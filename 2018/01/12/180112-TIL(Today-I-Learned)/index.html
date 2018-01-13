@@ -43,7 +43,7 @@
     
     <title>
         
-            Archives: 2018 | 
+            180112-TIL(Today-I-Learned) | 
         
         Jinwoo`s Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",TIL">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/archives/2018/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/archives/2018/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2018 | Jinwoo`s Blog">
+    <meta property="og:title" content="180112-TIL(Today-I-Learned) | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="TIL"> 
 
+    
+        <meta property="article:published_time" content="Fri Jan 12 2018 21:16:49 GMT+0900">
+        <meta property="article:modified_time" content="Sat Jan 13 2018 20:32:40 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,13 +250,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/archives/2018/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html",
+    "headline": "180112-TIL(Today-I-Learned)",
+    "datePublished": "Fri Jan 12 2018 21:16:49 GMT+0900",
+    "dateModified": "Sat Jan 13 2018 20:32:40 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Welcome to my blog"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",TIL",
+    "description": "",
+}
+</script>
 
 
     
@@ -287,261 +320,274 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Socket"><span class="post-toc-number">1.</span> <span class="post-toc-text">Socket</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Socket-암호화"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Socket 암호화</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web-Programming"><span class="post-toc-number">2.</span> <span class="post-toc-text">Web Programming</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#웹-개발-1세대-1991-1999"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">웹 개발 1세대 (1991 ~ 1999)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#웹-개발-2세대-1999-2009"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">웹 개발 2세대 (1999 ~ 2009)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#웹-개발-3세대-2000-현재"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">웹 개발 3세대 (2000 ~ 현재)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#여기서-잠깐-정적-웹-페이지와-동적-웹-페이지가-어떤-것일까"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">여기서 잠깐 정적 웹 페이지와 동적 웹 페이지가 어떤 것일까?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#정적-웹-페이지"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">정적 웹 페이지</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#동적-웹-페이지"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">동적 웹 페이지</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web-Browser"><span class="post-toc-number">3.</span> <span class="post-toc-text">Web Browser</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#현재-전-세계-웹-브라우저-점유율-2017-12"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">현재 전 세계 웹 브라우저 점유율(2017.12)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#현재-한국-웹-브라우저-점유율-2017-11"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">현재 한국 웹 브라우저 점유율(2017.11)</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web-architecture"><span class="post-toc-number">4.</span> <span class="post-toc-text">Web architecture</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#URI-URL-URN"><span class="post-toc-number">5.</span> <span class="post-toc-text">URI, URL, URN</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#API-Application-Program-Interface"><span class="post-toc-number">6.</span> <span class="post-toc-text">API (Application Program Interface)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-API"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Web API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#REST-API-Representational-State-Transfer-Application-Programming-Interface"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">REST API (Representational State Transfer Application Programming Interface)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#REST-API-장-단점"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">REST API 장/단점</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Graphql"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">Graphql</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Graphql-장-단점"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">Graphql 장/단점</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#장점"><span class="post-toc-number">6.5.1.</span> <span class="post-toc-text">장점</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#단점"><span class="post-toc-number">6.5.2.</span> <span class="post-toc-text">단점</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/12/180112-TIL(Today-I-Learned)/">180112-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/12/180112-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/11/180111-TIL(Today-I-Learned)/">180111-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/11/180111-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 11, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/10/180110-TIL(Today-I-Learned)/">180110-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/10/180110-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 10, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/09/180109-TIL(Today-I-Learned)/">180109-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/09/180109-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 09, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                180112-TIL(Today-I-Learned)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Jan 12, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/TIL/">TIL</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180112-TIL(Today-I-Learned)&url=http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180112-TIL(Today-I-Learned)&url=http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/12/180112-TIL(Today-I-Learned)/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a><strong>Socket</strong></h2><p>네트워크상에서 서버와 클라이언트 두개의 프로그램이 특정 포트를 통해 양방향 통신이 가능하도록 만들어 주는 소프트웨어 장치</p>
+<blockquote>
+<p>간단하게 떨어져 있는 두 컴퓨터를 연결해주는 과정</p>
+</blockquote>
+<p><img src="/img/til/socket.jpg" alt="socket.jpg"></p>
+<h3 id="Socket-암호화"><a href="#Socket-암호화" class="headerlink" title="Socket 암호화"></a><strong>Socket 암호화</strong></h3><p>TLS (Transport Layer Security) : 프로토콜에 의한 암호화<br>SSI (Secure Socket Layer) : 포트에 의한 암호화</p>
+<hr>
+
+<h2 id="Web-Programming"><a href="#Web-Programming" class="headerlink" title="Web Programming"></a><strong>Web Programming</strong></h2><h3 id="웹-개발-1세대-1991-1999"><a href="#웹-개발-1세대-1991-1999" class="headerlink" title="웹 개발 1세대 (1991 ~ 1999)"></a><strong>웹 개발 1세대</strong> (1991 ~ 1999)</h3><p>하이퍼텍스트 기반의 프로젝트를 제안이 된 후 정적인 컨텐츠들을 중심으로 웹 기술이 발달<br>-&gt; 정적 웹 페이지 多</p>
+<h3 id="웹-개발-2세대-1999-2009"><a href="#웹-개발-2세대-1999-2009" class="headerlink" title="웹 개발 2세대 (1999 ~ 2009)"></a><strong>웹 개발 2세대</strong> (1999 ~ 2009)</h3><p>Linux, Apache, Mysql, Php 중심의 동적인 서버, 정적인 클라이언트 모델이 지속됨<br>-&gt; 정적 웹 페이지가 점점 감소하며, 동적 웹 페이지가 多</p>
+<h3 id="웹-개발-3세대-2000-현재"><a href="#웹-개발-3세대-2000-현재" class="headerlink" title="웹 개발 3세대 (2000 ~ 현재)"></a><strong>웹 개발 3세대</strong> (2000 ~ 현재)</h3><p>JavaScript에서 클라이언트와 서버를 같은 언어로 구현 가능해짐<br>-&gt; 동적 웹 페이지 多</p>
+<h3 id="여기서-잠깐-정적-웹-페이지와-동적-웹-페이지가-어떤-것일까"><a href="#여기서-잠깐-정적-웹-페이지와-동적-웹-페이지가-어떤-것일까" class="headerlink" title="여기서 잠깐 정적 웹 페이지와 동적 웹 페이지가 어떤 것일까?"></a><strong>여기서 잠깐 정적 웹 페이지와 동적 웹 페이지가 어떤 것일까?</strong></h3><blockquote>
+<p>정적 웹 페이지 : 서버(Web Server)에 미리 저장된 파일(HTML 파일, 이미지, Javascript 파일 등)이 그대로 전달되는 웹 페이지<br>동적 웹 페이지 : 서버(Web Server)에 있는 데이터들을 스크립트에 의해 가공처리한 후 생성되어 전달되는 웹 페이지</p>
+</blockquote>
+<h3 id="정적-웹-페이지"><a href="#정적-웹-페이지" class="headerlink" title="정적 웹 페이지"></a><strong>정적 웹 페이지</strong></h3><ol>
+<li>요청에 대한 파일만 전송하면 되기 때문에 추가적인 작업이 필요없음</li>
+<li>저장된 정보만 보여줄 수 있음</li>
+<li>추가/수정/삭제의 작업 모두 수동으로 작업해야함 </li>
+</ol>
+<p>예) 같은 페이지에 다른 정보들을 요청하는 100 페이지가 들어오면 100페이지를 전부 작업</p>
+<h3 id="동적-웹-페이지"><a href="#동적-웹-페이지" class="headerlink" title="동적 웹 페이지"></a><strong>동적 웹 페이지</strong></h3><ol>
+<li>사용자에 웹 페이지를 전달하기 전에 처리하는 작업이 필요</li>
+<li>다양한 정보를 조합하여 동적으로 생성하여 제공가능</li>
+<li>추가/수정/삭제의 작업에 용이함   </li>
+</ol>
+<p>예) 같은 페이지에 다른 정보들을 요청하는 페이지가 100페이지 들어오면 관련 데이터를 DB(Database)에서 받고 1페이지만 작업 </p>
+<hr>
+
+<h2 id="Web-Browser"><a href="#Web-Browser" class="headerlink" title="Web Browser"></a><strong>Web Browser</strong></h2><p>웹 서버에서 쌍방향 통신하는 HTML 문서나 파일과 연동하고 출력하는 응용 소프트웨어<br>Mosaic(1993) -&gt; netscape(1994) -&gt; Internet Explorer(1995) -&gt; FireFox(2004) -&gt; Chrome(2008) </p>
+<h4 id="현재-전-세계-웹-브라우저-점유율-2017-12"><a href="#현재-전-세계-웹-브라우저-점유율-2017-12" class="headerlink" title="현재 전 세계 웹 브라우저 점유율(2017.12)"></a>현재 전 세계 웹 브라우저 점유율(2017.12)</h4><p><img src="/img/til/browser1.png" alt="browser1.png"></p>
+<h4 id="현재-한국-웹-브라우저-점유율-2017-11"><a href="#현재-한국-웹-브라우저-점유율-2017-11" class="headerlink" title="현재 한국 웹 브라우저 점유율(2017.11)"></a>현재 한국 웹 브라우저 점유율(2017.11)</h4><p><img src="/img/til/browser2.png" alt="browser2.png"></p>
+<h2 id="Web-architecture"><a href="#Web-architecture" class="headerlink" title="Web architecture"></a><strong>Web architecture</strong></h2><p><img src="/img/til/web_architecture.jpg" alt="web_architecture.jpg"></p>
+<h2 id="URI-URL-URN"><a href="#URI-URL-URN" class="headerlink" title="URI, URL, URN"></a><strong>URI, URL, URN</strong></h2><p>URI (Uniform Resource Information) : 모든 정보의 리소스를 가리키는 식별자<br><a href="http://www.example.com/post/how-to-make-url" target="_blank" rel="noopener">http://www.example.com/post/how-to-make-url</a><br>-&gt; 프로토콜 + 도메인 + Path + 파일이름</p>
+<p>URL (Uniform Resource Locator) : 리소스의 위치를 나타내는 것<br><a href="https://www.example.com/post/" target="_blank" rel="noopener">https://www.example.com/post/</a><br>-&gt; 프로토콜 + 도메인 + Path</p>
+<p>URN (Uniform Resource Name) : 리소스의 이름을 나타내는 것<br>www.example.com/post/how-to-make-url<br>-&gt; 도메인 + Path + 파일이름</p>
+<h2 id="API-Application-Program-Interface"><a href="#API-Application-Program-Interface" class="headerlink" title="API (Application Program Interface)"></a><strong>API</strong> (Application Program Interface)</h2><p>응용프로그램에서 사용할 수 있도록 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스</p>
+<h3 id="Web-API"><a href="#Web-API" class="headerlink" title="Web API"></a><strong>Web API</strong></h3><p>웹서버 혹은 브라우저를 위한 API</p>
+<p><img src="/img/til/api.png" alt="api.png"></p>
+<h3 id="REST-API-Representational-State-Transfer-Application-Programming-Interface"><a href="#REST-API-Representational-State-Transfer-Application-Programming-Interface" class="headerlink" title="REST API (Representational State Transfer Application Programming Interface)"></a><strong>REST API</strong> (Representational State Transfer Application Programming Interface)</h3><p>HTTP URL로 잘 표현된 리소스에 대한 행위를 HTTP Method로 정의하는 것</p>
+<blockquote>
+<p>무엇을 (HTTP URL로 정의 된 리소스) 어떻게(HTTP Method)한다</p>
+</blockquote>
+<p><img src="/img/til/rest.png" alt="rest.png"></p>
+<h3 id="REST-API-장-단점"><a href="#REST-API-장-단점" class="headerlink" title="REST API 장/단점"></a><strong>REST API 장/단점</strong></h3><p>장점 : 스펙없이 기존의 HTTP를 이용해 요청을 처리할 수 있다.<br>단점 : 사용할 수 있는 메소드가 4개(Get, Post, Put, Delete)며, 표준이 없다.</p>
+<h3 id="Graphql"><a href="#Graphql" class="headerlink" title="Graphql"></a><strong>Graphql</strong></h3><p>최신 응용 프로그램의 복잡하고 중첩 된 데이터 종속성을 설명하기 위해 고안된 데이터 쿼리 언어</p>
+<p><img src="/img/til/graph.png" alt="graph.png"></p>
+<h3 id="Graphql-장-단점"><a href="#Graphql-장-단점" class="headerlink" title="Graphql 장/단점"></a><strong>Graphql 장/단점</strong></h3><h4 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h4><ul>
+<li>요청에 따른 응답데이터 구조를 예측 가능</li>
+<li>직관적</li>
+<li>REST API의 N+1 Problem을 해결 가능</li>
+<li>확장이 용이함</li>
+</ul>
+<h4 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h4><ul>
+<li>코드가 추가되면서 단순한 App에서는 코드가 더 복잡해짐</li>
+<li>출시한지 얼마 안되어 안정성 문제가 생길 수 있음</li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/11/180111-TIL(Today-I-Learned)/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
