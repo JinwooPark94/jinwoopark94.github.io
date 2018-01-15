@@ -43,7 +43,7 @@
     
     <title>
         
-            Categories: TIL | 
+            git - init, add, commit | 
         
         Jinwoo`s Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",git">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/categories/TIL/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/15/git-intro0/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/categories/TIL/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/15/git-intro0/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Categories: TIL | Jinwoo`s Blog">
+    <meta property="og:title" content="git - init, add, commit | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="git"> 
 
+    
+        <meta property="article:published_time" content="Mon Jan 15 2018 21:51:17 GMT+0900">
+        <meta property="article:modified_time" content="Mon Jan 15 2018 23:13:45 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,13 +250,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/categories/TIL/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html",
+    "headline": "git - init, add, commit",
+    "datePublished": "Mon Jan 15 2018 21:51:17 GMT+0900",
+    "dateModified": "Mon Jan 15 2018 23:13:45 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Welcome to my blog"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",git",
+    "description": "",
+}
+</script>
 
 
     
@@ -287,281 +320,255 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#저장소-만들기-git-init"><span class="post-toc-text">저장소 만들기 (git init)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git-추가-상태-확인-git-add-status"><span class="post-toc-text">git 추가, 상태 확인 (git add, status)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git-버전-만들기-git-commit-config"><span class="post-toc-text">git 버전 만들기 (git commit, config)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><span class="post-toc-text">이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/12/180112-TIL(Today-I-Learned)/">180112-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/12/180112-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/TIL/">TIL</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/11/180111-TIL(Today-I-Learned)/">180111-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/11/180111-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 11, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/TIL/">TIL</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/10/180110-TIL(Today-I-Learned)/">180110-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/10/180110-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 10, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/TIL/">TIL</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/09/180109-TIL(Today-I-Learned)/">180109-TIL(Today-I-Learned)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/09/180109-TIL(Today-I-Learned)/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 09, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/TIL/">TIL</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                git - init, add, commit
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Jan 15, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=git - init, add, commit&url=http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=git - init, add, commit&url=http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="저장소-만들기-git-init"><a href="#저장소-만들기-git-init" class="headerlink" title="저장소 만들기 (git init)"></a><strong>저장소 만들기 (git init)</strong></h2><ul>
+<li>저장소를 만들기 위해서는 “git init”이라는 명령어를 입력해야 한다.</li>
+</ul>
+<ol>
+<li>먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&gt; mkdir: 폴더 생성 )<pre><code>mkdir gitblog</code></pre></li>
+<li>방금 만든 프로젝트 폴더로 이동합니다.<br>( Linux 명령어 -&gt; cd: 폴더 이동 )<pre><code>cd gitblog</code></pre></li>
+<li>git 저장소를 만듭니다.<pre><code>git init</code></pre></li>
+<li>아래의 명령어를 입력하여 .git 폴더가 생성 되었는지 확인합니다. ( Linux 명령어 -&gt; ls -la: 경로 안의 모든 내용을 출력 )<br><img src="/img/git/git_img1.png" alt="git_img.png"></li>
+</ol>
+<h2 id="git-추가-상태-확인-git-add-status"><a href="#git-추가-상태-확인-git-add-status" class="headerlink" title="git 추가, 상태 확인 (git add, status)"></a><strong>git 추가, 상태 확인 (git add, status)</strong></h2><ul>
+<li>git은 기본적으로 새로운 파일을 관리하지 않으며 파일을 관리하기 위해서는 등록이 필요합니다. git 파일 등록은 “git add”라는 명령어를 입력해야 합니다. 이 후 현재 git 폴더 상태를 확인하고 싶으면 “git status”라는 명령어를 사용합니다.</li>
+</ul>
+<ol>
+<li>파일을 생성합니다. (Linux 명령어 -&gt; touch: 파일 생성)<pre><code>touch blog-contents.txt</code></pre></li>
+<li>현재 프로젝트 폴더의 상태를 확인해봅니다.<pre><code>git status</code></pre>
+
+</li>
+</ol>
+<p><img src="/img/git/git_img2.png" alt="git_img2.png"><br>(git 파일 등록이 안된 상태라 그림과 같이 Untracked files에 빨간색으로 표시됩니다.)</p>
+<ol>
+<li>git 파일을 등록합니다.<pre><code>git add blog-contents.txt</code></pre></li>
+<li>등록 후 다시 현재 프로젝트 폴더의 상태를 확인해봅니다.<pre><code>git status</code></pre>
+
+</li>
+</ol>
+<p><img src="/img/git/git_img3.png" alt="git_img3.png"><br>(git 파일 등록이 되면 위의 그림과 같이 초록색으로 표시됩니다.)</p>
+<h2 id="git-버전-만들기-git-commit-config"><a href="#git-버전-만들기-git-commit-config" class="headerlink" title="git 버전 만들기 (git commit, config)"></a><strong>git 버전 만들기 (git commit, config)</strong></h2><ul>
+<li>일단 먼저 버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 1번만 하면 됩니다.<pre><code>git config --global user.name "자신의 닉네임"
+git config --global user.email "자신의 이메일"</code></pre></li>
+</ul>
+<ol>
+<li>git 버전에 “git commit”라는 명령어를 이용하여 commit 메세지와 함께 commit합니다.<pre><code>git add blog-contents.txt # git commit을 하기 전 add를 먼저 해줘야 한다.
+git commit -m "commit msg" # commit 메세지를 작성 후 commit</code></pre></li>
+<li>버전에 대한 정보를 확인합니다.<pre><code>git log</code></pre>
+
+</li>
+</ol>
+<h2 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다" class="headerlink" title="이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다."></a><strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h2>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/12/180112-TIL(Today-I-Learned)/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
