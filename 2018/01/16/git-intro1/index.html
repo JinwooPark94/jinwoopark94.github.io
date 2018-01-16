@@ -43,7 +43,7 @@
     
     <title>
         
-            Tag: git | 
+            git - Stage area, Repository, log, diff, reset, revert | 
         
         Jinwoo`s Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",git">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/tags/git/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/16/git-intro1/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/tags/git/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/16/git-intro1/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Tag: git | Jinwoo`s Blog">
+    <meta property="og:title" content="git - Stage area, Repository, log, diff, reset, revert | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="git"> 
 
+    
+        <meta property="article:published_time" content="Tue Jan 16 2018 18:27:25 GMT+0900">
+        <meta property="article:modified_time" content="Tue Jan 16 2018 21:12:34 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,13 +250,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/tags/git/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html",
+    "headline": "git - Stage area, Repository, log, diff, reset, revert",
+    "datePublished": "Tue Jan 16 2018 18:27:25 GMT+0900",
+    "dateModified": "Tue Jan 16 2018 21:12:34 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Welcome to my blog"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",git",
+    "description": "",
+}
+</script>
 
 
     
@@ -287,159 +320,247 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Stage-area-Repository"><span class="post-toc-text">Stage area, Repository</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#변경사항-확인하기-git-log-git-diff"><span class="post-toc-text">변경사항 확인하기 (git log, git diff)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#과거의-버전으로-돌아가기-git-reset-git-revert"><span class="post-toc-text">과거의 버전으로 돌아가기 (git reset, git revert)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-reset-방법"><span class="post-toc-text">1. reset 방법</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-revert-방법-commit을-취소하며-새로운-버전을-생성한다"><span class="post-toc-text">2. revert 방법 (commit을 취소하며 새로운 버전을 생성한다.)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><span class="post-toc-text">이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/16/git-intro1/">git - Stage area, Repository, log, diff, reset, revert</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/16/git-intro1/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 16, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/git/">git</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/15/git-intro0/">git - init, add, commit</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/15/git-intro0/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 15, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/git/">git</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                git - Stage area, Repository, log, diff, reset, revert
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Jan 16, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=git - Stage area, Repository, log, diff, reset, revert&url=http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=git - Stage area, Repository, log, diff, reset, revert&url=http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/16/git-intro1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Stage-area-Repository"><a href="#Stage-area-Repository" class="headerlink" title="Stage area, Repository"></a><strong>Stage area, Repository</strong></h2><ul>
+<li>“git add”를 하게되면 파일들이 commit 대기 상태가 되는데 commit 대기하는 곳이 Stage area이다. </li>
+<li>파일을 “git commit”을 한 후 “git push”를 이용해 서버에 올리면 commit 된 파일이 저장되는 곳이 Repository이다.</li>
+</ul>
+<h2 id="변경사항-확인하기-git-log-git-diff"><a href="#변경사항-확인하기-git-log-git-diff" class="headerlink" title="변경사항 확인하기 (git log, git diff)"></a><strong>변경사항 확인하기 (git log, git diff)</strong></h2><ul>
+<li>로그에서 출력되는 버전 간의 차이점을 확인하고 싶을 때 사용한다.<pre><code>git log -p</code></pre></li>
+<li>버전 간의 차이점을 비교할때 사용한다.<pre><code>git diff '버전 id'..'버전 id2'</code></pre></li>
+<li>git add하기 전과 add한 후의 파일 내용을 비교할때 사용한다.  <pre><code>git diff</code></pre>   
+
+
+</li>
+</ul>
+<h2 id="과거의-버전으로-돌아가기-git-reset-git-revert"><a href="#과거의-버전으로-돌아가기-git-reset-git-revert" class="headerlink" title="과거의 버전으로 돌아가기 (git reset, git revert)"></a><strong>과거의 버전으로 돌아가기 (git reset, git revert)</strong></h2><ul>
+<li>버전관리의 중요한 효용은 과거로 돌아갈 수 있다는 점이다. 방법은 총 2가지가 있는데 “git reset – ‘버전 id’”와 “git revert ‘버전 id’”가 있다. 하지만 뭐든지 과거로 돌아가는 작업은 위험한 작업이니 2번 3번 확인하고 사용하는게 좋다.<h3 id="1-reset-방법"><a href="#1-reset-방법" class="headerlink" title="1. reset 방법"></a>1. <strong>reset 방법</strong></h3><ol>
+<li>버전에 대한 정보를 확인합니다.<pre><code>git log</code></pre>   </li>
+<li>이전 버전으로 돌릴려는 버전의 commit id를 복사합니다.<br><img src="/img/git/git_reset.png" alt="git_reset.png"></li>
+<li>reset 명령어를 통해 reset을 진행합니다.<pre><code>git reset --hard 7352a7d3bd60a291e0a0f20f70cf76728d72ce8d</code></pre>
+
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-revert-방법-commit을-취소하며-새로운-버전을-생성한다"><a href="#2-revert-방법-commit을-취소하며-새로운-버전을-생성한다" class="headerlink" title="2. revert 방법 (commit을 취소하며 새로운 버전을 생성한다.)"></a>2. <strong>revert 방법 (commit을 취소하며 새로운 버전을 생성한다.)</strong></h3><ol>
+<li>버전에 대한 정보를 확인합니다.   <pre><code>git log</code></pre></li>
+<li>이전 버전으로 돌릴려는 버전의 commit id를 복사합니다.<br><img src="/img/git/git_reset.png" alt="git_reset.png"></li>
+<li>reset 명령어를 통해 reset을 진행합니다.<pre><code>git revert 7352a7d3bd60a291e0a0f20f70cf76728d72ce8d</code></pre>
+
+</li>
+</ol>
+<h3 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다" class="headerlink" title="이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다."></a><strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h3>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/16/180116-Daily-Summary-CSS/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -574,6 +695,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
