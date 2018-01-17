@@ -43,7 +43,7 @@
     
     <title>
         
-            웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성) | 
+            CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents) | 
         
         Jinwoo`s Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Web Accessibility">
+    <meta name="keywords" content=",CSS">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/17/web-accessibility/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/17/css-flex/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/17/web-accessibility/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/17/css-flex/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성) | Jinwoo`s Blog">
+    <meta property="og:title" content="CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents) | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Web Accessibility"> 
+    <meta property="og:article:tag" content="CSS"> 
 
     
-        <meta property="article:published_time" content="Wed Jan 17 2018 20:08:59 GMT+0900">
-        <meta property="article:modified_time" content="Wed Jan 17 2018 20:25:41 GMT+0900">
+        <meta property="article:published_time" content="Wed Jan 17 2018 20:33:49 GMT+0900">
+        <meta property="article:modified_time" content="Wed Jan 17 2018 21:28:58 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html",
-    "headline": "웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성)",
-    "datePublished": "Wed Jan 17 2018 20:08:59 GMT+0900",
-    "dateModified": "Wed Jan 17 2018 20:25:41 GMT+0900",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/17/css-flex/index.html",
+    "headline": "CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)",
+    "datePublished": "Wed Jan 17 2018 20:33:49 GMT+0900",
+    "dateModified": "Wed Jan 17 2018 21:28:58 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "ParkJinWoo",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Web Accessibility",
+    "keywords": ",CSS",
     "description": "",
 }
 </script>
@@ -349,7 +349,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#웹-접근성-한국형-웹-콘텐츠-접근성-지침"><span class="post-toc-text">웹 접근성 - 한국형 웹 콘텐츠 접근성 지침</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-인식의-용이성"><span class="post-toc-text">1. 인식의 용이성</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-운용의-용이성"><span class="post-toc-text">2. 운용의 용이성</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-이해의-용이성"><span class="post-toc-text">3. 이해의 용이성</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-견고성"><span class="post-toc-text">4. 견고성</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#자료-한국형-웹-콘텐츠-접근성-지침-참고"><span class="post-toc-text">자료 : 한국형 웹 콘텐츠 접근성 지침 참고</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Flexbox"><span class="post-toc-text">Flexbox</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Flex-Container-부모"><span class="post-toc-text">Flex Container - 부모</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#display"><span class="post-toc-text">display</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex-direction"><span class="post-toc-text">flex-direction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex-wrap"><span class="post-toc-text">flex-wrap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#justify-content"><span class="post-toc-text">justify-content</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#align-items"><span class="post-toc-text">align-items</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#align-content"><span class="post-toc-text">align-content</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#자료-beautifulcss님의-블로그-내용-참고"><span class="post-toc-text">자료 : beautifulcss님의 블로그 내용 참고</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -381,7 +381,7 @@
         
     
             <p class="article-headline-p">
-                웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성)
+                CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)
             </p>
         </div>
 
@@ -424,7 +424,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Web-Accessibility/">Web Accessibility</a>
+        <a class="post_tag-link" href="/tags/CSS/">CSS</a>
     </ul>
     
 
@@ -441,7 +441,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성)&url=http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)&url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -450,7 +450,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성)&url=http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html&via=ParkJinWoo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)&url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html&via=ParkJinWoo" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -459,7 +459,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -468,7 +468,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/17/web-accessibility/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -493,150 +493,60 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="웹-접근성-한국형-웹-콘텐츠-접근성-지침"><a href="#웹-접근성-한국형-웹-콘텐츠-접근성-지침" class="headerlink" title="웹 접근성 - 한국형 웹 콘텐츠 접근성 지침"></a><strong>웹 접근성 - 한국형 웹 콘텐츠 접근성 지침</strong></h2><h3 id="1-인식의-용이성"><a href="#1-인식의-용이성" class="headerlink" title="1. 인식의 용이성"></a><strong>1. 인식의 용이성</strong></h3><ul>
-<li><strong>대체 텍스트</strong>   <ol>
-<li>텍스트 아닌 콘텐츠는 그 의미나 용도를 인식할 수 있도록 대체 텍스트를 제공해야 한다.<blockquote>
-<p>적절한 대체 텍스트 제공</p>
+        <h1 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a><strong>Flexbox</strong></h1><ul>
+<li>flex의 유연성을 뜻하며 요소들을 자유자제로 위치시키는 뜻입니다.<blockquote>
+<p>새롭게 CSS3 명세에 반영된 레이아웃 모듈이며, 요소들이 수용된 공간을 어떻게 효과적으로 채워나갈지에 대해 고민하다가 만들어진 새로운 레이아웃 방식 </p>
 </blockquote>
-</li>
-</ol>
-</li>
-<li><strong>멀티미디어 대체 수단</strong>   <ol>
-<li>멀티미디어 콘텐츠에는 자막, 대본 또는 수화를 제공해야 한다.<blockquote>
-<p>자막 제공</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>명료성</strong><ol>
-<li>콘텐츠는 색에 관계없이 인식될 수 있어야 한다.   <blockquote>
-<p>색에 무관한 콘텐츠 인식</p>
-</blockquote>
-</li>
-<li>지시 사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.     <blockquote>
-<p>명확한 지시 사항 제공</p>
-</blockquote>
-</li>
-<li>텍스트 콘텐츠와 배경 간의 명도 대비는 4.5 대 1 이상이어야 한다.<blockquote>
-<p>텍스트 콘텐츠의 명도 대비</p>
-</blockquote>
-</li>
-<li>자동으로 소리가 재생되지 않아야 한다.<blockquote>
-<p>자동 재생 금지</p>
-</blockquote>
-</li>
-<li>이웃한 콘텐츠는 구별될 수 있어야 한다.<blockquote>
-<p>콘텐츠 간의 구분   </p>
-</blockquote>
-</li>
-</ol>
 </li>
 </ul>
-<h3 id="2-운용의-용이성"><a href="#2-운용의-용이성" class="headerlink" title="2. 운용의 용이성"></a><strong>2. 운용의 용이성</strong></h3><ul>
-<li><strong>입력장치 접근성</strong><ol>
-<li>모든 기능은 키보드만으로도 사용할 수 있어야 한다.   <blockquote>
-<p>키보드 사용 보장</p>
-</blockquote>
-</li>
-<li>키보드에 의한 초점은 논리적으로 이동해야 하며 시각적으로 구별할 수 있어야 한다.   <blockquote>
-<p>초점 이동</p>
-</blockquote>
-</li>
-<li>사용자 입력 및 컨트롤은 조작 가능하도록 제공되어야 한다.   <blockquote>
-<p>조작 가능</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>충분한 시간 제공</strong><ol>
-<li>시간제한이 있는 콘텐츠는 응답시간을 조절할 수 있어야 한다.<blockquote>
-<p>응답시간 조절</p>
-</blockquote>
-</li>
-<li>자동으로 변경되는 콘텐츠는 움직임을 제어할 수 있어야 한다.   <blockquote>
-<p>정지 기능 제공   </p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>광과민성 발작 예방</strong>   <ol>
-<li>초당 3~50 회 주기로 깜빡이거나 번쩍이는 콘텐츠를 제공하지 않아야 한다.   <blockquote>
-<p>깜박임과 번쩍임 사용 제한</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>쉬운 내비게이션</strong><ol>
-<li>콘텐츠의 반복되는 영역은 건너뛸 수 있어야 한다.<blockquote>
-<p>반복 영역 건너뛰기</p>
-</blockquote>
-</li>
-<li>페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다.<blockquote>
-<p>제목 제공</p>
-</blockquote>
-</li>
-<li>링크 텍스트는 용도나 목적을 이해할 수 있도록 제공해야 한다.<blockquote>
-<p>적절한 링크 텍스트</p>
-</blockquote>
-</li>
-</ol>
-</li>
+<h2 id="Flex-Container-부모"><a href="#Flex-Container-부모" class="headerlink" title="Flex Container - 부모"></a><strong>Flex Container - 부모</strong></h2><h2 id="display"><a href="#display" class="headerlink" title="display"></a><strong>display</strong></h2><p>그릇에 해당하는 부모 요소 (display: flex 혹은 display: inline-flex로 선언)</p>
+<pre><code>.flex-container { display: flex }</code></pre>   
+
+<h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><strong>flex-direction</strong></h2><p> 컨테이너 안에 위치하는 자식 요소에 어떤 방향성을 줄 것인지 결정   </p>
+<p> <img src="/img/til/flex_img1.png" alt="flex_img1.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>  }</code></pre></p>
+<ul>
+<li>row : 기본 값. 아이템이 수평방향(행)으로 흐르며, 방향성은 좌에서 우</li>
+<li>row-reverse : 아이템이 수평방향(행)으로 흐르며, 방향성은 우에서 좌</li>
+<li>column : 아이템이 수직방향(열)으로 흐르며, 방향성은 상에서 하</li>
+<li>column-reverse : 아이템이 수직방향(행)으로 흐르며, 방향성은 하에서 상   </li>
 </ul>
-<h3 id="3-이해의-용이성"><a href="#3-이해의-용이성" class="headerlink" title="3. 이해의 용이성"></a><strong>3. 이해의 용이성</strong></h3><ul>
-<li><strong>가독성</strong><ol>
-<li>주로 사용하는 언어를 명시해야 한다.<blockquote>
-<p>기본 언어 표시</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>예측 가능성</strong><ol>
-<li>사용자가 의도하지 않은 기능(새 창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.<blockquote>
-<p>사용자 요구에 따른 실행</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>콘텐츠의 논리성</strong><ol>
-<li>콘텐츠는 논리적인 순서로 제공해야 한다.<blockquote>
-<p>콘텐츠의 선형 구조</p>
-</blockquote>
-</li>
-<li>표는 이해하기 쉽게 구성해야 한다.<blockquote>
-<p>표의 구성</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>입력 도움</strong><ol>
-<li>사용자 입력에는 대응하는 레이블을 제공해야 한다.<blockquote>
-<p>레이블 제공</p>
-</blockquote>
-</li>
-<li>입력 오류를 정정할 수 있는 방법을 제공해야 한다.<blockquote>
-<p>오류 정정</p>
-</blockquote>
-</li>
-</ol>
-</li>
+<h2 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><strong>flex-wrap</strong></h2><p>줄 넘김 처리</p>
+<p> <img src="/img/til/flex_img2.png" alt="flex_img2.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: nowrap;<br>  }</code></pre>   </p>
+<ul>
+<li>nowrap : 기본 값. 아이템을 한 줄에 모두 표현</li>
+<li>wrap : 아이템이 적정 길이 이상으로 길다면, 복수의 줄에 걸쳐 표현</li>
+<li>wrap-reverse : wrap과 같지만, 방향성이 반전되어 표현. 한마디로, 역방향으로 줄 넘김이 발생   </li>
 </ul>
-<h3 id="4-견고성"><a href="#4-견고성" class="headerlink" title="4. 견고성"></a><strong>4. 견고성</strong></h3><ul>
-<li><strong>문법 준수</strong><ol>
-<li>마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.<blockquote>
-<p>마크업 오류 방지</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><strong>웹 애플리케이션 접근성</strong><ol>
-<li>콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.<blockquote>
-<p>웹 애플리케이션 접근성 준수</p>
-</blockquote>
-</li>
-</ol>
-</li>
+<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><strong>justify-content</strong></h2><p>수평 방향으로 정렬하는 방식</p>
+<p> <img src="/img/til/flex_img4.png" alt="flex_img4.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: nowrap;<br>   justify-content: flex-start;<br>  }</code></pre>   </p>
+<ul>
+<li>flex-start : 아이템을 한 덩어리로 묶어, 수평방향의 시작 점에 위치</li>
+<li>flex-enter : 아이템을 한 덩어리로 묶어, 수평방향의 끝 점에 위치</li>
+<li>center : 아이템을 한 덩어리로 묶어, 수평방향의 중앙에 위치</li>
+<li>space-between : 아이템을 컨테이너의 양쪽 끝에 맞춰 정렬</li>
+<li>space-around : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬   </li>
 </ul>
-<h3 id="자료-한국형-웹-콘텐츠-접근성-지침-참고"><a href="#자료-한국형-웹-콘텐츠-접근성-지침-참고" class="headerlink" title="자료 : 한국형 웹 콘텐츠 접근성 지침 참고"></a>자료 : 한국형 웹 콘텐츠 접근성 지침 참고</h3>
+<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a><strong>align-items</strong></h2><p>수직방향으로 정렬하는 방식</p>
+<p> <img src="/img/til/flex_img3.png" alt="flex_img3.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-flow: row nowrap;<br>   align-items:flex-start;<br>  }</code></pre>   </p>
+<ul>
+<li>flex-start : 아이템을 한 덩어리로 묶어, 수직방향의 시작 점에 위치</li>
+<li>flex-enter : 아이템을 한 덩어리로 묶어, 수직방향의 끝 점에 위치</li>
+<li>center : 아이템을 한 덩어리로 묶어, 수직방향의 중앙에 위치</li>
+<li>baseline : 아이템을 컨테이너의 baseline에 맞춰 정렬</li>
+<li>stretch : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬   </li>
+</ul>
+<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><strong>align-content</strong></h2><p>한 줄을 넘기는 아이템들을 수직방향으로 정렬 (“align-itm”과 “justify-content” 속성을 모두 가지고 있음)</p>
+<p> <img src="/img/til/flex_img5.png" alt="flex_img5.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-flow: row nowrap;<br>   align-items:flex-start;<br>  }</code></pre>   </p>
+<ul>
+<li>flex-start : 아이템을 한 덩어리로 묶어, 수직방향의 시작 점에 위치</li>
+<li>flex-enter : 아이템을 한 덩어리로 묶어, 수직방향의 끝 점에 위치</li>
+<li>center : 아이템을 한 덩어리로 묶어, 수직방향의 중앙에 위치</li>
+<li>baseline : 아이템을 컨테이너의 baseline에 맞춰 정렬</li>
+<li>space-between : 컨테이너의 수직방향 기준으로 아이템 사이의 줄(행)을 일정한 간격을 두고 정렬</li>
+<li>space-around : 컨테이너의 양쪽 끝을 기준으로 각 아이템 줄(행)의 전, 후에 일정한 간격의 공간을 만들어 정렬</li>
+<li>stretch : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬     </li>
+</ul>
+<h3 id="자료-beautifulcss님의-블로그-내용-참고"><a href="#자료-beautifulcss님의-블로그-내용-참고" class="headerlink" title="자료 : beautifulcss님의 블로그 내용 참고"></a>자료 : beautifulcss님의 블로그 내용 참고</h3>
         
     
 
@@ -656,7 +566,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/01/17/180117-Daily-Summary/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/01/17/TIL-180117/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -670,7 +580,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/01/16/TIL-180116/" id="post_nav-older" class="next-content">
+        <a href="/2018/01/17/180117-Daily-Summary/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
