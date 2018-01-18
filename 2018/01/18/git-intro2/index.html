@@ -43,7 +43,7 @@
     
     <title>
         
-            180115-Daily-Summary - WWW, WEB, HTML | 
+            git - git의 원리(gitstory, add, objects) | 
         
         Jinwoo`s Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Daily-Summary-Fds">
+    <meta name="keywords" content=",git">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/18/git-intro2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/18/git-intro2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="180115-Daily-Summary - WWW, WEB, HTML | Jinwoo`s Blog">
+    <meta property="og:title" content="git - git의 원리(gitstory, add, objects) | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Daily-Summary-Fds"> 
+    <meta property="og:article:tag" content="git"> 
 
     
-        <meta property="article:published_time" content="Mon Jan 15 2018 23:45:02 GMT+0900">
-        <meta property="article:modified_time" content="Tue Jan 16 2018 18:13:31 GMT+0900">
+        <meta property="article:published_time" content="Thu Jan 18 2018 21:37:47 GMT+0900">
+        <meta property="article:modified_time" content="Thu Jan 18 2018 21:54:32 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html",
-    "headline": "180115-Daily-Summary - WWW, WEB, HTML",
-    "datePublished": "Mon Jan 15 2018 23:45:02 GMT+0900",
-    "dateModified": "Tue Jan 16 2018 18:13:31 GMT+0900",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html",
+    "headline": "git - git의 원리(gitstory, add, objects)",
+    "datePublished": "Thu Jan 18 2018 21:37:47 GMT+0900",
+    "dateModified": "Thu Jan 18 2018 21:54:32 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "ParkJinWoo",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Daily-Summary-Fds",
+    "keywords": ",git",
     "description": "",
 }
 </script>
@@ -349,7 +349,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WWW-World-Wide-Web"><span class="post-toc-text">WWW(World Wide Web)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web"><span class="post-toc-text">Web</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BACK-END"><span class="post-toc-text">BACK-END</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FRONT-END"><span class="post-toc-text">FRONT-END</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#FRONT-END-Web-기술의-설정값"><span class="post-toc-text">FRONT-END Web 기술의 설정값</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-표준-Web-Standards"><span class="post-toc-text">Web 표준(Web Standards)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-접근성-Web-Accessibility"><span class="post-toc-text">Web 접근성(Web Accessibility)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTML"><span class="post-toc-text">HTML</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML5-탄생"><span class="post-toc-text">HTML5 탄생</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML4-01-XHTML1-0과-HTML5의-차이점"><span class="post-toc-text">HTML4.01, XHTML1.0과 HTML5의 차이점</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-Contents-Model의-추가"><span class="post-toc-text">1. Contents Model의 추가</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-Language의-추가"><span class="post-toc-text">2. Language의 추가</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-API"><span class="post-toc-text">3. API</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-개발-순서"><span class="post-toc-text">HTML 개발 순서</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-실습-예제"><span class="post-toc-text">HTML 실습 예제</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#원리를-배우는-이유"><span class="post-toc-text">원리를 배우는 이유</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gitstory"><span class="post-toc-text">gitstory</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#설치-방법"><span class="post-toc-text">설치 방법</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git-add의-원리"><span class="post-toc-text">git add의 원리</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#objects명의-원리"><span class="post-toc-text">objects명의 원리</span></a></li></ol>
     </ul>
     
 
@@ -381,7 +381,7 @@
         
     
             <p class="article-headline-p">
-                180115-Daily-Summary - WWW, WEB, HTML
+                git - git의 원리(gitstory, add, objects)
             </p>
         </div>
 
@@ -400,7 +400,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ParkJinWoo</strong>
-        <span>Jan 15, 2018</span>
+        <span>Jan 18, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -424,7 +424,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+        <a class="post_tag-link" href="/tags/git/">git</a>
     </ul>
     
 
@@ -441,7 +441,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180115-Daily-Summary - WWW, WEB, HTML&url=http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=git - git의 원리(gitstory, add, objects)&url=http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -450,7 +450,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180115-Daily-Summary - WWW, WEB, HTML&url=http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html&via=ParkJinWoo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=git - git의 원리(gitstory, add, objects)&url=http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html&via=ParkJinWoo" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -459,7 +459,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -468,7 +468,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/15/180115-Daily-Summary/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/18/git-intro2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -493,58 +493,24 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="WWW-World-Wide-Web"><a href="#WWW-World-Wide-Web" class="headerlink" title="WWW(World Wide Web)"></a><strong>WWW</strong>(World Wide Web)</h2><p>인터넷에 연결된 컴퓨터들을 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간</p>
-<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a><strong>Web</strong></h2><h3 id="BACK-END"><a href="#BACK-END" class="headerlink" title="BACK-END"></a><strong>BACK-END</strong></h3><p>사용자에게는 보이지 않는, 뒷면에서 작업이 이루어지는 단</p>
-<blockquote>
-<p>서버 사이드</p>
+        <h2 id="원리를-배우는-이유"><a href="#원리를-배우는-이유" class="headerlink" title="원리를 배우는 이유"></a><strong>원리를 배우는 이유</strong></h2><ul>
+<li>습득력이 안 배웠을때보다 더 빠르고 오래감</li>
+<li>기억에 오래 남으며 응용을 통해 새로운 것을 창조할 수 있음</li>
+<li>Git에 대한 많은 영감을 얻을 수 있음</li>
+</ul>
+<h2 id="gitstory"><a href="#gitstory" class="headerlink" title="gitstory"></a><strong>gitstory</strong></h2><p>git 원리-분석 도구<br><img src="/img/git/gitstory.png" alt="gitstory.png"></p>
+<h3 id="설치-방법"><a href="#설치-방법" class="headerlink" title="설치 방법"></a><strong>설치 방법</strong></h3><pre><code>pip install gistory
+</code></pre><p><img src="/img/git/gitstory_install.PNG" alt="git_install_img.png"></p>
+<h2 id="git-add의-원리"><a href="#git-add의-원리" class="headerlink" title="git add의 원리"></a><strong>git add의 원리</strong></h2><p><img src="/img/git/gitstory_add.PNG" alt="git_add.png"><br><strong>1. git에서 “git add”를 하면 눈에는 보이지 않지만 index파일이 변경되며 Object폴더에 새로운 파일이 추가됨</strong><br><strong>2. index파일에 새로운 버전을 가진 해쉬태그를 참조하는 파일명이 새롭게 갱신이 되며, 오브젝트폴더에 add한 파일이 해쉬값의 파일명으로 저장</strong></p>
 <ul>
-<li>JAVA</li>
-<li>JSP</li>
-<li>Spring</li>
-<li>Mysql</li>
+<li>git은 어떠한 파일을 저장할때 파일의 이름이 달라도 파일의 내용이 같으면 똑같은 파일을 새로 만들지 않고 해당 파일을 참조시킴</li>
 </ul>
-</blockquote>
-<h3 id="FRONT-END"><a href="#FRONT-END" class="headerlink" title="FRONT-END"></a><strong>FRONT-END</strong></h3><p>사용자와 직접 접촉하는 단</p>
-<blockquote>
-<p>클라이언트 사이드</p>
+<p><strong>중요 : git은 기존의 버전관리 시스템과 다르게 아주 효율적인 구조를 가지고 있다. git은 데이터를 스냅샷으로 취급되기때문에 중복될 일이 없어 대형프로젝트에 도입하면 크기가 매우 줄어듬</strong></p>
+<h2 id="objects명의-원리"><a href="#objects명의-원리" class="headerlink" title="objects명의 원리"></a><strong>objects명의 원리</strong></h2><p><strong>1. git은 수많은 버전들은 파일명, 만들어진 날짜순으로 보관하는게 아니라 sha-1이라고 부르는 특정 해쉬 알고리즘을 통과한 값을 기준으로 저장</strong></p>
 <ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>Javascript</li>
+<li>알고리즘은 회원가입 시스템을 구비하고있는 사이트 관리자가 사용자의 개인정보를 md5를 통과시킨 해쉬값으로 저장하고 있는것과 비슷한 원리</li>
 </ul>
-</blockquote>
-<h3 id="FRONT-END-Web-기술의-설정값"><a href="#FRONT-END-Web-기술의-설정값" class="headerlink" title="FRONT-END Web 기술의 설정값"></a><strong>FRONT-END Web 기술의 설정값</strong></h3><p>HTML5 : 뼈대<br>CSS3 : 근사한 스타일링<br>Javascript : 스마트한 두뇌   </p>
-<h3 id="Web-표준-Web-Standards"><a href="#Web-표준-Web-Standards" class="headerlink" title="Web 표준(Web Standards)"></a><strong>Web 표준</strong>(Web Standards)</h3><p>웹(Web)에서 표준적으로 사용되는 기술이나 규칙</p>
-<h3 id="Web-접근성-Web-Accessibility"><a href="#Web-접근성-Web-Accessibility" class="headerlink" title="Web 접근성(Web Accessibility)"></a><strong>Web 접근성</strong>(Web Accessibility)</h3><p>장애를 가진 사람과 장애를 가지지 않은 사람 모두가 웹사이트를 이용할 수 있게 하는 방식</p>
-<ul>
-<li>다양한 Platform</li>
-<li>Cross Browsing</li>
-<li>SEO (Search Engine Optimization)(검색 엔진 최적화)</li>
-<li>저사양 또는 저속회선</li>
-</ul>
-<hr>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a><strong>HTML</strong></h2><p>World Wide Web(www)을 위한 마크업 언어이며, 제목이나 문단, 표, 꼬리글 및 기타 요소를 이용하여 콘텐츠의 구조를 정의함으로써 웹 문서를 만드는 기능을 제공</p>
-<ul>
-<li>Markup의 기초 : HTML 문서는 요소(element)와 태그(tag) 그리고 콘텐츠로 구성되어 있으며, 요소는 HTML의 의미를 가짐</li>
-</ul>
-<h3 id="HTML5-탄생"><a href="#HTML5-탄생" class="headerlink" title="HTML5 탄생"></a><strong>HTML5 탄생</strong></h3><ul>
-<li>팀버너스리에 의해 설계되어 HTTP, URI, 브라우저와 함께 1990년에 개발</li>
-<li>1999 ~ 2000년 HTML 4.01, XHTML 1.0이 권고</li>
-<li>2000년 XHTML 1.0</li>
-<li>2004년 Apple, Mozilla, Opera가 공통으로 WHATWG (Web Hypertext Application Technology Working Group) 발족 -&gt; 널리 보급된 HTML에 기초하여 브라우저에 실제 구현된 기능을 중시, 현실적인 접근법을 채틱</li>
-<li>2007년 W3C가 WHATWG와 공통으로 HTML5 제정에 합류</li>
-<li>2008년 HTML 5 초안 공개</li>
-<li>2009년 XHTML 2.0의 사양제정 중지</li>
-</ul>
-<h3 id="HTML4-01-XHTML1-0과-HTML5의-차이점"><a href="#HTML4-01-XHTML1-0과-HTML5의-차이점" class="headerlink" title="HTML4.01, XHTML1.0과 HTML5의 차이점"></a><strong>HTML4.01, XHTML1.0과 HTML5의 차이점</strong></h3><h4 id="1-Contents-Model의-추가"><a href="#1-Contents-Model의-추가" class="headerlink" title="1. Contents Model의 추가"></a>1. Contents Model의 추가</h4><ul>
-<li>HTML4.01보다 훨씬 더 시멘틱한 웹 구성이 가능해짐<br><img src="/img/til/html_img1.png" alt="Contents-model1.png"></li>
-</ul>
-<h4 id="2-Language의-추가"><a href="#2-Language의-추가" class="headerlink" title="2. Language의 추가"></a>2. Language의 추가</h4><ul>
-<li>HTML4.01에서 HTML5로 개정이 되면서 이전 문서들과 다르게 추가되거나 변경됨<br><img src="/img/til/git_img1.png" alt="Language2.png"><br><img src="/img/til/html_img3.png" alt="Language3.png"><br><img src="/img/til/html_img4.png" alt="Language4.png"><br><img src="/img/til/html_img5.png" alt="Language5.png"><br><img src="/img/til/html_img6.png" alt="Language6.png"><br><img src="/img/til/html_img7.png" alt="Language7.png"><h4 id="3-API"><a href="#3-API" class="headerlink" title="3. API"></a>3. API</h4></li>
-<li>HTML4.01에서 HTML5로 개정이 되면서 새롭게 사용 가능한 API 기능이 추가됨<br><img src="/img/til/html_img8.png" alt="API.png"></li>
-</ul>
-<h3 id="HTML-개발-순서"><a href="#HTML-개발-순서" class="headerlink" title="HTML 개발 순서"></a><strong>HTML 개발 순서</strong></h3><p><strong>1. 구조설계 -&gt; 2. 의미에 맞는 마크업 설정 -&gt; 3. 네이밍 설정</strong>   </p>
-<h3 id="HTML-실습-예제"><a href="#HTML-실습-예제" class="headerlink" title="HTML 실습 예제"></a><strong>HTML 실습 예제</strong></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; &lt;!-- HTML5 선언 --&gt; </span><br><span class="line">&lt;html lang=<span class="string">"ko"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;!--인코딩을 UTF<span class="number">-8</span>로 설정--&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!-- 파비콘 추가 --&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"shortcut icon"</span> href=<span class="string">"./images/common/favicon.ico"</span> type=<span class="string">"image/x-icon"</span>&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;!-- 사용자가 모바일에서 북마크나 바로가기 만들시 표시되는 아이콘 --&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"apple-touch-icon"</span> href=<span class="string">"./images/common/favicon.ico"</span>&gt; </span><br><span class="line">  </span><br><span class="line">  &lt;title&gt;웹카페 - HTML5,CSS3,Accessibility&lt;/title&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;!-- css 추가 : style.css --&gt;</span><br><span class="line">  &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"./css/style.css"</span>&gt; </span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
         
     
 
@@ -564,21 +530,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/01/16/180116-Daily-Summary-CSS/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/01/15/TIL-180115/" id="post_nav-older" class="next-content">
+        <a href="/2018/01/17/TIL-180117/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
