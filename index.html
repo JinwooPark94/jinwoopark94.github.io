@@ -23,6 +23,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
 
 
 
@@ -398,6 +400,15 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;Views
+                        </span>
+                    </li>
+                </a>
             
 
             
@@ -1291,6 +1302,8 @@ It will not impact the appearance and can give developers a lot of support :)
         <div id="copyright">
             Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Jinwoo`s Blog
             
+            <br>
+            총 방문자 수 : <span id="busuanzi_value_site_uv"></span>
         </div>
 
         <!-- Paradox Footer Right Section -->
@@ -1356,6 +1369,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
