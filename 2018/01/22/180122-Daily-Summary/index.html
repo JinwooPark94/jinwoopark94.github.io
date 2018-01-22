@@ -45,7 +45,7 @@
     
     <title>
         
-            Categories: Web Accessibility | 
+            180122-Daily-Summary- HTML dl, dt, dd / CSS background | 
         
         Jinwoo`s Blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Daily-Summary-Fds">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/categories/Web-Accessibility/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/categories/Web-Accessibility/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Categories: Web Accessibility | Jinwoo`s Blog">
+    <meta property="og:title" content="180122-Daily-Summary- HTML dl, dt, dd / CSS background | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Daily-Summary-Fds"> 
 
+    
+        <meta property="article:published_time" content="Mon Jan 22 2018 18:14:45 GMT+0900">
+        <meta property="article:modified_time" content="Mon Jan 22 2018 18:16:17 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/categories/Web-Accessibility/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html",
+    "headline": "180122-Daily-Summary- HTML dl, dt, dd / CSS background",
+    "datePublished": "Mon Jan 22 2018 18:14:45 GMT+0900",
+    "dateModified": "Mon Jan 22 2018 18:16:17 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "About Web"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Daily-Summary-Fds",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,98 +322,309 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML5-dl-dt-dd-태그"><span class="post-toc-text">HTML5 dl, dt, dd 태그</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dl-definition-list-태그"><span class="post-toc-text">dl(definition list) 태그</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dt-태그-definition-term"><span class="post-toc-text">dt 태그(definition term)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dd-태그-definition-description"><span class="post-toc-text">dd 태그(definition description)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS-background-속성"><span class="post-toc-text">CSS background 속성</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-image"><span class="post-toc-text">background-image</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-repeat"><span class="post-toc-text">background-repeat</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-attachment"><span class="post-toc-text">background-attachment</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-size"><span class="post-toc-text">background-size</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-position"><span class="post-toc-text">background-position</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background-color"><span class="post-toc-text">background-color</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#background"><span class="post-toc-text">background</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/17/web-accessibility/">웹 접근성 (인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/17/web-accessibility/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 17, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Web-Accessibility/">Web Accessibility</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                180122-Daily-Summary- HTML dl, dt, dd / CSS background
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Jan 22, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180122-Daily-Summary- HTML dl, dt, dd / CSS background&url=http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180122-Daily-Summary- HTML dl, dt, dd / CSS background&url=http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="HTML5-dl-dt-dd-태그"><a href="#HTML5-dl-dt-dd-태그" class="headerlink" title="HTML5 dl, dt, dd 태그"></a><strong>HTML5 dl, dt, dd 태그</strong></h1><h2 id="dl-definition-list-태그"><a href="#dl-definition-list-태그" class="headerlink" title="dl(definition list) 태그"></a><strong>dl(definition list) 태그</strong></h2><p><strong>용어를 설명하는 목록을 만들때 사용</strong></p>
+<h2 id="dt-태그-definition-term"><a href="#dt-태그-definition-term" class="headerlink" title="dt 태그(definition term)"></a><strong>dt 태그(definition term)</strong></h2><p><strong>용어의 제목을 넣을때 사용</strong></p>
+<h2 id="dd-태그-definition-description"><a href="#dd-태그-definition-description" class="headerlink" title="dd 태그(definition description)"></a><strong>dd 태그(definition description)</strong></h2><p><strong>용어를 설명하는데 사용</strong></p>
+<pre><code>&lt;dl&gt; &lt;!-- 용어 설명하는 목록 --&gt;
+  &lt;dt&gt;용어의 제목&lt;/dt&gt;
+  &lt;dd&gt;용어의 설명&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre><p><strong>중요!!</strong><br><strong>dl 태그 안에 div 태그를 쓰고 싶다면 dt와 dd를 감싸놓은 상태로 사용해야한다. div는 dt, dd은 형제 노드 관계로 dt나 dd 안에 사용할 수 없다.</strong></p>
+<pre><code>&lt;dl&gt; 
+  &lt;div&gt;
+    &lt;dt&gt;test&lt;/dt&gt;
+    &lt;dd&gt;dl&lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+</code></pre><h1 id="CSS-background-속성"><a href="#CSS-background-속성" class="headerlink" title="CSS background 속성"></a><strong>CSS background 속성</strong></h1><h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a><strong>background-image</strong></h2><p><strong>배경에 이미지를 넣는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-image: url(&quot;이미지 경로&quot;);
+}
+</code></pre><h2 id="background-repeat"><a href="#background-repeat" class="headerlink" title="background-repeat"></a><strong>background-repeat</strong></h2><p><strong>배경 이미지를 반복 설정 하는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-repeat: no-repeat / repeat / repeat-x / repeat-y
+}
+</code></pre><ol>
+<li>no-repeat : 반복하지 않음</li>
+<li>repeat : 반복(기본값)</li>
+<li>repeat-x : x축 기준으로 반복</li>
+<li>repeat-y : y축 기준으로 반복</li>
+</ol>
+<h2 id="background-attachment"><a href="#background-attachment" class="headerlink" title="background-attachment"></a><strong>background-attachment</strong></h2><p><strong>배경 이미지를 고정시키거나 스크롤 할때 움직이게 할 수 있는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-attachment: scroll (기본값) / fixed;
+}
+</code></pre><ol>
+<li>scroll : 스크롤바가 움직일때 배경도 움직임(기본값)</li>
+<li>fix : 스크롤바가 움직여도 배경은 고정</li>
+</ol>
+<h2 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a><strong>background-size</strong></h2><p><strong>배경 이미지를 고정시키거나 스크롤 할때 움직이게 할 수 있는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-size: auto (기본값) / 100px 100px;
+}
+</code></pre><ol>
+<li>auto : 기본 크기(기본값)</li>
+<li>00px 00px : 가로 세로 크기</li>
+</ol>
+<h2 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a><strong>background-position</strong></h2><p><strong>배경 이미지의 위치를 조절할 수 있는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-position: left top / 100px 100px;
+}
+</code></pre><ol>
+<li>left top : 왼쪽 상단에 위치</li>
+<li>00px 00px : 가로 세로 위치</li>
+</ol>
+<h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color"></a><strong>background-color</strong></h2><p><strong>배경에 색깔을 넣는 속성</strong></p>
+<pre><code>.css-background-test{
+  background-color: #fff / red / rgb(0,0,0);
+}
+</code></pre><h2 id="background"><a href="#background" class="headerlink" title="background"></a><strong>background</strong></h2><p><strong>배경 관련 속성들을 한꺼번에 표현하는 속성</strong></p>
+<pre><code>.css-background-test{
+  background: url(&apos;./jinwoo.png&apos;) no-repeat left top fixed;
+}
+</code></pre>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://jinwoopark94.github.io/2018/01/22/180122-Daily-Summary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//jinwoopark94.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/19/TIL-180119/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
