@@ -45,7 +45,7 @@
     
     <title>
         
-            Archives: 2018 | 
+            180124-Daily-Summary | 
         
         Jinwoo`s Blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Daily-Summary-Fds">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/archives/2018/page/3/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/archives/2018/page/3/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2018 | Jinwoo`s Blog">
+    <meta property="og:title" content="180124-Daily-Summary | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="Daily-Summary-Fds"> 
 
+    
+        <meta property="article:published_time" content="Wed Jan 24 2018 20:04:12 GMT+0900">
+        <meta property="article:modified_time" content="Wed Jan 24 2018 20:04:30 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/archives/2018/page/3/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html",
+    "headline": "180124-Daily-Summary",
+    "datePublished": "Wed Jan 24 2018 20:04:12 GMT+0900",
+    "dateModified": "Wed Jan 24 2018 20:04:30 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "About Web"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Daily-Summary-Fds",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,286 +322,347 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#IR-Image-Replacement-기법"><span class="post-toc-text">IR(Image Replacement) 기법</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#올바른-IR기법"><span class="post-toc-text">올바른 IR기법</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Text-indent"><span class="post-toc-text">1. Text-indent</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-overflow-hidden"><span class="post-toc-text">2. overflow:hidden</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-z-index를-활용한-설정"><span class="post-toc-text">3. z-index를 활용한 설정</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-높이와-넓이를-0으로-설정"><span class="post-toc-text">4. 높이와 넓이를 0으로 설정</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#잘못-된-IR-기법"><span class="post-toc-text">잘못 된 IR 기법</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-visible-hidden"><span class="post-toc-text">1. visible:hidden</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-display-none"><span class="post-toc-text">2. display:none</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Sprite-기법"><span class="post-toc-text">Sprite 기법</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#장점"><span class="post-toc-text">장점</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#단점"><span class="post-toc-text">단점</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML-strong-em과-b-i-구분"><span class="post-toc-text">HTML strong, em과 b,i 구분</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strong-em과-b-i-공통점"><span class="post-toc-text">strong, em과 b,i 공통점</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strong-em과-b-i-차이점"><span class="post-toc-text">strong, em과 b,i 차이점</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS-box-sizing"><span class="post-toc-text">CSS box-sizing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#content-box"><span class="post-toc-text">content-box</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#padding-box"><span class="post-toc-text">padding-box</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#border-box"><span class="post-toc-text">border-box</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS-vertical-align"><span class="post-toc-text">CSS vertical-align</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-top"><span class="post-toc-text">1. top</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-middle"><span class="post-toc-text">2. middle</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-bottom"><span class="post-toc-text">3. bottom</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/12/180112-Daily-Summary/">180112-Daily - Summary-Socket, Web-browser, API</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/12/180112-Daily-Summary/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/11/180111-Daily-Summary/">180111-Daily-Summary - Network</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/11/180111-Daily-Summary/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 11, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/10/180110-Daily-Summary/">180110-Daily-Summary - Linux, git</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/10/180110-Daily-Summary/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 10, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/09/180109-Daily-Summary/">180109-Daily-Summary - 마크다운, 의사코드, 알고리즘, 자료구조</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/09/180109-Daily-Summary/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="ParkJinWoo's avatar">
-            </div>
-            <div>
-                <strong>ParkJinWoo</strong>
-                <span>Jan 09, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/archives/2018/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                180124-Daily-Summary
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Jan 24, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180124-Daily-Summary&url=http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180124-Daily-Summary&url=http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="IR-Image-Replacement-기법"><a href="#IR-Image-Replacement-기법" class="headerlink" title="IR(Image Replacement) 기법"></a><strong>IR(Image Replacement) 기법</strong></h1><p>이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)</p>
+<h2 id="올바른-IR기법"><a href="#올바른-IR기법" class="headerlink" title="올바른 IR기법"></a><strong>올바른 IR기법</strong></h2><h3 id="1-Text-indent"><a href="#1-Text-indent" class="headerlink" title="1. Text-indent"></a><strong>1. Text-indent</strong></h3><pre><code>&lt;style&gt;
+     .textindent_test{
+    text-indent:-9999px;
+  }
+&lt;/style&gt;
+&lt;span class=&quot;textindent_test&quot;&gt;
+  text-indent IR 기법
+&lt;/span&gt;
+</code></pre><blockquote>
+<p>Text-indent 속성은 적용된 요소가 많을 때 컴퓨터가 웹 페이지 로드 시 위치값을 적용된 개수 만큼 계산해야 하므로 성능에 저하가 올 수 있음.</p>
+</blockquote>
+<h3 id="2-overflow-hidden"><a href="#2-overflow-hidden" class="headerlink" title="2. overflow:hidden"></a><strong>2. overflow:hidden</strong></h3><pre><code>&lt;style&gt;
+     .visible_test{
+    position:absolute;
+    left:9999px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+&lt;/style&gt;
+&lt;div class=&quot;overflow_test&quot;&gt;
+  overflow:hidden IR 기법
+&lt;/div&gt;
+</code></pre><blockquote>
+<p>원리는 text-indent랑 유사함</p>
+</blockquote>
+<h3 id="3-z-index를-활용한-설정"><a href="#3-z-index를-활용한-설정" class="headerlink" title="3. z-index를 활용한 설정"></a><strong>3. z-index를 활용한 설정</strong></h3><ul>
+<li>이미지의 대체 텍스트에 z-index 속성 값을 음의 정수로 부여하는 방식   </li>
+</ul>
+<pre><code>&lt;style&gt;
+     .z-index_test{
+      position:relative;
+    z-index:-1;
+  }
+&lt;/style&gt;
+&lt;div class=&quot;z-index_test&quot;&gt;
+  z-index_test IR 기법
+&lt;/div&gt;
+</code></pre><blockquote>
+<p>CSS가 정상적으로 로드되지 않을 때 숨겨진 텍스트가 화면에 출력</p>
+</blockquote>
+<h3 id="4-높이와-넓이를-0으로-설정"><a href="#4-높이와-넓이를-0으로-설정" class="headerlink" title="4. 높이와 넓이를 0으로 설정"></a><strong>4. 높이와 넓이를 0으로 설정</strong></h3><blockquote>
+<p>대체 텍스트 글자가 들어가는 요소의 높이와 너비를 0으로 지정하는 방법</p>
+</blockquote>
+<h2 id="잘못-된-IR-기법"><a href="#잘못-된-IR-기법" class="headerlink" title="잘못 된 IR 기법"></a><strong>잘못 된 IR 기법</strong></h2><p>스크린 리더가 적용된 요소를 무시하고 모두 출력하여 사용자가 현재 화면에서 어떤 컨텐츠가 표시되는 것인지 구별 불가</p>
+<h3 id="1-visible-hidden"><a href="#1-visible-hidden" class="headerlink" title="1. visible:hidden"></a><strong>1. visible:hidden</strong></h3><pre><code>&lt;style&gt;
+     .visible_test{
+    position:absolute;
+    left:9999px;
+    width:1px;
+    height:1px;
+    visible:hidden;
+  }
+&lt;/style&gt;
+&lt;div class=&quot;visible_test&quot;&gt;
+  visible:hidden IR 기법
+&lt;/div&gt;
+</code></pre><h3 id="2-display-none"><a href="#2-display-none" class="headerlink" title="2. display:none"></a><strong>2. display:none</strong></h3><pre><code>&lt;style&gt;
+     .display_test{
+    display:none;
+  }
+&lt;/style&gt;
+&lt;div class=&quot;display_test&quot;&gt;
+  display:none IR 기법
+&lt;/div&gt;
+</code></pre><hr>
+<h1 id="Sprite-기법"><a href="#Sprite-기법" class="headerlink" title="Sprite 기법"></a><strong>Sprite 기법</strong></h1><p><strong>다량수의 이미지를 하나의 이미지로 묶고 CSS를 이용해 이미지들 마다 position 위치를 이동시켜서 특정 이미지가 보이도록 하는 기법</strong></p>
+<h2 id="장점"><a href="#장점" class="headerlink" title="장점"></a><strong>장점</strong></h2><ul>
+<li>가볍다 : 일정 간격으로 여러가지 이미지들을 하나로 만들기 때문에 이미지 파일을 여러개를 불러올 필요없이 하나의 이미지만 불러오면 됨</li>
+<li>편리함 : 여러개의 이미지가 여러 곳에 분산되어 있으면 이미지를 관리하기가 불편한데 비슷한 분류의 이미지를 동일한 간격으로 배치하기 때문에 쉽게 적용 가능</li>
+</ul>
+<h2 id="단점"><a href="#단점" class="headerlink" title="단점"></a><strong>단점</strong></h2><ul>
+<li>웹페이지에 이미지를 추가/제거할때 Sprite 이미지도 같이 추가/제거를 해야함</li>
+</ul>
+<p><strong>이미지를 올리면 자동으로 position 값을 보여주는 사이트</strong><br><a href="https://spritegen.website-performance.org/" target="_blank" rel="noopener">https://spritegen.website-performance.org/</a></p>
+<hr>
+<h1 id="HTML-strong-em과-b-i-구분"><a href="#HTML-strong-em과-b-i-구분" class="headerlink" title="HTML strong, em과 b,i 구분"></a><strong>HTML strong, em과 b,i 구분</strong></h1><h2 id="strong-em과-b-i-공통점"><a href="#strong-em과-b-i-공통점" class="headerlink" title="strong, em과 b,i 공통점"></a><strong>strong, em과 b,i 공통점</strong></h2><p>브라우저에서 태그 사용시 굵은 글씨와 이탤릭체로 표시함</p>
+<h2 id="strong-em과-b-i-차이점"><a href="#strong-em과-b-i-차이점" class="headerlink" title="strong, em과 b,i 차이점"></a><strong>strong, em과 b,i 차이점</strong></h2><p>strong, em 같은 경우에는 각각 굵은 글씨, 이텔릭체로 표시하는데 음성으로 읽을 경우 볼륨이나 톤을 변경하여 읽어주지만 b,i 같은 경우에는 웹 브라우저에서만 굵은 글씨, 이텔릭체로 표시</p>
+<blockquote>
+<p>결국 b,i 태그는 강조되는 것처럼 보일 수 있지만 실제로 웹에서 음성으로 인식할때 일반 구조로 태그로 인식함</p>
+</blockquote>
+<hr>
+<h1 id="CSS-box-sizing"><a href="#CSS-box-sizing" class="headerlink" title="CSS box-sizing"></a><strong>CSS box-sizing</strong></h1><p>요소의 너비와 높이를 계산하는 데 사용되는 기본적인 CSS model 대체하기 위해 사용</p>
+<pre><code>.box-test{
+     box-sizing: content-box / padding-box / border-box;
+}
+</code></pre><h2 id="content-box"><a href="#content-box" class="headerlink" title="content-box"></a><strong>content-box</strong></h2><p>css에 기본 정의된 defualt 값이며 width나 height를 측정할 때 padding, border, margin을 포함하지 않음</p>
+<h2 id="padding-box"><a href="#padding-box" class="headerlink" title="padding-box"></a><strong>padding-box</strong></h2><p>width나 height를 측정할 때 border, margin을 포함하지 않음</p>
+<h2 id="border-box"><a href="#border-box" class="headerlink" title="border-box"></a><strong>border-box</strong></h2><p>width나 height를 측정할 때 margin을 포함하지 않음</p>
+<hr>
+<h1 id="CSS-vertical-align"><a href="#CSS-vertical-align" class="headerlink" title="CSS vertical-align"></a><strong>CSS vertical-align</strong></h1><p>inline 또는 table-cell box에서 수직 정렬을 지정</p>
+<pre><code>.vertical-test{
+    vertical-align: top / middle / bottom;
+}
+</code></pre><h2 id="1-top"><a href="#1-top" class="headerlink" title="1. top"></a><strong>1. top</strong></h2><p>셀을 top으로 정렬</p>
+<h2 id="2-middle"><a href="#2-middle" class="headerlink" title="2. middle"></a><strong>2. middle</strong></h2><p>셀을 중앙으로 정렬</p>
+<h2 id="3-bottom"><a href="#3-bottom" class="headerlink" title="3. bottom"></a><strong>3. bottom</strong></h2><p>셀을 bottom으로 정렬</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//jinwoopark94.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/01/23/TIL-180123/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
