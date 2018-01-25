@@ -45,7 +45,7 @@
     
     <title>
         
-            CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents) | 
+            180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성] | 
         
         Jinwoo`s Blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",CSS">
+    <meta name="keywords" content=",Daily-Summary-Fds">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jinwoo`s Blog">
-    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/17/css-flex/">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
@@ -232,16 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/17/css-flex/">
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents) | Jinwoo`s Blog">
+    <meta property="og:title" content="180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성] | Jinwoo`s Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="CSS"> 
+    <meta property="og:article:tag" content="Daily-Summary-Fds"> 
 
     
-        <meta property="article:published_time" content="Wed Jan 17 2018 20:33:49 GMT+0900">
-        <meta property="article:modified_time" content="Wed Jan 17 2018 21:28:58 GMT+0900">
+        <meta property="article:published_time" content="Thu Jan 25 2018 22:32:04 GMT+0900">
+        <meta property="article:modified_time" content="Thu Jan 25 2018 22:34:33 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" />
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/17/css-flex/index.html",
-    "headline": "CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)",
-    "datePublished": "Wed Jan 17 2018 20:33:49 GMT+0900",
-    "dateModified": "Wed Jan 17 2018 21:28:58 GMT+0900",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html",
+    "headline": "180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성]",
+    "datePublished": "Thu Jan 25 2018 22:32:04 GMT+0900",
+    "dateModified": "Thu Jan 25 2018 22:34:33 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "ParkJinWoo",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",CSS",
+    "keywords": ",Daily-Summary-Fds",
     "description": "",
 }
 </script>
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Flexbox"><span class="post-toc-text">Flexbox</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Flex-Container-부모"><span class="post-toc-text">Flex Container - 부모</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#display"><span class="post-toc-text">display</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex-direction"><span class="post-toc-text">flex-direction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex-wrap"><span class="post-toc-text">flex-wrap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#justify-content"><span class="post-toc-text">justify-content</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#align-items"><span class="post-toc-text">align-items</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#align-content"><span class="post-toc-text">align-content</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#자료-beautifulcss님의-블로그-내용-참고"><span class="post-toc-text">자료 : beautifulcss님의 블로그 내용 참고</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML-blockquote와-q-태그"><span class="post-toc-text">HTML - blockquote와 q 태그</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#blockquote-태그"><span class="post-toc-text">blockquote 태그</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#q-태그"><span class="post-toc-text">q 태그</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML-address-태그"><span class="post-toc-text">HTML - address 태그</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS-counter-속성"><span class="post-toc-text">CSS - counter 속성</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Grid-Layout"><span class="post-toc-text">Grid Layout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Grid-Layout-구현하는-방식"><span class="post-toc-text">Grid Layout 구현하는 방식</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS-grid-속성"><span class="post-toc-text">CSS - grid 속성</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#grid-container-설정"><span class="post-toc-text">grid container 설정</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#grid-열과-행-크기-설정"><span class="post-toc-text">grid 열과 행 크기 설정</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#grid-반복되는-구간-설정"><span class="post-toc-text">grid 반복되는 구간 설정</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#grid-라인을-이용한-아이템-설정"><span class="post-toc-text">grid 라인을 이용한 아이템 설정</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -383,7 +383,7 @@
         
     
             <p class="article-headline-p">
-                CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)
+                180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성]
             </p>
         </div>
 
@@ -402,7 +402,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ParkJinWoo</strong>
-        <span>Jan 17, 2018</span>
+        <span>Jan 25, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -426,7 +426,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/CSS/">CSS</a>
+        <a class="post_tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
     </ul>
     
 
@@ -445,7 +445,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)&url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성]&url=http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -454,7 +454,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CSS - Flex (display, flex-wrap, justify-content, align-items, align-contents)&url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html&via=ParkJinWoo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180125-Daily-Summary - [HTML - blockquote와 q 태그, address 태그], CSS - [counter 속성, grid 속성]&url=http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html&via=ParkJinWoo" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -463,7 +463,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -472,7 +472,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/17/css-flex/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -497,60 +497,153 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a><strong>Flexbox</strong></h1><ul>
-<li>flex의 유연성을 뜻하며 요소들을 자유자제로 위치시키는 뜻입니다.<blockquote>
-<p>새롭게 CSS3 명세에 반영된 레이아웃 모듈이며, 요소들이 수용된 공간을 어떻게 효과적으로 채워나갈지에 대해 고민하다가 만들어진 새로운 레이아웃 방식 </p>
+        <h1 id="HTML-blockquote와-q-태그"><a href="#HTML-blockquote와-q-태그" class="headerlink" title="HTML - blockquote와 q 태그"></a><strong>HTML - blockquote와 q 태그</strong></h1><p>인용문을 표현하기 위해 사용하는 태그</p>
+<h2 id="blockquote-태그"><a href="#blockquote-태그" class="headerlink" title="blockquote 태그"></a><strong>blockquote 태그</strong></h2><ul>
+<li>주로 긴 인용문에 사용되며 출처 표시</li>
+<li><p>block 형식</p>
+<pre><code>&lt;blockquote cite=&quot;(출처 url)&quot;&gt;
+  &lt;p&gt;blockquote 테스트&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre></li>
+</ul>
+<blockquote>
+<p>cite 속성을 이용하여 출처 표시 가능</p>
+</blockquote>
+<h2 id="q-태그"><a href="#q-태그" class="headerlink" title="q 태그"></a><strong>q 태그</strong></h2><ul>
+<li>주로 짧은 인용문에 사용되며 출처 표시</li>
+<li>inline 형식</li>
+<li>자동으로 태그안에 before, after content로 “ “ 큰 따옴표가 넣어짐</li>
+</ul>
+<pre><code>&lt;q cite=&quot;(출처 url)&quot;&gt;
+  &lt;p&gt;q 테스트&lt;/p&gt;
+&lt;/q&gt;
+</code></pre><blockquote>
+<p>cite 속성을 이용하여 출처 표시 가능</p>
+</blockquote>
+<hr>
+<h1 id="HTML-address-태그"><a href="#HTML-address-태그" class="headerlink" title="HTML - address 태그"></a><strong>HTML - address 태그</strong></h1><ul>
+<li>주소, 연락처, 메일, 저작권 등 정보를 위한 태그</li>
+<li><p>address안에 글꼴은 defalut 값으로 이탤릭체</p>
+<pre><code>&lt;address&gt;
+  &lt;span&gt;서울시 서초구&lt;/span&gt;
+  &lt;span&gt;전화: &lt;a href=&quot;tel:02-1234-5678&quot;&gt;02-1234-5678&lt;/a&gt;&lt;/span&gt;
+  &lt;span&gt;E-MAIL: &lt;a href=&quot;mailto:wlsdntus2@naver.com&quot;&gt;wlsdntus2@naver.com&lt;/a&gt;&lt;/span&gt;
+  &lt;span&gt;Copyright by JinwooPark&lt;/span&gt;
+&lt;/address&gt;
+</code></pre></li>
+</ul>
+<blockquote>
+<p><strong>위의 a 태그 주소에서 tel과 mailto를 사용하면 모바일 환경에서 클릭시 자동으로 전화를 바로 거는 기능이나 메일 주소로 바로 연결하여 메일 전송이 가능</strong></p>
+</blockquote>
+<hr>
+<h1 id="CSS-counter-속성"><a href="#CSS-counter-속성" class="headerlink" title="CSS - counter 속성"></a><strong>CSS - counter 속성</strong></h1><p>CSS를 기반하여 어떠한 값을 증가시키거나 감소시킬때 사용하는 속성</p>
+<pre><code>.counter-test li{
+    counter-reset: number; /* number를 초기화시킴*/
+    counter-increment: number; /* number에 1씩 증가시킴*/
+}
+
+.counter-test li::before{
+    content: counter(number); /* 값을 1씩 증가시켜서 표시*/
+}
+</code></pre><ul>
+<li>counter-reset : 속성값 초기화 (css counter를 사용할려면 초기화가 필요함)</li>
+<li>counter-increment : 값을 증가시킴</li>
+<li>counter : counter는 counter(이름)과 counters(이름, 스타일)을 사용할 수 있음<blockquote>
+<p><strong>counter나 counters 함수를 사용할때에는 기본 defalut 값으로 decimal으로 설정되어 있음</strong> </p>
 </blockquote>
 </li>
 </ul>
-<h2 id="Flex-Container-부모"><a href="#Flex-Container-부모" class="headerlink" title="Flex Container - 부모"></a><strong>Flex Container - 부모</strong></h2><h2 id="display"><a href="#display" class="headerlink" title="display"></a><strong>display</strong></h2><p>그릇에 해당하는 부모 요소 (display: flex 혹은 display: inline-flex로 선언)</p>
-<pre><code>.flex-container { display: flex }</code></pre>   
+<hr>
+<h1 id="Grid-Layout"><a href="#Grid-Layout" class="headerlink" title="Grid Layout"></a><strong>Grid Layout</strong></h1><p>페이지를 구조적으로 나누어 다양한 레이아웃을 구현하는 것</p>
+<h2 id="Grid-Layout-구현하는-방식"><a href="#Grid-Layout-구현하는-방식" class="headerlink" title="Grid Layout 구현하는 방식"></a><strong>Grid Layout 구현하는 방식</strong></h2><ul>
+<li>table 방식</li>
+<li>float 방식</li>
+<li>flex 방식</li>
+<li>grid 방식</li>
+</ul>
+<hr>
+<h1 id="CSS-grid-속성"><a href="#CSS-grid-속성" class="headerlink" title="CSS - grid 속성"></a><strong>CSS - grid 속성</strong></h1><p>2차원 grid 기반이며 열과 행의 라인을 기준으로 gird 설정을 하여 layout 구현</p>
+<h2 id="grid-container-설정"><a href="#grid-container-설정" class="headerlink" title="grid container 설정"></a><strong>grid container 설정</strong></h2><p>grid container를 설정을 하면 그 아래 있는 모든 자식 요소는 그리드 아이템   </p>
+<blockquote>
+<p>display: grid / inline-grid</p>
+</blockquote>
+<pre><code>&lt;div class=&quot;gird-test-div&quot;&gt;
+  &lt;div&gt;영역1&lt;/div&gt;
+  &lt;div&gt;영역2&lt;/div&gt;
+  &lt;div&gt;영역3&lt;/div&gt;
+  &lt;div&gt;영역4&lt;/div&gt;
+  &lt;div&gt;영역5&lt;/div&gt;
+  &lt;div&gt;영역6&lt;/div&gt;
+  &lt;div&gt;영역7&lt;/div&gt;
+  &lt;div&gt;영역8&lt;/div&gt;
+  &lt;div&gt;영역9&lt;/div&gt;
+&lt;/div&gt;
 
-<h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a><strong>flex-direction</strong></h2><p> 컨테이너 안에 위치하는 자식 요소에 어떤 방향성을 줄 것인지 결정   </p>
-<p> <img src="/img/til/flex_img1.png" alt="flex_img1.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>  }</code></pre></p>
-<ul>
-<li>row : 기본 값. 아이템이 수평방향(행)으로 흐르며, 방향성은 좌에서 우</li>
-<li>row-reverse : 아이템이 수평방향(행)으로 흐르며, 방향성은 우에서 좌</li>
-<li>column : 아이템이 수직방향(열)으로 흐르며, 방향성은 상에서 하</li>
-<li>column-reverse : 아이템이 수직방향(행)으로 흐르며, 방향성은 하에서 상   </li>
+.gird-test-div{
+  display: grid / inline-grid;
+}
+</code></pre><h2 id="grid-열과-행-크기-설정"><a href="#grid-열과-행-크기-설정" class="headerlink" title="grid 열과 행 크기 설정"></a><strong>grid 열과 행 크기 설정</strong></h2><p>grid의 열과 행의 크기를 각각 설정 가능   </p>
+<blockquote>
+<p>grid-template-columns, grid-template-rows</p>
+</blockquote>
+<pre><code>&lt;div class=&quot;gird-test-div&quot;&gt;
+  &lt;div&gt;영역1&lt;/div&gt;
+  &lt;div&gt;영역2&lt;/div&gt;
+  &lt;div&gt;영역3&lt;/div&gt;
+  &lt;div&gt;영역4&lt;/div&gt;
+  &lt;div&gt;영역5&lt;/div&gt;
+  &lt;div&gt;영역6&lt;/div&gt;
+  &lt;div&gt;영역7&lt;/div&gt;
+  &lt;div&gt;영역8&lt;/div&gt;
+  &lt;div&gt;영역9&lt;/div&gt;
+&lt;/div&gt;
+
+.gird-test-div{
+  display: grid;
+  /* 200px 200px로 나누고 나머지 공간을 하나의 column으로 나눔*/
+  grid-template-columns: 200px 200px 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
+}
+</code></pre><ul>
+<li><p>fr란? : 컨테이너에 남아 있는 공간의 일정 비율을 나타냄   </p>
+<blockquote>
+<p>만약 grid-template-columns값을 1fr 1fr 1fr로 바꾼 후 실행하면 컨테이너 열 크기에 맞게 3개의 크기가 같은 공간을 생성 </p>
+</blockquote>
+</li>
 </ul>
-<h2 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a><strong>flex-wrap</strong></h2><p>줄 넘김 처리</p>
-<p> <img src="/img/til/flex_img2.png" alt="flex_img2.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: nowrap;<br>  }</code></pre>   </p>
-<ul>
-<li>nowrap : 기본 값. 아이템을 한 줄에 모두 표현</li>
-<li>wrap : 아이템이 적정 길이 이상으로 길다면, 복수의 줄에 걸쳐 표현</li>
-<li>wrap-reverse : wrap과 같지만, 방향성이 반전되어 표현. 한마디로, 역방향으로 줄 넘김이 발생   </li>
-</ul>
-<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a><strong>justify-content</strong></h2><p>수평 방향으로 정렬하는 방식</p>
-<p> <img src="/img/til/flex_img4.png" alt="flex_img4.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: nowrap;<br>   justify-content: flex-start;<br>  }</code></pre>   </p>
-<ul>
-<li>flex-start : 아이템을 한 덩어리로 묶어, 수평방향의 시작 점에 위치</li>
-<li>flex-enter : 아이템을 한 덩어리로 묶어, 수평방향의 끝 점에 위치</li>
-<li>center : 아이템을 한 덩어리로 묶어, 수평방향의 중앙에 위치</li>
-<li>space-between : 아이템을 컨테이너의 양쪽 끝에 맞춰 정렬</li>
-<li>space-around : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬   </li>
-</ul>
-<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a><strong>align-items</strong></h2><p>수직방향으로 정렬하는 방식</p>
-<p> <img src="/img/til/flex_img3.png" alt="flex_img3.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-flow: row nowrap;<br>   align-items:flex-start;<br>  }</code></pre>   </p>
-<ul>
-<li>flex-start : 아이템을 한 덩어리로 묶어, 수직방향의 시작 점에 위치</li>
-<li>flex-enter : 아이템을 한 덩어리로 묶어, 수직방향의 끝 점에 위치</li>
-<li>center : 아이템을 한 덩어리로 묶어, 수직방향의 중앙에 위치</li>
-<li>baseline : 아이템을 컨테이너의 baseline에 맞춰 정렬</li>
-<li>stretch : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬   </li>
-</ul>
-<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a><strong>align-content</strong></h2><p>한 줄을 넘기는 아이템들을 수직방향으로 정렬 (“align-itm”과 “justify-content” 속성을 모두 가지고 있음)</p>
-<p> <img src="/img/til/flex_img5.png" alt="flex_img5.png"><br> <pre><code>.flex-container {<br>   display: flex;<br>   flex-flow: row nowrap;<br>   align-items:flex-start;<br>  }</code></pre>   </p>
-<ul>
-<li>flex-start : 아이템을 한 덩어리로 묶어, 수직방향의 시작 점에 위치</li>
-<li>flex-enter : 아이템을 한 덩어리로 묶어, 수직방향의 끝 점에 위치</li>
-<li>center : 아이템을 한 덩어리로 묶어, 수직방향의 중앙에 위치</li>
-<li>baseline : 아이템을 컨테이너의 baseline에 맞춰 정렬</li>
-<li>space-between : 컨테이너의 수직방향 기준으로 아이템 사이의 줄(행)을 일정한 간격을 두고 정렬</li>
-<li>space-around : 컨테이너의 양쪽 끝을 기준으로 각 아이템 줄(행)의 전, 후에 일정한 간격의 공간을 만들어 정렬</li>
-<li>stretch : 컨테이너의 양쪽 끝을 기준으로 각 아이템의 전, 후에 일정한 간격의 공간을 만들어 정렬     </li>
-</ul>
-<h3 id="자료-beautifulcss님의-블로그-내용-참고"><a href="#자료-beautifulcss님의-블로그-내용-참고" class="headerlink" title="자료 : beautifulcss님의 블로그 내용 참고"></a>자료 : beautifulcss님의 블로그 내용 참고</h3>
+<h2 id="grid-반복되는-구간-설정"><a href="#grid-반복되는-구간-설정" class="headerlink" title="grid 반복되는 구간 설정"></a><strong>grid 반복되는 구간 설정</strong></h2><p>grid 설정 중 repeat()를 통해 반복되는 부분을 쉽게 처리 가능</p>
+<blockquote>
+<p>repeat()</p>
+</blockquote>
+<pre><code>.gird-test-div{
+  display: grid;
+
+  /* repeat 적용 전*/
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* repeat 적용 후*/
+  grid-template-columns: repeat(3, 1fr);
+}
+</code></pre><h2 id="grid-라인을-이용한-아이템-설정"><a href="#grid-라인을-이용한-아이템-설정" class="headerlink" title="grid 라인을 이용한 아이템 설정"></a><strong>grid 라인을 이용한 아이템 설정</strong></h2><p>grid에서 라인을 기준으로 아이템을 설정하는데 라인은 아래와 그림과 같이 시작하며 명령어는 아래와 같음</p>
+<blockquote>
+<p>grid-column-start, grid-column-end, grid-row-start, grid-row-end</p>
+</blockquote>
+<p><img src="./grid_lines.png" alt="grid line을 나타낸 grid 그림 출처:https://www.w3schools.com/css/css_grid.asp"></p>
+<pre><code>.gird-test-div{
+    grid-column-start: 1;    /* 열 Line 1부터 시작 */
+    grid-column-end: 4;    /*열 Line 4까지 */
+    grid-row-start: 1;    /* 행 Line 1부터 시작*/
+    grid-row-end: 3;     /* 행 Line 3까지*/
+}
+</code></pre><blockquote>
+<p><strong>간편하게 아래와 같이 합쳐서 사용 가능하다. (※ 처음 사용시 헷갈림 주의)</strong></p>
+</blockquote>
+<pre><code>.gird-test-div{
+    /* row-start / column-start / row-end / column-end */
+    grid-area : 1 / 1 / 3 / 4      
+}
+</code></pre><p>참고 : w3schools -&gt; <a href="https://www.w3schools.com/css/css_grid_item.asp" target="_blank" rel="noopener">https://www.w3schools.com/css/css_grid_item.asp</a></p>
+
         
     
 
@@ -568,8 +661,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://jinwoopark94.github.io/2018/01/17/css-flex/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://jinwoopark94.github.io/2018/01/17/css-flex/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://jinwoopark94.github.io/2018/01/25/180125-Daily-Summary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -599,21 +692,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/01/17/TIL-180117/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/01/17/180117-Daily-Summary/" id="post_nav-older" class="next-content">
+        <a href="/2018/01/24/git-branch/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
