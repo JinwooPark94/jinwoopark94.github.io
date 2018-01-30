@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Tue Jan 30 2018 20:55:08 GMT+0900">
-        <meta property="article:modified_time" content="Tue Jan 30 2018 20:59:33 GMT+0900">
+        <meta property="article:modified_time" content="Tue Jan 30 2018 22:35:07 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "http://jinwoopark94.github.io/2018/01/30/180130-Daily-Summary/index.html",
     "headline": "180130-Daily-Summary - Javascript - 변수, 자료형, 객체형, 표기법, var의 문제점, 삼항 연산자",
     "datePublished": "Tue Jan 30 2018 20:55:08 GMT+0900",
-    "dateModified": "Tue Jan 30 2018 20:59:33 GMT+0900",
+    "dateModified": "Tue Jan 30 2018 22:35:07 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "ParkJinWoo",
@@ -351,7 +351,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#변수-Variable"><span class="post-toc-text">변수 (Variable)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#자료형-Data-Type"><span class="post-toc-text">자료형(Data Type)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value"><span class="post-toc-text">기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Boolean-true-or-false"><span class="post-toc-text">Boolean : true or false</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#null-변수가-가르키고-있는-참조를-무효화함-null은-“Null”-”NULL”과-다름"><span class="post-toc-text">null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,”NULL”과 다름)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undifined-아직-값이-할당되지-않아서-초기화-해놓은-곳"><span class="post-toc-text">undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Number-정수와-실수-infinite-NaN-Not-a-Number"><span class="post-toc-text">Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#String-문자열-유사배열"><span class="post-toc-text">String : 문자열 (유사배열)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Symbol-객체-key-value-명이-중복되지않은-값을-만드는-것-ECMAScript-6에서-추가"><span class="post-toc-text">Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference"><span class="post-toc-text">객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-배열-함수-정규표현식-등-기본자료형을-제외한-나머지들을-포함"><span class="post-toc-text">Object : 배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본-자료형과-객체형의-차이점"><span class="post-toc-text">기본 자료형과 객체형의 차이점</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#표기법"><span class="post-toc-text">표기법</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#메모리"><span class="post-toc-text">메모리</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#var-키워드로-선언된-변수의-문제점"><span class="post-toc-text">var 키워드로 선언된 변수의 문제점</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#중복-선언"><span class="post-toc-text">중복 선언</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#var-키워드-생략-가능"><span class="post-toc-text">var 키워드 생략 가능</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#동적-타이핑"><span class="post-toc-text">동적 타이핑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#변수-호이스팅-Variable-Hoisting"><span class="post-toc-text">변수 호이스팅(Variable Hoisting)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Function-level-scope"><span class="post-toc-text">Function-level scope</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#블록-구문"><span class="post-toc-text">블록 구문</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#비교-연산자"><span class="post-toc-text">비교 연산자</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#삼항-연산자"><span class="post-toc-text">삼항 연산자</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#단축-평가"><span class="post-toc-text">단축 평가</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#"><span class="post-toc-text">!!</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#변수-Variable"><span class="post-toc-text">변수 (Variable)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#자료형-Data-Type"><span class="post-toc-text">자료형(Data Type)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value"><span class="post-toc-text">기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference"><span class="post-toc-text">객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본-자료형과-객체형의-차이점"><span class="post-toc-text">기본 자료형과 객체형의 차이점</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#표기법"><span class="post-toc-text">표기법</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#메모리"><span class="post-toc-text">메모리</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#var-키워드로-선언된-변수의-문제점"><span class="post-toc-text">var 키워드로 선언된 변수의 문제점</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#중복-선언"><span class="post-toc-text">중복 선언</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#var-키워드-생략-가능"><span class="post-toc-text">var 키워드 생략 가능</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#동적-타이핑"><span class="post-toc-text">동적 타이핑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#변수-호이스팅-Variable-Hoisting"><span class="post-toc-text">변수 호이스팅(Variable Hoisting)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Function-level-scope"><span class="post-toc-text">Function-level scope</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#블록-구문"><span class="post-toc-text">블록 구문</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#비교-연산자"><span class="post-toc-text">비교 연산자</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#삼항-연산자"><span class="post-toc-text">삼항 연산자</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#단축-평가"><span class="post-toc-text">단축 평가</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-text">!!</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -507,7 +507,8 @@
 <hr>
 <h1 id="자료형-Data-Type"><a href="#자료형-Data-Type" class="headerlink" title="자료형(Data Type)"></a><strong>자료형(Data Type)</strong></h1><p>문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이터를 식별하는 분류</p>
 <blockquote>
-<p>자료형이 있는 이유 : 메모리에 할당하는 크기를 정하기 위해</p>
+<p>자료형이 있는 이유 : 메모리에 할당하는 크기를 정하기 위해   </p>
+</blockquote>
 <h2 id="기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value"><a href="#기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value" class="headerlink" title="기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)"></a><strong>기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)</strong></h2><ul>
 <li>Boolean</li>
 <li>null</li>
@@ -516,8 +517,8 @@
 <li>String</li>
 <li>Symbol </li>
 </ul>
-</blockquote>
-<h3 id="Boolean-true-or-false"><a href="#Boolean-true-or-false" class="headerlink" title="Boolean : true or false"></a><strong>Boolean : true or false</strong></h3><h3 id="null-변수가-가르키고-있는-참조를-무효화함-null은-“Null”-”NULL”과-다름"><a href="#null-변수가-가르키고-있는-참조를-무효화함-null은-“Null”-”NULL”과-다름" class="headerlink" title="null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,”NULL”과 다름)"></a><strong>null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,”NULL”과 다름)</strong></h3><h3 id="undifined-아직-값이-할당되지-않아서-초기화-해놓은-곳"><a href="#undifined-아직-값이-할당되지-않아서-초기화-해놓은-곳" class="headerlink" title="undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳"></a><strong>undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳</strong></h3><h3 id="Number-정수와-실수-infinite-NaN-Not-a-Number"><a href="#Number-정수와-실수-infinite-NaN-Not-a-Number" class="headerlink" title="Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)"></a><strong>Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)</strong></h3><h3 id="String-문자열-유사배열"><a href="#String-문자열-유사배열" class="headerlink" title="String : 문자열 (유사배열)"></a><strong>String : 문자열 (유사배열)</strong></h3><h3 id="Symbol-객체-key-value-명이-중복되지않은-값을-만드는-것-ECMAScript-6에서-추가"><a href="#Symbol-객체-key-value-명이-중복되지않은-값을-만드는-것-ECMAScript-6에서-추가" class="headerlink" title="Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)"></a><strong>Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)</strong></h3><p>예)</p>
+<p><strong>Boolean : true or false</strong><br><strong>null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,”NULL”과 다름)</strong><br><strong>undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳</strong><br><strong>Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)</strong><br><strong>String : 문자열 (유사배열)</strong><br><strong>Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)</strong></p>
+<p>예)</p>
 <pre><code>var num;  // 1
 num = 4;  // 2
 </code></pre><ol>
@@ -530,7 +531,8 @@ num = 4;  // 2
 <h2 id="객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference"><a href="#객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference" class="headerlink" title="객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)"></a><strong>객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)</strong></h2><ul>
 <li>Object</li>
 </ul>
-<h3 id="Object-배열-함수-정규표현식-등-기본자료형을-제외한-나머지들을-포함"><a href="#Object-배열-함수-정규표현식-등-기본자료형을-제외한-나머지들을-포함" class="headerlink" title="Object : 배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함"></a><strong>Object : 배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함</strong></h3><p>예) </p>
+<p><strong>Object : 배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함</strong></p>
+<p>예) </p>
 <pre><code>var user1 = {
   name: &apos;Park&apos;,
   number: &apos;13&apos;
@@ -574,15 +576,14 @@ console.log(user2.name); // 4
 </ol>
 <hr>
 <h1 id="var-키워드로-선언된-변수의-문제점"><a href="#var-키워드로-선언된-변수의-문제점" class="headerlink" title="var 키워드로 선언된 변수의 문제점"></a><strong>var 키워드로 선언된 변수의 문제점</strong></h1><h2 id="중복-선언"><a href="#중복-선언" class="headerlink" title="중복 선언"></a><strong>중복 선언</strong></h2><ul>
-<li><p>변수는 중복 선언이 가능   </p>
+<li>변수는 중복 선언이 가능   </li>
+</ul>
 <pre><code>var score = 1;
 console.log(score); // 1
 
 var score = 100;
 console.log(score); // 100
-</code></pre></li>
-</ul>
-<h2 id="var-키워드-생략-가능"><a href="#var-키워드-생략-가능" class="headerlink" title="var 키워드 생략 가능"></a><strong>var 키워드 생략 가능</strong></h2><ul>
+</code></pre><h2 id="var-키워드-생략-가능"><a href="#var-키워드-생략-가능" class="headerlink" title="var 키워드 생략 가능"></a><strong>var 키워드 생략 가능</strong></h2><ul>
 <li>변수 선언시 var 키워드 생략 가능<blockquote>
 <p>변수는 전역 변수가 됨</p>
 </blockquote>
@@ -598,16 +599,16 @@ console.log(score); // 100
 <li>전역 변수의 남발</li>
 </ul>
 <hr>
-<h1 id="블록-구문"><a href="#블록-구문" class="headerlink" title="블록 구문"></a><strong>블록 구문</strong></h1><p>함수안에서의 블록 구문에만 지역변수를 인정</p>
-<h1 id="비교-연산자"><a href="#비교-연산자" class="headerlink" title="비교 연산자"></a><strong>비교 연산자</strong></h1><p>(==, ===)(!=, !==)의 차이 : “==, !=”는 값만 확인하고 “===, !==”는 값과 타입을 확인함</p>
-<h1 id="삼항-연산자"><a href="#삼항-연산자" class="headerlink" title="삼항 연산자"></a><strong>삼항 연산자</strong></h1><p>조건 ? 조건이 ture일때 반환할 값 : 조건이 false일때 반환할 값 </p>
+<h2 id="블록-구문"><a href="#블록-구문" class="headerlink" title="블록 구문"></a><strong>블록 구문</strong></h2><p>함수안에서의 블록 구문에만 지역변수를 인정</p>
+<h2 id="비교-연산자"><a href="#비교-연산자" class="headerlink" title="비교 연산자"></a><strong>비교 연산자</strong></h2><p>(==, ===)(!=, !==)의 차이 : “==, !=”는 값만 확인하고 “===, !==”는 값과 타입을 확인함</p>
+<h2 id="삼항-연산자"><a href="#삼항-연산자" class="headerlink" title="삼항 연산자"></a><strong>삼항 연산자</strong></h2><p>조건 ? 조건이 ture일때 반환할 값 : 조건이 false일때 반환할 값 </p>
 <blockquote>
 <p>2개 이상의 조건이 들어갈시 가독성 때문에 if문을 쓰는것이 좋음</p>
 </blockquote>
 <pre><code>var condition = true;
 var result = condition ? &apos;true&apos; : &apos;false&apos;;
 console.log(result); // &apos;true&apos;
-</code></pre><h1 id="단축-평가"><a href="#단축-평가" class="headerlink" title="단축 평가"></a><strong>단축 평가</strong></h1><pre><code>function foo (str) {
+</code></pre><h2 id="단축-평가"><a href="#단축-평가" class="headerlink" title="단축 평가"></a><strong>단축 평가</strong></h2><pre><code>function foo (str) {
   str = str || &apos;&apos;;
   // do somethig with str
   console.log(str.length);
@@ -615,7 +616,7 @@ console.log(result); // &apos;true&apos;
 </code></pre><blockquote>
 <p>매개변수 초기화</p>
 </blockquote>
-<h1 id=""><a href="#" class="headerlink" title="!!"></a><strong>!!</strong></h1><p>피연산자를 boolean값으로 변환하는 것</p>
+<h2 id=""><a href="#" class="headerlink" title="!!"></a><strong>!!</strong></h2><p>피연산자를 boolean값으로 변환하는 것</p>
 
         
     
@@ -664,6 +665,14 @@ console.log(result); // &apos;true&apos;
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/01/30/TIL-180130/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -771,7 +780,7 @@ console.log(result); // &apos;true&apos;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Algorism/">Algorism<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/TIL/">TIL<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web-Accessibility/">Web Accessibility<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/Algorism/">Algorism<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/TIL/">TIL<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web-Accessibility/">Web Accessibility<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
