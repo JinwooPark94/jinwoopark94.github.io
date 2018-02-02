@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this | 
+        
+        Jinwoo`s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="웹 관련 지식 공유">
+    <meta name="keywords" content=",Daily-Summary-Fds">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?yPmNjQckTImqie9raQO7Zw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Jinwoo`s Blog">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this | Jinwoo`s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="웹 관련 지식 공유">
+    <meta property="og:article:tag" content="Daily-Summary-Fds"> 
+
+    
+        <meta property="article:published_time" content="Fri Feb 02 2018 23:48:33 GMT+0900">
+        <meta property="article:modified_time" content="Fri Feb 02 2018 23:58:19 GMT+0900">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google site verification -->
+    <meta name="google-site-verification" content="Nuhm250QCJRidwnqPf6806W6-QquNIKBYDTeSEWzIso" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html",
+    "headline": "180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this",
+    "datePublished": "Fri Feb 02 2018 23:48:33 GMT+0900",
+    "dateModified": "Fri Feb 02 2018 23:58:19 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Jinwoo`s Blog"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Daily-Summary-Fds",
+    "description": "웹 관련 지식 공유",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#함수-객체의-속성-property"><span class="post-toc-text">함수 객체의 속성(property)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#arguments-속성-property"><span class="post-toc-text">arguments 속성(property)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#caller-속성-property"><span class="post-toc-text">caller 속성(property)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#length-속성-property"><span class="post-toc-text">length 속성(property)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#name-속성-property"><span class="post-toc-text">name 속성(property)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#proto-속성-property"><span class="post-toc-text">__proto__ 속성(property)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#prototype-속성-property"><span class="post-toc-text">prototype 속성(property)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#함수의-다양한-형태"><span class="post-toc-text">함수의 다양한 형태</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#즉시호출함수표현식-IIFE-Immediately-Invoke-Function-Expression"><span class="post-toc-text">즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#내부-함수-Inner-function"><span class="post-toc-text">내부 함수 (Inner function)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#콜백-함수-Callback-function"><span class="post-toc-text">콜백 함수 (Callback function)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#프로토타입-객체"><span class="post-toc-text">프로토타입 객체</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#constructor-프로퍼티"><span class="post-toc-text">constructor 프로퍼티</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Prototype-chain-프로토타입-체인"><span class="post-toc-text">Prototype chain(프로토타입 체인)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#리터널-방식-객체의-Prototype-체인"><span class="post-toc-text">리터널 방식 객체의 Prototype 체인</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#생성자-방식-객체의-Prototype-체인"><span class="post-toc-text">생성자 방식 객체의 Prototype 체인</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Prototype-객체의-확장-및-변경"><span class="post-toc-text">Prototype 객체의 확장 및 변경</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#기본자료형-Primitive-data-type-의-확장"><span class="post-toc-text">기본자료형(Primitive data type)의 확장</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Scope-유효범위"><span class="post-toc-text">Scope (유효범위)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Scope의-종류"><span class="post-toc-text">Scope의 종류</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#생존기간-life-cycle-조절"><span class="post-toc-text">생존기간(life-cycle) 조절</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#this"><span class="post-toc-text">this</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#특징"><span class="post-toc-text">특징</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#함수-호출-패턴에-따른-this의-참조값"><span class="post-toc-text">함수 호출 패턴에 따른 this의 참조값</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-함수-호출-패턴"><span class="post-toc-text">1. 함수 호출 패턴</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-메소드-호출-패턴"><span class="post-toc-text">2. 메소드 호출 패턴</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-생성자-호출-패턴"><span class="post-toc-text">3. 생성자 호출 패턴</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#동작-방식"><span class="post-toc-text">동작 방식</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#참고-http-poiemaweb-com"><span class="post-toc-text">참고 : http://poiemaweb.com</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Feb 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this&url=http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this&url=http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="함수-객체의-속성-property"><a href="#함수-객체의-속성-property" class="headerlink" title="함수 객체의 속성(property)"></a>함수 객체의 속성(property)</h1><h2 id="arguments-속성-property"><a href="#arguments-속성-property" class="headerlink" title="arguments 속성(property)"></a>arguments 속성(property)</h2><p>함수 호출시 함수 값에 arguments를 자동 생성하고 인수들의 정보를 담고 있는 순회가능한 유사배열 객체</p>
+<blockquote>
+<p>유사배열 객체(array-like object) : 배열처럼 움직이는 객체</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 방어코드 넣기</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">multiply();        <span class="comment">// &#123;&#125;</span></span><br><span class="line">multiply(<span class="number">1</span>);       <span class="comment">// &#123; '0': 1 &#125;</span></span><br><span class="line">multiply(<span class="number">1</span>, <span class="number">2</span>);    <span class="comment">// &#123; '0': 1, '1': 2 &#125;</span></span><br><span class="line">multiply(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// &#123; '0': 1, '1': 2, '2': 3 &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="caller-속성-property"><a href="#caller-속성-property" class="headerlink" title="caller 속성(property)"></a>caller 속성(property)</h2><p>자신이 호출한 함수를 의미</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">restaurant</span>(<span class="params">personFunc</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> table = personFunc();</span><br><span class="line">  <span class="keyword">return</span> desk;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> person.caller;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(restaurant(person)); <span class="comment">// function restaurant의 속성을 가지고 있음</span></span><br></pre></td></tr></table></figure>
+<h2 id="length-속성-property"><a href="#length-속성-property" class="headerlink" title="length 속성(property)"></a>length 속성(property)</h2><p>함수에서 매개변수의 개수를 의미</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"> name, gender, country </span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person.length); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h2 id="name-속성-property"><a href="#name-속성-property" class="headerlink" title="name 속성(property)"></a>name 속성(property)</h2><p>기명 함수 또는 익명 함수에 사용되며</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"> name, gender, country </span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// 여기서의 person name은 함수 function의 이름인 person이 출력됨</span></span><br></pre></td></tr></table></figure>
+<h2 id="proto-속성-property"><a href="#proto-속성-property" class="headerlink" title="__proto__ 속성(property)"></a><strong>__</strong>proto__ 속성(property)</h2><ul>
+<li>함수 객체를 포함한 모든 객체가 가지고 있는 프로퍼티</li>
+<li>자신의 부모역할을 할 프로포타입 객체를 가르킴</li>
+<li>함수의 프로포타입 객체는 <code>Function.prototype</code> 이며 이것도 함수</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">phone</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === <span class="built_in">Function</span>.prototype);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getPrototypeOf(phone) === <span class="built_in">Function</span>.prototype);</span><br></pre></td></tr></table></figure>
+<h2 id="prototype-속성-property"><a href="#prototype-속성-property" class="headerlink" title="prototype 속성(property)"></a>prototype 속성(property)</h2><ul>
+<li>함수 객체만 가지고 있는 프로퍼티</li>
+<li>함수 객체가 생성자로 사용될 때 생성된 객체의 부모 역할을 하는 객체를 가르킴</li>
+<li>함수가 생성될 때 만들어지며 <code>constructor</code> 프로퍼티를 가지는 객체를 가지는 객체를 가리킴</li>
+</ul>
+<blockquote>
+<p>함수는 생성자 함수로 사용될 가능성이 있기 때문에</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">phone</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === <span class="built_in">Function</span>.prototype); <span class="comment">// true ①</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === phone.prototype);   <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.prototype.constructor === phone); <span class="comment">// true ②</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__.constructor === phone.prototype.constructor); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="함수의-다양한-형태"><a href="#함수의-다양한-형태" class="headerlink" title="함수의 다양한 형태"></a>함수의 다양한 형태</h1><h2 id="즉시호출함수표현식-IIFE-Immediately-Invoke-Function-Expression"><a href="#즉시호출함수표현식-IIFE-Immediately-Invoke-Function-Expression" class="headerlink" title="즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression)"></a>즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression)</h2><p>함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함</p>
+<blockquote>
+<p>실행이 필요한 초기화 처리등에 사용 가능</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 기명 즉시호출함수</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">nameFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 익명방법</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<h2 id="내부-함수-Inner-function"><a href="#내부-함수-Inner-function" class="headerlink" title="내부 함수 (Inner function)"></a>내부 함수 (Inner function)</h2><p>함수 내부에 있는 함수를 내부함수</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//부모함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 내부함수</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>자식은 부모의 변수에 접근이 가능하지만 부모는 자식의 변수에 접근 불가능함</li>
+<li>안의 내부함수는 부모함수의 외부에서 접근할 수 없음</li>
+</ul>
+<h2 id="콜백-함수-Callback-function"><a href="#콜백-함수-Callback-function" class="headerlink" title="콜백 함수 (Callback function)"></a>콜백 함수 (Callback function)</h2><p><img src="http://poiemaweb.com/img/callback.png" alt="참고 : http://poiemaweb.com/js-function - callback function"></p>
+<p>특정한 이벤트가 발생할때 호출되는 함수</p>
+<blockquote>
+<p>나중에 호출하는 함수</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">laterCall</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">'Park'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 0.03초 후에 함수 실행</span></span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span> + name);</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">doSomething(); <span class="comment">// My name is Park 이라고 출력됨</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="프로토타입-객체"><a href="#프로토타입-객체" class="headerlink" title="프로토타입 객체"></a>프로토타입 객체</h1><ul>
+<li><p><code>Javascript</code>는 프로토타입 기반 객체지향 프로그래밍 언어</p>
+</li>
+<li><p>모든 객체는 자신의 부모 역할 담당하는 객체와 연결되어 있음</p>
+<blockquote>
+<p>부모 객체를 Prototype 객체라고 부르며 줄여서 Prototype이라고 함</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>결국 Prototype 객체는 생성자 함수에 의해 생성된 각 객체들에 제공되는 공통부분의 프로퍼티를 제공하기 위해 사용</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> restaurant = &#123;</span><br><span class="line">  foodName: <span class="string">'pasta'</span>,</span><br><span class="line">  value: <span class="number">16000</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(restaurant.hasOwnProperty(<span class="string">'name'</span>)); <span class="comment">// 값은 : true</span></span><br></pre></td></tr></table></figure>
+<p>restaurant라는 객체에는 hasOwnProperty라는 정보가 없지만 값은 true가 출력이 된다. 그 이유는 만약 선택한 객체에 값이 없으면 그 다음 부모 객체로 찾아가고 또 없으면 이 과정을 반복하여 결국 Object 객체까지 가서 없으면 error값을 반환 한다.</p>
+<h2 id="constructor-프로퍼티"><a href="#constructor-프로퍼티" class="headerlink" title="constructor 프로퍼티"></a>constructor 프로퍼티</h2><p>모든 Prototype 객체는 constructor 이라는 Property를 가지는데 이것은 생성자 함수를 가르킴</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Restaurant</span>(<span class="params">food</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.food = food;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Restaurant(<span class="string">'pasta'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Restaurant.prototype.constructor === Restaurant);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.constructor === Restaurant);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Restaurant.constructor === <span class="built_in">Function</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Prototype-chain-프로토타입-체인"><a href="#Prototype-chain-프로토타입-체인" class="headerlink" title="Prototype chain(프로토타입 체인)"></a>Prototype chain(프로토타입 체인)</h2><p>Property나 메소드로 접근하려고 할 때 해당 객체에 Property 값 또는 메소드가 없다면 각각의 객체에 가지고 있는 <strong>__</strong>proto__( 부모역할을 할 프로포타입 객체를 가르킴)의 위치를 찾아 계속 반복 수행을 하는 것</p>
+<blockquote>
+<p>Prototype chain의 동작 조건</p>
+</blockquote>
+<p><strong>자바스트립트의 프로토타입 체이닝은 결국 상속</strong></p>
+<h3 id="리터널-방식-객체의-Prototype-체인"><a href="#리터널-방식-객체의-Prototype-체인" class="headerlink" title="리터널 방식 객체의 Prototype 체인"></a>리터널 방식 객체의 Prototype 체인</h3><p>객체를 생성하는 과정에서 Object() 생성자 함수로 객체를 생성하는데 Object() 생성자 함수도 다른 함수와 같은 함수이기 때문에 prototype 속성이 있음</p>
+<p><img src="http://poiemaweb.com/img/object_literal_prototype_chaining.png" alt="참고 : http://poiemaweb.com/js-function - Object literal Prototype chaining"></p>
+<blockquote>
+<p>결국 객체(Object)를 생성하면 그 객체에 <code>Object.prototype</code>을 프로포타입 객체로 가짐</p>
+</blockquote>
+<h3 id="생성자-방식-객체의-Prototype-체인"><a href="#생성자-방식-객체의-Prototype-체인" class="headerlink" title="생성자 방식 객체의 Prototype 체인"></a>생성자 방식 객체의 Prototype 체인</h3><p>함수를 생성하는 과정에서 Function() 생성자 함수를 통해 함수가 생성되는데 모든 함수의 Prototype 객체는 <code>Function.prototype</code>이고 또한 생성자 함수도 함수 객체이므로 <code>Function.prototype</code> 객체이다.</p>
+<p><img src="http://poiemaweb.com/img/constructor_function_prototype_chaining.png" alt="참고 : http://poiemaweb.com/js-function - constructor function prototype chaining"></p>
+<blockquote>
+<p>모든 방식은 결국 모든 객체의 부모인 Object.prototpye 객체에서 끝나는데 이것을 <code>프로토타입 체인의 종점</code>이라고 함</p>
+</blockquote>
+<h2 id="Prototype-객체의-확장-및-변경"><a href="#Prototype-객체의-확장-및-변경" class="headerlink" title="Prototype 객체의 확장 및 변경"></a>Prototype 객체의 확장 및 변경</h2><p>Prototype 객체도 객체이므로 객체를 추가, 수정 또는 삭제 할 수 있음</p>
+<blockquote>
+<p>이 말은 즉 Object.prototype 객체를 추가, 수정 또는 삭제 가능</p>
+</blockquote>
+<p><img src="http://poiemaweb.com/img/changing_prototype.png" alt="참고 : http://poiemaweb.com/js-function - changing prototype"></p>
+<h2 id="기본자료형-Primitive-data-type-의-확장"><a href="#기본자료형-Primitive-data-type-의-확장" class="headerlink" title="기본자료형(Primitive data type)의 확장"></a>기본자료형(Primitive data type)의 확장</h2><p>기본자료형인 문자열이 객체와 유사하게 동작하는데 기본자료형으로 프로퍼티나 메소드를 호출할 때 기본자료형과 연관된 객체로 일시적으로 변환되어 프로토타입 객체를 공유하고 이후 다시 기본자료형으로 변환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'test'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);                 <span class="comment">// 자료형</span></span><br><span class="line"><span class="built_in">console</span>.log(str.constructor === <span class="built_in">String</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.dir(str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strObj = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'test'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj);                 <span class="comment">// 객체</span></span><br><span class="line"><span class="built_in">console</span>.log(strObj.constructor === <span class="built_in">String</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.dir(strObj);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>기본자료형 중 문자열일 경우 “.”을 찍는 순간 String() 생성자 함수로 객체로 바꿔버림</p>
+</blockquote>
+<hr>
+<h1 id="Scope-유효범위"><a href="#Scope-유효범위" class="headerlink" title="Scope (유효범위)"></a>Scope (유효범위)</h1><h2 id="Scope의-종류"><a href="#Scope의-종류" class="headerlink" title="Scope의 종류"></a>Scope의 종류</h2><ul>
+<li>전역변수 : 어디서든 참조할 수 있는 변수<blockquote>
+<p>전역 객체(Global scope)는 window의 property</p>
+</blockquote>
+</li>
+<li>지역변수 : 지역에서만 참조할 수 있는 변수<blockquote>
+<p>함수 지역내에만 지역변수를 선언 가능</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="생존기간-life-cycle-조절"><a href="#생존기간-life-cycle-조절" class="headerlink" title="생존기간(life-cycle) 조절"></a>생존기간(life-cycle) 조절</h2><ul>
+<li>전역변수 : 어플리케이션이 끝날 때 까지 남아 있음</li>
+<li>지역변수 : 함수가 종료될 때 까지 남아 있음</li>
+</ul>
+<hr>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>인스턴스 자신을 가르키는 변수이며 객체 자신에 대한 참조 값을 가지고 있음</p>
+<h2 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h2><ul>
+<li>함수가 호출될 때 argument 객체와 this를 전달 받음</li>
+<li>함수 또는 메소드 안에 있는 것은 모두 전역객체<blockquote>
+<p>단, 2가지를 제외함</p>
+<ul>
+<li>메소드 내에 있는 경우</li>
+<li>생성자 함수에 있는 경우</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="함수-호출-패턴에-따른-this의-참조값"><a href="#함수-호출-패턴에-따른-this의-참조값" class="headerlink" title="함수 호출 패턴에 따른 this의 참조값"></a>함수 호출 패턴에 따른 this의 참조값</h2><h3 id="1-함수-호출-패턴"><a href="#1-함수-호출-패턴" class="headerlink" title="1. 함수 호출 패턴"></a>1. 함수 호출 패턴</h3><p>전역객체는 객체중에 가장 상위 객체인데 딱 유일한 하나이며 browser에서는 ‘window’ node에서는 ‘global’을 포함</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// browser console</span></span><br><span class="line"><span class="keyword">this</span> === <span class="built_in">window</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// in Terminal - Node</span></span><br><span class="line"><span class="keyword">this</span> === global <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-메소드-호출-패턴"><a href="#2-메소드-호출-패턴" class="headerlink" title="2. 메소드 호출 패턴"></a>2. 메소드 호출 패턴</h3><p>함수 자체가 객체의 Property면 메소드 호출 패턴으로 호출</p>
+<blockquote>
+<p>메소드 내부에 this는 메소드를 호출한 객체에 바인딩됨</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> me = <span class="keyword">new</span> Person(<span class="string">'Park'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(me.getName());</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">'Woo'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.getName());</span><br></pre></td></tr></table></figure>
+<h3 id="3-생성자-호출-패턴"><a href="#3-생성자-호출-패턴" class="headerlink" title="3. 생성자 호출 패턴"></a>3. 생성자 호출 패턴</h3><p>기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작</p>
+<h4 id="동작-방식"><a href="#동작-방식" class="headerlink" title="동작 방식"></a>동작 방식</h4><ol>
+<li>빈 객체 생성과 동시에 this 바인딩<br><strong>순서</strong><ul>
+<li>빈 객체를 만듬</li>
+<li>this를 빈 객체를 가리킴</li>
+<li>마지막에 자신의 프로토타입 객체로 설정</li>
+</ul>
+</li>
+<li>this를 통한 property 생성</li>
+<li>생성된 객체를 반환함<ul>
+<li>반환문이 없는 경우, this에 바인딩 되어있는 새로운 객체를 반환</li>
+<li>반환문이 this가 아닌 다른 객체를 반환하는 경우, this가 아닌 해당 객체가 반환</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 생성자 함수 코드 실행 전 -------- 1</span></span><br><span class="line">  <span class="keyword">this</span>.name = name;  <span class="comment">// --------- 2</span></span><br><span class="line">  <span class="comment">// 생성된 함수 반환 -------------- 3</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> me = <span class="keyword">new</span> Person(<span class="string">'Lee'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(me.name);</span><br></pre></td></tr></table></figure>
+<p><img src="http://poiemaweb.com/img/constructor.png" alt="참고 : http://poiemaweb.com/js-function - constructor"></p>
+<h3 id="참고-http-poiemaweb-com"><a href="#참고-http-poiemaweb-com" class="headerlink" title="참고 : http://poiemaweb.com"></a>참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//jinwoopark94.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/01/TIL-180201/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ParkJinWoo's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        wlsdntus4@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <!--<li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+        </ul>
+    </li>
+    -->
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown open">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Algorism/">Algorism<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/TIL/">TIL<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web-Accessibility/">Web Accessibility<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/sass/">sass<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/JinwooPark94" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Jinwoo`s Blog
+            
+            <br>
+             Total <span id="busuanzi_value_site_pv"> </span> views
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?tNQK2Tw2SUL8a1Scn/Mgew==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//jinwoopark94.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
