@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Tue Feb 06 2018 22:15:01 GMT+0900">
-        <meta property="article:modified_time" content="Tue Feb 06 2018 22:22:04 GMT+0900">
+        <meta property="article:modified_time" content="Tue Feb 06 2018 22:26:50 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "http://jinwoopark94.github.io/2018/02/06/javascript-number/index.html",
     "headline": "javascript-number",
     "datePublished": "Tue Feb 06 2018 22:15:01 GMT+0900",
-    "dateModified": "Tue Feb 06 2018 22:22:04 GMT+0900",
+    "dateModified": "Tue Feb 06 2018 22:26:50 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "ParkJinWoo",
@@ -344,6 +344,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#기본자료형-Number-레퍼-Wrapper-객체"><span class="post-toc-text">기본자료형 Number 레퍼(Wrapper) 객체</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Number-Constructor"><span class="post-toc-text">Number Constructor</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Number-Property"><span class="post-toc-text">Number Property</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Number-EPSILON"><span class="post-toc-text">1. Number.EPSILON</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Number-MAX-VALUE"><span class="post-toc-text">2. Number.MAX_VALUE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Number-MIN-VALUE"><span class="post-toc-text">3. Number.MIN_VALUE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-Number-POSITIVE-INFINITY"><span class="post-toc-text">4. Number.POSITIVE_INFINITY</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-Number-NEGATIVE-INFINITY"><span class="post-toc-text">5. Number.NEGATIVE_INFINITY</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-Number-NaN"><span class="post-toc-text">6. Number.NaN</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Number-Method"><span class="post-toc-text">Number Method</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Number-isFinite"><span class="post-toc-text">1. Number.isFinite()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Number-isFinite-는-전역-함수-isFinite-와-차이"><span class="post-toc-text">Number.isFinite()는 전역 함수 isFinite()와 차이</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Number-isInteger"><span class="post-toc-text">2. Number.isInteger()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Number-isNaN"><span class="post-toc-text">3. Number.isNaN()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-Number-isSafeInteger"><span class="post-toc-text">4. Number.isSafeInteger()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-Number-prototype-toExponential"><span class="post-toc-text">5. Number.prototype.toExponential()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-Number-prototype-toFixed"><span class="post-toc-text">6. Number.prototype.toFixed()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-Number-prototype-toPrecision"><span class="post-toc-text">7. Number.prototype.toPrecision()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-Number-prototype-toString"><span class="post-toc-text">8. Number.prototype.toString()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-Number-prototype-valueOf"><span class="post-toc-text">9. Number.prototype.valueOf()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#참고-http-poiemaweb-com"><span class="post-toc-text">참고 : http://poiemaweb.com</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
 
@@ -488,171 +497,61 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>기본자료형 Number 레퍼(Wrapper) 객체</p>
-<p>기본자료형 number를 다룰 때 유용한 프로퍼티와 메소드를 제공하는 레퍼(wrapper) 객체</p>
+        <h1 id="기본자료형-Number-레퍼-Wrapper-객체"><a href="#기본자료형-Number-레퍼-Wrapper-객체" class="headerlink" title="기본자료형 Number 레퍼(Wrapper) 객체"></a>기본자료형 Number 레퍼(Wrapper) 객체</h1><p>기본자료형 number를 다룰 때 유용한 프로퍼티와 메소드를 제공하는 레퍼(wrapper) 객체</p>
+<blockquote>
 <p>변수 또는 객체의 속성(Property)가 숫자 값을 가지고 있다면 사용 가능</p>
-<p>Number Constructor</p>
-<p>Number() 생성자 함수를 통해 생성</p>
+</blockquote>
+<h2 id="Number-Constructor"><a href="#Number-Constructor" class="headerlink" title="Number Constructor"></a>Number Constructor</h2><p>Number() 생성자 함수를 통해 생성</p>
+<blockquote>
 <p>인자가 숫자로 변환될 수 없다면 NaN 반환</p>
-<pre><code>var x = new Number(123); // 생성 방법 1
-var x = 123; // 생성 방법 2
-
-var y = new Number(&apos;123&apos;); // 123
-var z = new Number(&apos;str&apos;); // NaN
-</code></pre><p>Number Property</p>
-<p>Static 프로퍼티로 Number 객체를 생성할 필요없이 Number.propertyName 형태로 사용</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>); <span class="comment">// 생성 방법 1</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">123</span>; <span class="comment">// 생성 방법 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> y = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="string">'123'</span>); <span class="comment">// 123</span></span><br><span class="line"><span class="keyword">var</span> z = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="string">'str'</span>); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<h2 id="Number-Property"><a href="#Number-Property" class="headerlink" title="Number Property"></a>Number Property</h2><p>Static 프로퍼티로 Number 객체를 생성할 필요없이 <code>Number.propertyName</code> 형태로 사용</p>
+<blockquote>
 <p>숫자에 관련된 상수</p>
-<ol>
-<li>Number.EPSILON</li>
-</ol>
-<p>Number.EPSILON은 JavaScript에서 표현할 수 있는 가장 작은 수</p>
+</blockquote>
+<h3 id="1-Number-EPSILON"><a href="#1-Number-EPSILON" class="headerlink" title="1. Number.EPSILON"></a>1. Number.EPSILON</h3><p>Number.EPSILON은 JavaScript에서 표현할 수 있는 가장 작은 수</p>
+<blockquote>
 <p>중요 ! 컴퓨터에서 표현할 수 있는 다음 수</p>
-<pre><code>console.log(0.1 + 0.2);        // 0.30000000000000004
-console.log(0.1 + 0.2 == 0.3); // false!!!
-
-function isEqual(a, b){
-  // Math.abs는 절댓값을 반환한다.
-  // 즉 a와 b의 차이가 JavaScript에서 표현할 수 있는 가장 작은 수인 Number.EPSILON보다 작으면 같은 수로 인정할 수 있다.
-  return Math.abs(a - b) &lt; Number.EPSILON;
-}
-
-console.log(isEqual(0.1 + 0.2, 0.3));
-</code></pre><ol>
-<li>Number.MAX_VALUE</li>
-</ol>
-<p>자바스크립트에서 사용 가능한 가장 큰 숫자(1.7976931348623157e+308)를 반환</p>
-<p>MAX_VALUE보다 큰 숫자는 Infinity</p>
-<ol>
-<li>Number.MIN_VALUE</li>
-</ol>
-<p>자바스크립트에서 사용 가능한 가장 작은 숫자(5e-324)를 반환</p>
-<p>MAX_VALUE보다 작은 숫자는 0으로 변환</p>
-<ol>
-<li>Number.POSITIVE_INFINITY</li>
-</ol>
-<p>양의 무한대 Infinity를 반환</p>
-<ol>
-<li>Number.NEGATIVE_INFINITY</li>
-</ol>
-<p>음의 무한대 -Infinity를 반환</p>
-<ol>
-<li>Number.NaN</li>
-</ol>
-<p>숫자가 아님(Not-a-Number)을 나타내는 숫자값</p>
-<pre><code>console.log(&apos;how&apos;); // NaN
-console.log(6 * &apos;string&apos;); // NaN
-</code></pre><p>Number Method</p>
-<p>Number Method안에 있는 것들을 형 변환을 안함</p>
-<ol>
-<li>Number.isFinite()</li>
-</ol>
-<p>매개변수로 전달된 값이 유한한 값인지 아닌지 검사하여 그 결과를 Boolean으로 반환</p>
-<pre><code>Number.isFinite(testValue)
-// testValue: 검사 대상 값
-
-Number.isFinite(&apos;Hi&apos;); // false
-Number.isFinite(24); //true
-Number.isFinite(null) //false
-</code></pre><p>Number.isFinite()는 전역 함수 isFinite()와 차이</p>
-<p>전역 함수 isFinite() : 인수를 숫자로 형 변환하여 검사를 수행</p>
-<p>Number.isFinite() : 인수를 형 변환을 안함</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);        <span class="comment">// 0.30000000000000004</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span> == <span class="number">0.3</span>); <span class="comment">// false!!!</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isEqual</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// Math.abs는 절댓값을 반환한다.</span></span><br><span class="line">  <span class="comment">// 즉 a와 b의 차이가 JavaScript에서 표현할 수 있는 가장 작은 수인 Number.EPSILON보다 작으면 같은 수로 인정할 수 있다.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.abs(a - b) &lt; <span class="built_in">Number</span>.EPSILON;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(isEqual(<span class="number">0.1</span> + <span class="number">0.2</span>, <span class="number">0.3</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="2-Number-MAX-VALUE"><a href="#2-Number-MAX-VALUE" class="headerlink" title="2. Number.MAX_VALUE"></a>2. Number.MAX_VALUE</h3><p>자바스크립트에서 사용 가능한 가장 큰 숫자(1.7976931348623157e+308)를 반환</p>
+<blockquote>
+<p>MAX_VALUE보다 큰 숫자는 <code>Infinity</code></p>
+</blockquote>
+<h3 id="3-Number-MIN-VALUE"><a href="#3-Number-MIN-VALUE" class="headerlink" title="3. Number.MIN_VALUE"></a>3. Number.MIN_VALUE</h3><p>자바스크립트에서 사용 가능한 가장 작은 숫자(5e-324)를 반환</p>
+<blockquote>
+<p>MAX_VALUE보다 작은 숫자는 <code>0</code>으로 변환</p>
+</blockquote>
+<h3 id="4-Number-POSITIVE-INFINITY"><a href="#4-Number-POSITIVE-INFINITY" class="headerlink" title="4. Number.POSITIVE_INFINITY"></a>4. Number.POSITIVE_INFINITY</h3><p>양의 무한대 <code>Infinity</code>를 반환</p>
+<h3 id="5-Number-NEGATIVE-INFINITY"><a href="#5-Number-NEGATIVE-INFINITY" class="headerlink" title="5. Number.NEGATIVE_INFINITY"></a>5. Number.NEGATIVE_INFINITY</h3><p>음의 무한대 <code>-Infinity</code>를 반환</p>
+<h3 id="6-Number-NaN"><a href="#6-Number-NaN" class="headerlink" title="6. Number.NaN"></a>6. Number.NaN</h3><p>숫자가 아님(Not-a-Number)을 나타내는 숫자값</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'how'</span>); <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">6</span> * <span class="string">'string'</span>); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<h2 id="Number-Method"><a href="#Number-Method" class="headerlink" title="Number Method"></a>Number Method</h2><p>Number Method안에 있는 것들을 형 변환을 안함</p>
+<h3 id="1-Number-isFinite"><a href="#1-Number-isFinite" class="headerlink" title="1. Number.isFinite()"></a>1. Number.isFinite()</h3><p>매개변수로 전달된 값이 유한한 값인지 아닌지 검사하여 그 결과를 Boolean으로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isFinite(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="string">'Hi'</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="number">24</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="literal">null</span>) <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h4 id="Number-isFinite-는-전역-함수-isFinite-와-차이"><a href="#Number-isFinite-는-전역-함수-isFinite-와-차이" class="headerlink" title="Number.isFinite()는 전역 함수 isFinite()와 차이"></a>Number.isFinite()는 전역 함수 isFinite()와 차이</h4><p><strong>전역 함수 isFinite()</strong> : 인수를 숫자로 형 변환하여 검사를 수행</p>
+<p><strong>Number.isFinite()</strong> : 인수를 형 변환을 안함</p>
 <p>따라서 Number.isFinite()가 더 엄격하게 검사함</p>
-<ol>
-<li>Number.isInteger()</li>
-</ol>
-<p>매개변수로 전달된 값이 정수인지 아닌지 검사하여 그 결과를 Boolean으로 반환</p>
-<pre><code>Number.isInteger(testValue)
-// testValue: 검사 대상 값
-
-Number.isInteger(5-2)   //true
-Number.isInteger(0)     //true
-Number.isInteger(0.5)   //false
-Number.isInteger(&apos;123&apos;) //false
-</code></pre><ol>
-<li>Number.isNaN()</li>
-</ol>
-<p>매개변수에 전달된 값이 NaN인지를 검사하여 그 결과를 Boolean으로 반환</p>
-<pre><code>Number.isNaN(testValue)
-// testValue: 검사 대상 값
-
-Number.isNaN(&apos;str&apos;) // false
-Number.isNaM(29) // false
-Number.isNaN(&apos;29&apos;) // false
-</code></pre><ol>
-<li>Number.isSafeInteger()</li>
-</ol>
-<p>매개변수에 전달된 값이 정수 범위안에 있는지를 확인하여 Boolean으로 반환</p>
-<pre><code>Number.isSafeInteger(testValue)
-// testValue: 검사 대상의 값
-
-Number.isSafeInteger(123) // true
-Number.isSafeInteger(0) // true
-Number.isSafeInteger(10000000000000001) // false
-</code></pre><ol>
-<li>Number.prototype.toExponential()</li>
-</ol>
-<p>대상을 지수 표기법으로 변환하여 문자열로 반환</p>
-<pre><code>numObj.toExponential([fractionDigits])
-// fractionDigits: 0~20 사이의 정수값으로 소숫점 이하의 자릿수를 나타낸다. 옵션으로 생략 가능
-
-var numObj = 77.1234;
-
-console.log(numObj.toExponential());  // logs 7.71234e+1
-console.log(numObj.toExponential(4)); // logs 7.7123e+1
-console.log(numObj.toExponential(2)); // logs 7.71e+1
-</code></pre><p>e(Exponent) 앞에 있는 숫자에 10의 n승이 곱하는 형식</p>
-<ol>
-<li>Number.prototype.toFixed()</li>
-</ol>
-<p>매개변수로 지정된 소숫점자리를 반올림하여 문자열로 반환</p>
-<pre><code>numObj.toFixed([digits])
-// digits: 0~20 사이의 정수값으로 소숫점 이하 자릿수를 나타낸다. 기본값은 0이며 옵션으로 생략 가능
-
-var numObj = 12345.6789;
-
-// 소숫점 이하 반올림
-console.log(numObj.toFixed());   // &apos;12346&apos;
-// 소숫점 이하 1자리수 확보, 나머지 반올림
-console.log(numObj.toFixed(1));  // &apos;12345.7&apos;
-// 소숫점 이하 2자리수 확보, 나머지 반올림
-console.log(numObj.toFixed(2));  // &apos;12345.68&apos;
-// 소숫점 이하 6자리수 확보, 나머지 반올림
-console.log(numObj.toFixed(6));  // &apos;12345.678900&apos;
-</code></pre><ol>
-<li><p>Number.prototype.toPrecision()</p>
-<p> numObj.toPrecision([precision])<br> // precision: 1~21 사이의 정수값으로 전체 자릿수를 나타낸다. 옵션으로 생략 가능</p>
-<p> var numObj = 15345.6789;</p>
-<p> // 전체자리수 유효<br> console.log(numObj.toPrecision());   // ‘12345.6789’<br> // 전체 1자리수 유효, 나머지 반올림<br> console.log(numObj.toPrecision(1));  // ‘2e+4’</p>
-</li>
-</ol>
-<ol>
-<li>Number.prototype.toString()</li>
-</ol>
-<p>숫자를 문자열로 변환</p>
-<pre><code>numObj.toString([radix])
-// radix: 2~36 사이의 정수값으로 진법을 나타내고 옵션으로 생략 가능
-
-var count = 10;
-console.log(count.toString());   // &apos;10&apos;
-console.log((17).toString());    // &apos;17&apos;
-
-var x = 16;
-console.log(x.toString(2));       // &apos;10000&apos;
-console.log(x.toString(8));       // &apos;20&apos;
-</code></pre><ol>
-<li>Number.prototype.valueOf()</li>
-</ol>
-<p>Number 객체의 기본자료형 값(primitive value)을 반환</p>
-<pre><code>numObj.valueOf()
-
-var numObj = new Number(10);
-console.log(typeof numObj); // object
-
-var num = numObj.valueOf();
-console.log(num);           // 10
-console.log(typeof num);    // number
-</code></pre><p>참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></p>
-
+<h3 id="2-Number-isInteger"><a href="#2-Number-isInteger" class="headerlink" title="2. Number.isInteger()"></a>2. Number.isInteger()</h3><p>매개변수로 전달된 값이 정수인지 아닌지 검사하여 그 결과를 Boolean으로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">5</span><span class="number">-2</span>)   <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">0</span>)     <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">0.5</span>)   <span class="comment">//false</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="string">'123'</span>) <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Number-isNaN"><a href="#3-Number-isNaN" class="headerlink" title="3. Number.isNaN()"></a>3. Number.isNaN()</h3><p>매개변수에 전달된 값이 NaN인지를 검사하여 그 결과를 Boolean으로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isNaN(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">'str'</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaM(<span class="number">29</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">'29'</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-Number-isSafeInteger"><a href="#4-Number-isSafeInteger" class="headerlink" title="4. Number.isSafeInteger()"></a>4. Number.isSafeInteger()</h3><p>매개변수에 전달된 값이 정수 범위안에 있는지를 확인하여 Boolean으로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isSafeInteger(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상의 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">123</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">0</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">10000000000000001</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-Number-prototype-toExponential"><a href="#5-Number-prototype-toExponential" class="headerlink" title="5. Number.prototype.toExponential()"></a>5. Number.prototype.toExponential()</h3><p>대상을 지수 표기법으로 변환하여 문자열로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">numObj.toExponential([fractionDigits])</span><br><span class="line"><span class="comment">// fractionDigits: 0~20 사이의 정수값으로 소숫점 이하의 자릿수를 나타낸다. 옵션으로 생략 가능</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numObj = <span class="number">77.1234</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toExponential());  <span class="comment">// logs 7.71234e+1</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toExponential(<span class="number">4</span>)); <span class="comment">// logs 7.7123e+1</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toExponential(<span class="number">2</span>)); <span class="comment">// logs 7.71e+1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> e(Exponent) 앞에 있는 숫자에 10의 n승이 곱하는 형식</p>
+</blockquote>
+<h3 id="6-Number-prototype-toFixed"><a href="#6-Number-prototype-toFixed" class="headerlink" title="6. Number.prototype.toFixed()"></a>6. Number.prototype.toFixed()</h3><p>매개변수로 지정된 소숫점자리를 반올림하여 <code>문자열</code>로 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">numObj.toFixed([digits])</span><br><span class="line"><span class="comment">// digits: 0~20 사이의 정수값으로 소숫점 이하 자릿수를 나타낸다. 기본값은 0이며 옵션으로 생략 가능</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numObj = <span class="number">12345.6789</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 소숫점 이하 반올림</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toFixed());   <span class="comment">// '12346'</span></span><br><span class="line"><span class="comment">// 소숫점 이하 1자리수 확보, 나머지 반올림</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toFixed(<span class="number">1</span>));  <span class="comment">// '12345.7'</span></span><br><span class="line"><span class="comment">// 소숫점 이하 2자리수 확보, 나머지 반올림</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toFixed(<span class="number">2</span>));  <span class="comment">// '12345.68'</span></span><br><span class="line"><span class="comment">// 소숫점 이하 6자리수 확보, 나머지 반올림</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toFixed(<span class="number">6</span>));  <span class="comment">// '12345.678900'</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-Number-prototype-toPrecision"><a href="#7-Number-prototype-toPrecision" class="headerlink" title="7. Number.prototype.toPrecision()"></a>7. Number.prototype.toPrecision()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">numObj.toPrecision([precision])</span><br><span class="line"><span class="comment">// precision: 1~21 사이의 정수값으로 전체 자릿수를 나타낸다. 옵션으로 생략 가능</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numObj = <span class="number">15345.6789</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 전체자리수 유효</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toPrecision());   <span class="comment">// '12345.6789'</span></span><br><span class="line"><span class="comment">// 전체 1자리수 유효, 나머지 반올림</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj.toPrecision(<span class="number">1</span>));  <span class="comment">// '2e+4'</span></span><br></pre></td></tr></table></figure>
+<h3 id="8-Number-prototype-toString"><a href="#8-Number-prototype-toString" class="headerlink" title="8. Number.prototype.toString()"></a>8. Number.prototype.toString()</h3><p>숫자를 문자열로 변환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">numObj.toString([radix])</span><br><span class="line"><span class="comment">// radix: 2~36 사이의 정수값으로 진법을 나타내고 옵션으로 생략 가능</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(count.toString());   <span class="comment">// '10'</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="number">17</span>).toString());    <span class="comment">// '17'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">16</span>;</span><br><span class="line"><span class="built_in">console</span>.log(x.toString(<span class="number">2</span>));       <span class="comment">// '10000'</span></span><br><span class="line"><span class="built_in">console</span>.log(x.toString(<span class="number">8</span>));       <span class="comment">// '20'</span></span><br></pre></td></tr></table></figure>
+<h3 id="9-Number-prototype-valueOf"><a href="#9-Number-prototype-valueOf" class="headerlink" title="9. Number.prototype.valueOf()"></a>9. Number.prototype.valueOf()</h3><p>Number 객체의 기본자료형 값(primitive value)을 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">numObj.valueOf()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numObj = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numObj); <span class="comment">// object</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = numObj.valueOf();</span><br><span class="line"><span class="built_in">console</span>.log(num);           <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);    <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+<h3 id="참고-http-poiemaweb-com"><a href="#참고-http-poiemaweb-com" class="headerlink" title="참고 : http://poiemaweb.com"></a>참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
         
     
 
