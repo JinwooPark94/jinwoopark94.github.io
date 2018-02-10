@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Html-Markup Summary | 
+        
+        Jinwoo`s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="웹 관련 지식 공유">
+    <meta name="keywords" content=",HTML,Markup">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?yPmNjQckTImqie9raQO7Zw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Jinwoo`s Blog">
+    <meta name="msapplication-starturl" content="http://jinwoopark94.github.io/2018/02/10/html-markup/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Jinwoo`s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://jinwoopark94.github.io/2018/02/10/html-markup/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Html-Markup Summary | Jinwoo`s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="웹 관련 지식 공유">
+    <meta property="og:article:tag" content="HTML"> <meta property="og:article:tag" content="Markup"> 
+
+    
+        <meta property="article:published_time" content="Sat Feb 10 2018 19:55:05 GMT+0900">
+        <meta property="article:modified_time" content="Sat Feb 10 2018 19:57:10 GMT+0900">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google site verification -->
+    <meta name="google-site-verification" content="Nuhm250QCJRidwnqPf6806W6-QquNIKBYDTeSEWzIso" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/10/html-markup/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://jinwoopark94.github.io/2018/02/10/html-markup/index.html",
+    "headline": "Html-Markup Summary",
+    "datePublished": "Sat Feb 10 2018 19:55:05 GMT+0900",
+    "dateModified": "Sat Feb 10 2018 19:57:10 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "ParkJinWoo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Jinwoo`s Blog"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jinwoo`s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",HTML,Markup",
+    "description": "웹 관련 지식 공유",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HTML-태그-정리"><span class="post-toc-text">HTML 태그 정리</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Documnet-Wrapper-문서-바깥"><span class="post-toc-text">Documnet Wrapper(문서 바깥)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Comment-주석"><span class="post-toc-text">Comment (주석)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Page-Information-페이지-정보"><span class="post-toc-text">Page Information (페이지 정보)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Document-Structure-문서-구조"><span class="post-toc-text">Document Structure (문서 구조)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Text-Markup-텍스트-마크업"><span class="post-toc-text">Text Markup (텍스트 마크업)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#참고"><span class="post-toc-text">참고 :</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Html-Markup Summary
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ParkJinWoo</strong>
+        <span>Feb 10, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/HTML/">HTML</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Markup/">Markup</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Html-Markup Summary&url=http://jinwoopark94.github.io/2018/02/10/html-markup/index.html&pic=http://jinwoopark94.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Html-Markup Summary&url=http://jinwoopark94.github.io/2018/02/10/html-markup/index.html&via=ParkJinWoo" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://jinwoopark94.github.io/2018/02/10/html-markup/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://jinwoopark94.github.io/2018/02/10/html-markup/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="HTML-태그-정리"><a href="#HTML-태그-정리" class="headerlink" title="HTML 태그 정리"></a>HTML 태그 정리</h1><h2 id="Documnet-Wrapper-문서-바깥"><a href="#Documnet-Wrapper-문서-바깥" class="headerlink" title="Documnet Wrapper(문서 바깥)"></a>Documnet Wrapper(문서 바깥)</h2><table>
+<thead>
+<tr>
+<th><strong><code>&lt;!DOCTYPE&gt;</code></strong></th>
+<th><strong>(X)HTML 버전을 나타냄</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;HTML&gt;</code></td>
+<td>HTML 문서</td>
+</tr>
+<tr>
+<td><code>&lt;HEAD&gt;</code></td>
+<td>페이지 정보</td>
+</tr>
+<tr>
+<td><code>&lt;BODY&gt;</code></td>
+<td>페이지 컨텐츠</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Comment-주석"><a href="#Comment-주석" class="headerlink" title="Comment (주석)"></a>Comment (주석)</h2><p><code>&lt;!-- COMMENT TEXT--&gt;</code></p>
+<p>HTML안에 주석을 나타냄</p>
+<h2 id="Page-Information-페이지-정보"><a href="#Page-Information-페이지-정보" class="headerlink" title="Page Information (페이지 정보)"></a>Page Information (페이지 정보)</h2><table>
+<thead>
+<tr>
+<th><strong>태그</strong></th>
+<th><strong>정의</strong></th>
+<th><strong>사용</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;base /&gt;</code></td>
+<td>기본 URL</td>
+<td>- 문서에 포함된 모든 상대 URL들의 기준 URL을 나타냄</td>
+</tr>
+<tr>
+<td><code>&lt;meta /&gt;</code></td>
+<td>META 정보</td>
+<td>- META 관련 요소들로 나타내어질 수 없는 메타데이터를 나타냄</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>페이지 제목</td>
+<td>- 브라우저의 타이틀 바나 페이지의 탭에 보여지는 문서의 제목을 정의함</td>
+</tr>
+<tr>
+<td><code>&lt;link /&gt;</code></td>
+<td>관련 자원</td>
+<td>- 현재 문서와 외부 리소스와의 관계를 명시</td>
+</tr>
+<tr>
+<td><code>&lt;style&gt;</code></td>
+<td>스타일 자원</td>
+<td>- HTML의 일부에 대한 스타일 정보를 포함</td>
+</tr>
+<tr>
+<td><code>&lt;script&gt;</code></td>
+<td>스크립트 자원</td>
+<td>- (x)HTML 문서내에 실행 가능한 스크립트를 포함하거나 참조</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Document-Structure-문서-구조"><a href="#Document-Structure-문서-구조" class="headerlink" title="Document Structure (문서 구조)"></a>Document Structure (문서 구조)</h2><table>
+<thead>
+<tr>
+<th><strong>태그</strong></th>
+<th><strong>정의</strong></th>
+<th><strong>사용</strong></th>
+<th><strong>Display</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>페이지 메인 내용들을 묶은 구간</td>
+<td>- <code>body</code>안에 문서나 앱의 주요 컨텐츠를 나타냄<br>- 페이지에 2개 이상 있으면 안됨(Unique)</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>소개나 탐색을 돕는 구간</td>
+<td>- 일부 제목요소들을 포함할 수 있고 저자를 나타낼 수 있음<br>예) 메인 TOP메뉴와 로고, 아이콘 등을 포함하는 구간</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>저작권 정보나 서비스 제공자의 정보를 나타내는 구간</td>
+<td>- 일반적으로 구성자 구획, 저작권 데이터, 관련된 문서의 링크 등을 나타냄<br>- 주로 사이트 하단에 위치<br>예) copyright, contact, sitemap ,관련된 문서 등을 포함하는 구간</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>문서의 영역을 지정(아무런 의미를 가지지 않음)</td>
+<td>- 스타일 또는 스크립트가 목적 <br>- 같은 섹션에 포함된 여러개의 문단을 묶어 주석을 달고자 할때 유용하게 사용<br>- 최대한 사용 안하는 것이 좋음<br>예) 아무런 의미없이 스타일링 또는 스크립트만 사용하는 구간</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>문서나 응용 프로그램의 일반적인 구간을 표현</td>
+<td>- 제목으로 시작하는 컨텐츠를 의미적으로 그룹핑할때 사용<br>예) 소개, 뉴스 아이템, 연락처 등</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>페이지 전체 내용과 관련이 있지만 주된 내용은 연관성 없는 내용</td>
+<td>- 페이지에 연관성이 없다고 해서 단순 삽입어구를 사용하면 안됨<br>예) 사이드바</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>문서내에 독립적인 컨텐츠를 나타냄</td>
+<td>- 하나의 문서 안에 여러개의 article이 올 수 있음<br>예) forum, 잡지, 신문 기사, 블로그 글, 댓글, 위젯, 가젯 등 독립적인 아이템</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>페이지들을 이어주는 부분으로 네비게이션 링크로 구성됨</td>
+<td>- 모든 링크그룹이 nav요소일 필요는 없음<br>예) 메뉴, 리스트 형식</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;h[1-6]&gt;</code></td>
+<td>큰 제목, 소 제목을 나타냄</td>
+<td>- 대제목이나 소제목을 적을때 사용</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>문단을 나타냄</td>
+<td>- 텍스트를 단락으로 정의</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>&lt;span&gt;</code></td>
+<td>인라인 요소를 나타냄(아무런 의미를 가지지 않음)</td>
+<td>- 한 부분의 텍스트나 한 부분의 문서에 사용</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;br /&gt;</code></td>
+<td>한 줄 내리기</td>
+<td>- 텍스트 사용시 문단을 내리고 싶을 때 사용</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>&lt;hr /&gt;</code></td>
+<td>문단레벨에서 주제의 분리를 나타냄</td>
+<td>- 화면 전환이나 섹션내에 다른 주제로 전환할때 사용<br>단락들사이에 의미적 구분이 있을 때 사용</td>
+<td>Block</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Text-Markup-텍스트-마크업"><a href="#Text-Markup-텍스트-마크업" class="headerlink" title="Text Markup (텍스트 마크업)"></a>Text Markup (텍스트 마크업)</h2><table>
+<thead>
+<tr>
+<th><strong>태그</strong></th>
+<th><strong>정의</strong></th>
+<th><strong>사용</strong></th>
+<th><strong>Display</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;strong&gt;</code></td>
+<td>해당 내용의 중요함을 나타냄</td>
+<td>- strong을 중첩하면 중첩할 수록 중요하다고 할 수 있음<br>- 브라우저에서 자동 font-weight가 bold처리 됨</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;b&gt;</code></td>
+<td>텍스트를 굵게 장식하는 스타일 요소</td>
+<td>- 키워드를 부각하기 위해 사용<br>- 의미가 크게 없으므로 강조를 하기위한 목적으면 em, 중요성을 목적으로 하면 strong, 텍스트를 부각하려면 mark를 사용</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;mark&gt;</code></td>
+<td>하나의 문서 내에 다른 문맥과의 관련성을 나타내기위해 마킹되거나 하이라이트 텍스트 표현</td>
+<td>- 검색어와 매칭되는 부분을 하이라이팅 하기 위해 사용<br>- 특정 부분의 주의를 끌기 위해 사용<br>- 브라우저에서 자동 Background 효과가 처리 됨</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;em&gt;</code></td>
+<td>해당 내용을 강조함</td>
+<td>- em을 중첩하면 중첩할 수록 중요하다고 할 수 있음<br>- 브라우저에서 자동 italic체로 표시 됨</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;</code></td>
+<td>텍스트를 이탤릭체로 장식하는 스타일 요소이지만 요새는 아이콘의 <code>i</code>와 같아서 아이콘을 넣을때에도 사용</td>
+<td>- 의미가 크게 없으므로 강조를 하기위한 목적이면 em, 정의를 목적으로 하고 있다면 dfn을 사용</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>dfn</code></td>
+<td>텍스트를 전문용어나 관용구등을 정의어로 지정</td>
+<td>- 브라우저에서 자동 Italic체로 표시</td>
+<td>Inline-Block</td>
+</tr>
+<tr>
+<td><code>&lt;blockquote&gt;</code></td>
+<td>텍스트를 인용문으로 정의하며 인용된 곳의 원천 소스를 표시</td>
+<td>- 텍스트를 블록레벨의 인용문으로 지정<br>- 브라우저에서 자동 들여쓰기로 표현</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>다른 소스로부터 인용된 구문컨텐츠를 나타내며 인용해온 원본 주소를 나타냄</td>
+<td>- 텍스트를 인라인레벨의 인용문으로 지정<br>- 브라우저에서 자동 <code>&#39; &#39;</code>, <code>&quot; &quot;</code>을 표현(따로 따옴표를 적을 필요 X)</td>
+<td>Inline-Block</td>
+</tr>
+</tbody>
+</table>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고 :"></a>참고 :</h2><ul>
+<li><a href="https://www.w3schools.com" target="_blank" rel="noopener">https://www.w3schools.com</a></li>
+<li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">https://developer.mozilla.org</a></li>
+<li><a href="https://opentutorials.org" target="_blank" rel="noopener">https://opentutorials.org</a></li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://jinwoopark94.github.io/2018/02/10/html-markup/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://jinwoopark94.github.io/2018/02/10/html-markup/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//jinwoopark94.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/09/Window-Agnoster-Theme/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ParkJinWoo's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        wlsdntus4@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <!--<li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+        </ul>
+    </li>
+    -->
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown open">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Algorism/">Algorism<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/TIL/">TIL<span class="sidebar_archives-count">20</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web-Accessibility/">Web Accessibility<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Web-Contents/">Web Contents<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Window/">Window<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Window/Ubuntu/">Ubuntu<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Window/Ubuntu/ZSH/">ZSH<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Window/Ubuntu/ZSH/Oh-My-ZSH/">Oh My ZSH<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/git/">git<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/sass/">sass<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/JinwooPark94" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Jinwoo`s Blog
+            
+            <br>
+             Total <span id="busuanzi_value_site_pv"> </span> views
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?tNQK2Tw2SUL8a1Scn/Mgew==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//jinwoopark94.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
