@@ -17,19 +17,19 @@
   
   
   <title>Javascript - Regexp | Jinwoo`s Blog</title>
-  <meta name="description" content="정규표현식 문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음   정규표현식을 사용하는 Javascript 메소드 RegExp.prototype.exec() RegExp.">
+  <meta name="description" content="정규표현식  문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음    정규표현식을 사용하는 Javascript 메소드  RegExp.prototype.exec() Reg">
 <meta name="keywords" content="javascript,Regexp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript - Regexp">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/02/06/javascript-regexp/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="정규표현식 문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음   정규표현식을 사용하는 Javascript 메소드 RegExp.prototype.exec() RegExp.">
+<meta property="og:description" content="정규표현식  문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음    정규표현식을 사용하는 Javascript 메소드  RegExp.prototype.exec() Reg">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://poiemaweb.com/img/regular_expression.png">
 <meta property="og:updated_time" content="2018-02-07T14:25:28.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript - Regexp">
-<meta name="twitter:description" content="정규표현식 문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음   정규표현식을 사용하는 Javascript 메소드 RegExp.prototype.exec() RegExp.">
+<meta name="twitter:description" content="정규표현식  문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음    정규표현식을 사용하는 Javascript 메소드  RegExp.prototype.exec() Reg">
 <meta name="twitter:image" content="http://poiemaweb.com/img/regular_expression.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/06/javascript-regexp/index.html">
@@ -327,13 +327,15 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="정규표현식"><a href="#정규표현식" class="headerlink" title="정규표현식"></a>정규표현식</h1><ul>
+        <h1 id="정규표현식"><a class="markdownIt-Anchor" href="#정규표현식"></a> 정규표현식</h1>
+<ul>
 <li>문자열에서 특정 내용을 찾거나 대체 또는 발췌하는데 사용</li>
 <li>반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현</li>
 <li>주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지않은 문제가 있음</li>
 </ul>
 <p><img src="http://poiemaweb.com/img/regular_expression.png" alt="regular expression"></p>
-<h2 id="정규표현식을-사용하는-Javascript-메소드"><a href="#정규표현식을-사용하는-Javascript-메소드" class="headerlink" title="정규표현식을 사용하는 Javascript 메소드"></a>정규표현식을 사용하는 Javascript 메소드</h2><ul>
+<h2 id="정규표현식을-사용하는-javascript-메소드"><a class="markdownIt-Anchor" href="#정규표현식을-사용하는-javascript-메소드"></a> 정규표현식을 사용하는 Javascript 메소드</h2>
+<ul>
 <li>RegExp.prototype.exec()</li>
 <li>RegExp.prototype.test() : True or False 반환</li>
 <li>String.prototype.match()</li>
@@ -342,7 +344,8 @@
 <li>String.prototype.split()</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> targetStr = <span class="string">'This is a pen.'</span>;</span><br><span class="line"><span class="keyword">var</span> regexr = <span class="regexp">/is/ig</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// RegExp 객체의 메소드</span></span><br><span class="line"><span class="built_in">console</span>.log(regexr.exec(targetStr)); <span class="comment">// [ 'is', index: 2, input: 'This is a pen.' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(regexr.test(targetStr)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// String 객체의 메소드</span></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.match(regexr)); <span class="comment">// [ 'is', 'is' ]</span></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.replace(regexr, <span class="string">'IS'</span>)); <span class="comment">// ThIS IS a pen.</span></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.search(regexr)); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.split(regexr));  <span class="comment">// [ 'Th', ' ', ' a pen.' ]</span></span><br></pre></td></tr></table></figure>
-<h2 id="Flag-플래그"><a href="#Flag-플래그" class="headerlink" title="Flag(플래그)"></a>Flag(플래그)</h2><p>플래그의 종류는 아래와 같음</p>
+<h2 id="flag플래그"><a class="markdownIt-Anchor" href="#flag플래그"></a> Flag(플래그)</h2>
+<p>플래그의 종류는 아래와 같음</p>
 <blockquote>
 <p>검색 대상이 1개 이상이라도 첫번째 매칭만 대상만 검색함</p>
 </blockquote>
@@ -373,7 +376,8 @@
 </tbody>
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> targetStr = <span class="string">'Is this all there is?'</span>;</span><br><span class="line"><span class="keyword">var</span> regexr = <span class="regexp">/is/</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.match(regexr)); <span class="comment">// [ 'is', index: 5, input: 'Is this all there is?' ]</span></span><br><span class="line"></span><br><span class="line">regexr = <span class="regexp">/is/ig</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(targetStr.match(regexr)); <span class="comment">// [ 'Is', 'is', 'is' ]</span></span><br></pre></td></tr></table></figure>
-<h2 id="패턴"><a href="#패턴" class="headerlink" title="패턴"></a>패턴</h2><ul>
+<h2 id="패턴"><a class="markdownIt-Anchor" href="#패턴"></a> 패턴</h2>
+<ul>
 <li>찾고자 하는 대상을 문자열로 지정</li>
 <li>특별한 의미를 가지는 메타문자(Metacharacter) 또는 기호로 표현 가능</li>
 </ul>
@@ -394,7 +398,8 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> targetStr = <span class="string">'AA BB Aa Bb 24,000'</span>;</span><br><span class="line"><span class="comment">// 알파벳과 숫자 또는 ','가 한번이상 반복되는 문자열을 반복 검색</span></span><br><span class="line"><span class="keyword">var</span> regexr = <span class="regexp">/[\w,]+/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(targetStr.match(regexr)); <span class="comment">// [ 'AA', 'BB', 'Aa', 'Bb', '24,000' ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 알파벳과 숫자가 아닌 문자 또는 ','가 한번이상 반복되는 문자열을 반복 검색</span></span><br><span class="line"><span class="keyword">var</span> regexr = <span class="regexp">/[\W,]+/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(targetStr.match(regexr)); <span class="comment">// [ ' ', ' ', ' ', ' ', ',' ]</span></span><br></pre></td></tr></table></figure>
 <p><strong>더 많은 내용은 <a href="https://regexr.com/" target="_blank" rel="noopener">[Regexr.com]</a>을 참고</strong></p>
-<h3 id="참고-http-poiemaweb-com"><a href="#참고-http-poiemaweb-com" class="headerlink" title="참고 : http://poiemaweb.com"></a>참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+<h3 id="참고-httppoiemawebcom"><a class="markdownIt-Anchor" href="#참고-httppoiemawebcom"></a> 참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+
       
     </div>
     <div class="article-footer">

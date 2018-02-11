@@ -17,19 +17,19 @@
   
   
   <title>Javascript - Standard Built-in | Jinwoo`s Blog</title>
-  <meta name="description" content="전역 객체(Global Object)모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!&apos;)">
+  <meta name="description" content="전역 객체(Global Object) 모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!">
 <meta name="keywords" content="javascript,Standard Built-in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript - Standard Built-in">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/02/07/javascript-Standard-Built-in/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="전역 객체(Global Object)모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!&apos;)">
+<meta property="og:description" content="전역 객체(Global Object) 모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cfile26.uf.tistory.com/image/255D3F4755AF337B1BEB88">
 <meta property="og:updated_time" content="2018-02-07T14:25:01.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript - Standard Built-in">
-<meta name="twitter:description" content="전역 객체(Global Object)모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!&apos;)">
+<meta name="twitter:description" content="전역 객체(Global Object) 모든 객체의 유일한 최상위 객체를 의미함  new 연산자를 이용하여 새롭게 생성 불가 전역 스코프를 갖게 됨 전역 객체의 자식 객체를 사용할 때 전역 객체의 기술은 생략 가능     Browser Server(Node.js)     window global    12// window.alert(&apos;Hello world!">
 <meta name="twitter:image" content="http://cfile26.uf.tistory.com/image/255D3F4755AF337B1BEB88">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/07/javascript-Standard-Built-in/index.html">
@@ -327,7 +327,8 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="전역-객체-Global-Object"><a href="#전역-객체-Global-Object" class="headerlink" title="전역 객체(Global Object)"></a>전역 객체(Global Object)</h1><p>모든 객체의 유일한 최상위 객체를 의미함</p>
+        <h1 id="전역-객체global-object"><a class="markdownIt-Anchor" href="#전역-객체global-object"></a> 전역 객체(Global Object)</h1>
+<p>모든 객체의 유일한 최상위 객체를 의미함</p>
 <ul>
 <li>new 연산자를 이용하여 새롭게 생성 불가</li>
 <li>전역 스코프를 갖게 됨</li>
@@ -348,47 +349,60 @@
 </tbody>
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// window.alert('Hello world!');;</span></span><br><span class="line">alert(<span class="string">'Hello world!'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="전역-프로퍼티-Global-property"><a href="#전역-프로퍼티-Global-property" class="headerlink" title="전역 프로퍼티(Global property)"></a>전역 프로퍼티(Global property)</h2><p>전역 객체의 프로퍼티를 의미하고 애플리케이션 전역에서 사용하는 값들을 나타내기 위해 사용</p>
-<h3 id="1-Infinity"><a href="#1-Infinity" class="headerlink" title="1. Infinity"></a>1. Infinity</h3><p>양/음의 무한대를 나타내는 숫자값 Infinity를 가짐</p>
+<h2 id="전역-프로퍼티global-property"><a class="markdownIt-Anchor" href="#전역-프로퍼티global-property"></a> 전역 프로퍼티(Global property)</h2>
+<p>전역 객체의 프로퍼티를 의미하고 애플리케이션 전역에서 사용하는 값들을 나타내기 위해 사용</p>
+<h3 id="1-infinity"><a class="markdownIt-Anchor" href="#1-infinity"></a> 1. Infinity</h3>
+<p>양/음의 무한대를 나타내는 숫자값 Infinity를 가짐</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>/<span class="number">0</span>);  <span class="comment">// Infinity</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">-3</span>/<span class="number">0</span>); <span class="comment">// -Infinity</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-NaN"><a href="#2-NaN" class="headerlink" title="2. NaN"></a>2. NaN</h3><p>숫자가 아님을 나타내는 숫자값 NaN을 가짐</p>
+<h3 id="2-nan"><a class="markdownIt-Anchor" href="#2-nan"></a> 2. NaN</h3>
+<p>숫자가 아님을 나타내는 숫자값 NaN을 가짐</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span> * <span class="string">'String'</span>); <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">NaN</span>);   <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-undefined"><a href="#3-undefined" class="headerlink" title="3. undefined"></a>3. undefined</h3><p>기본자료형 undefined를 값으로 가짐</p>
+<h3 id="3-undefined"><a class="markdownIt-Anchor" href="#3-undefined"></a> 3. undefined</h3>
+<p>기본자료형 undefined를 값으로 가짐</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-<h2 id="전역-함수-Global-function"><a href="#전역-함수-Global-function" class="headerlink" title="전역 함수(Global function)"></a>전역 함수(Global function)</h2><p>애플리케이션 전역에서 호출할 수 있는 함수로서 전역 객체의 메소드</p>
-<h3 id="1-eval"><a href="#1-eval" class="headerlink" title="1. eval()"></a>1. eval()</h3><p>전달된 문자열 구문 또는 표현식을 평가 또는 실행함</p>
+<h2 id="전역-함수global-function"><a class="markdownIt-Anchor" href="#전역-함수global-function"></a> 전역 함수(Global function)</h2>
+<p>애플리케이션 전역에서 호출할 수 있는 함수로서 전역 객체의 메소드</p>
+<h3 id="1-eval"><a class="markdownIt-Anchor" href="#1-eval"></a> 1. eval()</h3>
+<p>전달된 문자열 구문 또는 표현식을 평가 또는 실행함</p>
 <blockquote>
 <p>사용자로 부터 입력받은 콘텐츠를 실행하는 것은 보안에 매우 취약하므로 사용을 가급적 금지 하는 것이 좋음</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>(string)</span><br><span class="line"><span class="comment">// string: code 또는 표현식을 나타내는 문자열. 표현식은 존재하는 객체들의 프로퍼티들과 변수들을 포함할 수 있음</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">7</span>,</span><br><span class="line">    y = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">eval</span>(<span class="string">'x * y'</span>)); <span class="comment">// 28</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-isFinite"><a href="#2-isFinite" class="headerlink" title="2. isFinite()"></a>2. isFinite()</h3><p>매개변수에 전달된 값이 유한수인지 검사하여 그 결과를 Boolean으로 반환</p>
+<h3 id="2-isfinite"><a class="markdownIt-Anchor" href="#2-isfinite"></a> 2. isFinite()</h3>
+<p>매개변수에 전달된 값이 유한수인지 검사하여 그 결과를 Boolean으로 반환</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isFinite</span>(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="number">3</span>));         <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isFinite</span>(<span class="string">'Hello'</span>));   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-isNaN"><a href="#3-isNaN" class="headerlink" title="3. isNaN()"></a>3. isNaN()</h3><p>매개변수에 전달된 값이 NaN인지 검사하여 그 결과를 Boolean으로 반환</p>
+<h3 id="3-isnan"><a class="markdownIt-Anchor" href="#3-isnan"></a> 3. isNaN()</h3>
+<p>매개변수에 전달된 값이 NaN인지 검사하여 그 결과를 Boolean으로 반환</p>
 <blockquote>
 <p>값이 숫자가 아닌 경우, 숫자로 변환</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(testValue)</span><br><span class="line"><span class="comment">// testValue: 검사 대상 값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>)       <span class="comment">// true</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">37</span>)        <span class="comment">// false</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">'park'</span>)    <span class="comment">// true: 'park' -&gt; NaN</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">''</span>)        <span class="comment">// false: '' -&gt; 0</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-parseFloat"><a href="#4-parseFloat" class="headerlink" title="4. parseFloat()"></a>4. parseFloat()</h3><p>매개변수에 전달된 문자열을 부동소수점 숫자로 변환하여 반환</p>
+<h3 id="4-parsefloat"><a class="markdownIt-Anchor" href="#4-parsefloat"></a> 4. parseFloat()</h3>
+<p>매개변수에 전달된 문자열을 부동소수점 숫자로 변환하여 반환</p>
 <blockquote>
 <p>첫 숫자만  반환되고 숫자로 변환할 수 없으면 NaN을 반환</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(string)</span><br><span class="line"><span class="comment">// string: 변환 대상 문자열</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'3.14'</span>);     <span class="comment">// 3.14</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'10.00'</span>);    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'34 45 66'</span>); <span class="comment">// 34</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-parseInt"><a href="#5-parseInt" class="headerlink" title="5. parseInt()"></a>5. parseInt()</h3><p>매개변수에 전달된 문자열을 정수형 숫자로 변환하여 반환</p>
+<h3 id="5-parseint"><a class="markdownIt-Anchor" href="#5-parseint"></a> 5. parseInt()</h3>
+<p>매개변수에 전달된 문자열을 정수형 숫자로 변환하여 반환</p>
 <blockquote>
 <p>첫 숫자만 반환되고 숫자로 변환할 수 없으면 NaN을 반환</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(string);</span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'23'</span>);       <span class="comment">// 23</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10.33'</span>);    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10 20 30'</span>); <span class="comment">// 30</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">' 60 '</span>);     <span class="comment">// 60</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-encodeURI-decodeURI"><a href="#6-encodeURI-decodeURI" class="headerlink" title="6. encodeURI() / decodeURI()"></a>6. encodeURI() / decodeURI()</h3><p>encodeURI() : 매개변수로 전달된 URI를 인코딩</p>
+<h3 id="6-encodeuri-decodeuri"><a class="markdownIt-Anchor" href="#6-encodeuri-decodeuri"></a> 6. encodeURI() / decodeURI()</h3>
+<p>encodeURI() : 매개변수로 전달된 URI를 인코딩</p>
 <p>decodeURI() : 매개변수로 전달된 URI을 디코딩</p>
 <p><img src="http://cfile26.uf.tistory.com/image/255D3F4755AF337B1BEB88" alt="uri"></p>
 <blockquote>
 <p>네트워크를 통해 정보를 공유할 때 모든 시스템에서 읽을 수 있도록 ASCII Charactor-set으로 변환</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURI</span>(URI)</span><br><span class="line"><span class="comment">// URI: 완전한 URI</span></span><br><span class="line"><span class="built_in">decodeURI</span>(encodedURI)</span><br><span class="line"><span class="comment">// encodedURI: 인코딩된 완전한 URI</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> uri = <span class="string">'http://example.com?id=sdasq1123&amp;name=박진우'</span>;</span><br><span class="line"><span class="keyword">var</span> enc = <span class="built_in">encodeURI</span>(uri);</span><br><span class="line"><span class="keyword">var</span> dec = <span class="built_in">decodeURI</span>(enc);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(enc);</span><br><span class="line"><span class="comment">// http://example.com?id=sdasq1123&amp;name=%CE%3D%C4%EC%9B%85%EB%AA%A8</span></span><br><span class="line"><span class="built_in">console</span>.log(dec);</span><br><span class="line"><span class="comment">// http://example.com?id=sdasq1123&amp;name=박진우</span></span><br></pre></td></tr></table></figure>
-<h3 id="7-encodeURIComponent-decodeURIComponent"><a href="#7-encodeURIComponent-decodeURIComponent" class="headerlink" title="7. encodeURIComponent() / decodeURIComponent()"></a>7. encodeURIComponent() / decodeURIComponent()</h3><p>encodeURIComponent() : 매개변수로 전달된 URI component(구성 요소)를 인코딩</p>
+<h3 id="7-encodeuricomponent-decodeuricomponent"><a class="markdownIt-Anchor" href="#7-encodeuricomponent-decodeuricomponent"></a> 7. encodeURIComponent() / decodeURIComponent()</h3>
+<p>encodeURIComponent() : 매개변수로 전달된 URI component(구성 요소)를 인코딩</p>
 <p>decodeURIComponent() : 매개변수로 전달된 URI component(구성 요소)를 디코딩</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(URI)</span><br><span class="line"><span class="comment">// URI: URI component(구성 요소)</span></span><br><span class="line"><span class="built_in">decodeURIComponent</span>(encodedURI)</span><br><span class="line"><span class="comment">// encodedURI: 인코딩된 URI component(구성 요소)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> uriShort = <span class="string">'id=sdasq1123&amp;name=박진우'</span>;</span><br><span class="line"></span><br><span class="line">enc = <span class="built_in">encodeURIComponent</span>(uriShort);</span><br><span class="line">dec = <span class="built_in">decodeURIComponent</span>(enc);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(enc);</span><br><span class="line"><span class="comment">// id=sdasq1123&amp;name=%CE%3D%C4%EC%9B%85%EB%AA%A8</span></span><br><span class="line"><span class="built_in">console</span>.log(dec);</span><br><span class="line"><span class="comment">// id=sdasq1123&amp;name=박진우</span></span><br></pre></td></tr></table></figure>
-<h3 id="참고-http-poiemaweb-com"><a href="#참고-http-poiemaweb-com" class="headerlink" title="참고 : http://poiemaweb.com"></a>참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+<h3 id="참고-httppoiemawebcom"><a class="markdownIt-Anchor" href="#참고-httppoiemawebcom"></a> 참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+
       
     </div>
     <div class="article-footer">

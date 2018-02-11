@@ -17,18 +17,18 @@
   
   
   <title>Javascript - Cosure | Jinwoo`s Blog</title>
-  <meta name="description" content="클로저(Closure)란?내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함 실행 컨텍스트 관점 클로저내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation object(변">
+  <meta name="description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
 <meta name="keywords" content="javascript,Closure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript - Cosure">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/02/08/javascript-closure/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="클로저(Closure)란?내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함 실행 컨텍스트 관점 클로저내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation object(변">
+<meta property="og:description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-02-08T13:52:55.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript - Cosure">
-<meta name="twitter:description" content="클로저(Closure)란?내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함 실행 컨텍스트 관점 클로저내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation object(변">
+<meta name="twitter:description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/08/javascript-closure/index.html">
   
@@ -325,10 +325,14 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="클로저-Closure-란"><a href="#클로저-Closure-란" class="headerlink" title="클로저(Closure)란?"></a>클로저(Closure)란?</h1><p>내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함</p>
-<h2 id="실행-컨텍스트-관점-클로저"><a href="#실행-컨텍스트-관점-클로저" class="headerlink" title="실행 컨텍스트 관점 클로저"></a>실행 컨텍스트 관점 클로저</h2><p>내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 <strong>Activation object</strong>(변수, 함수 선언 등의 정보를 가지고 있다)는 유효하여 내부함수가 <strong>스코프 체인</strong>을 통해 참조</p>
-<h2 id="자유변수란"><a href="#자유변수란" class="headerlink" title="자유변수란 ?"></a>자유변수란 ?</h2><p>내부함수가 참조하고 있는 변수</p>
-<h2 id="클로저의-활용"><a href="#클로저의-활용" class="headerlink" title="클로저의 활용"></a>클로저의 활용</h2><p>Javascript안에서의 클로저는 강력한 기능이지만 성능이나 자원적인 면에서 손해를 볼 수 있음</p>
+        <h1 id="클로저closure란"><a class="markdownIt-Anchor" href="#클로저closure란"></a> 클로저(Closure)란?</h1>
+<p>내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함</p>
+<h2 id="실행-컨텍스트-관점-클로저"><a class="markdownIt-Anchor" href="#실행-컨텍스트-관점-클로저"></a> 실행 컨텍스트 관점 클로저</h2>
+<p>내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 <strong>Activation object</strong>(변수, 함수 선언 등의 정보를 가지고 있다)는 유효하여 내부함수가 <strong>스코프 체인</strong>을 통해 참조</p>
+<h2 id="자유변수란"><a class="markdownIt-Anchor" href="#자유변수란"></a> 자유변수란 ?</h2>
+<p>내부함수가 참조하고 있는 변수</p>
+<h2 id="클로저의-활용"><a class="markdownIt-Anchor" href="#클로저의-활용"></a> 클로저의 활용</h2>
+<p>Javascript안에서의 클로저는 강력한 기능이지만 성능이나 자원적인 면에서 손해를 볼 수 있음</p>
 <blockquote>
 <p>경험을 통한 사용방법을 터특해야함</p>
 </blockquote>

@@ -17,18 +17,18 @@
   
   
   <title>180124-Daily-Summary - [IR 기법, Sprite 기법], [HTML strong, em과 b,i 구분], [CSS box-sizing, vertical-align] | Jinwoo`s Blog</title>
-  <meta name="description" content="IR(Image Replacement) 기법이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법) 올바른 IR기법1. Text-indent&amp;lt;style&amp;gt;      .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;quot">
+  <meta name="description" content="IR(Image Replacement) 기법 이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)  올바른 IR기법  1. Text-indent &amp;lt;style&amp;gt;   .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;q">
 <meta name="keywords" content="Daily-Summary-Fds">
 <meta property="og:type" content="article">
 <meta property="og:title" content="180124-Daily-Summary - [IR 기법, Sprite 기법], [HTML strong, em과 b,i 구분], [CSS box-sizing, vertical-align]">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="IR(Image Replacement) 기법이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법) 올바른 IR기법1. Text-indent&amp;lt;style&amp;gt;      .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;quot">
+<meta property="og:description" content="IR(Image Replacement) 기법 이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)  올바른 IR기법  1. Text-indent &amp;lt;style&amp;gt;   .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;q">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-01-24T12:17:18.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="180124-Daily-Summary - [IR 기법, Sprite 기법], [HTML strong, em과 b,i 구분], [CSS box-sizing, vertical-align]">
-<meta name="twitter:description" content="IR(Image Replacement) 기법이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법) 올바른 IR기법1. Text-indent&amp;lt;style&amp;gt;      .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;quot">
+<meta name="twitter:description" content="IR(Image Replacement) 기법 이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)  올바른 IR기법  1. Text-indent &amp;lt;style&amp;gt;   .textindent_test{     text-indent:-9999px;   } &amp;lt;/style&amp;gt; &amp;lt;span class=&amp;q">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/24/180124-Daily-Summary/index.html">
   
@@ -325,20 +325,25 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="IR-Image-Replacement-기법"><a href="#IR-Image-Replacement-기법" class="headerlink" title="IR(Image Replacement) 기법"></a><strong>IR(Image Replacement) 기법</strong></h1><p>이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)</p>
-<h2 id="올바른-IR기법"><a href="#올바른-IR기법" class="headerlink" title="올바른 IR기법"></a><strong>올바른 IR기법</strong></h2><h3 id="1-Text-indent"><a href="#1-Text-indent" class="headerlink" title="1. Text-indent"></a><strong>1. Text-indent</strong></h3><pre><code>&lt;style&gt;
-     .textindent_test{
+        <h1 id="irimage-replacement-기법"><a class="markdownIt-Anchor" href="#irimage-replacement-기법"></a> <strong>IR(Image Replacement) 기법</strong></h1>
+<p>이미지를 볼 수 없는 사용자에게 대체된 텍스트를 제공하는 것 (스크린리더 사용자를 위한 기법)</p>
+<h2 id="올바른-ir기법"><a class="markdownIt-Anchor" href="#올바른-ir기법"></a> <strong>올바른 IR기법</strong></h2>
+<h3 id="1-text-indent"><a class="markdownIt-Anchor" href="#1-text-indent"></a> <strong>1. Text-indent</strong></h3>
+<pre><code>&lt;style&gt;
+  .textindent_test{
     text-indent:-9999px;
   }
 &lt;/style&gt;
 &lt;span class=&quot;textindent_test&quot;&gt;
   text-indent IR 기법
 &lt;/span&gt;
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p>Text-indent 속성은 적용된 요소가 많을 때 컴퓨터가 웹 페이지 로드 시 위치값을 적용된 개수 만큼 계산해야 하므로 성능에 저하가 올 수 있음.</p>
 </blockquote>
-<h3 id="2-overflow-hidden"><a href="#2-overflow-hidden" class="headerlink" title="2. overflow:hidden"></a><strong>2. overflow:hidden</strong></h3><pre><code>&lt;style&gt;
-     .visible_test{
+<h3 id="2-overflowhidden"><a class="markdownIt-Anchor" href="#2-overflowhidden"></a> <strong>2. overflow:hidden</strong></h3>
+<pre><code>&lt;style&gt;
+  .visible_test{
     position:absolute;
     left:9999px;
     width:1px;
@@ -349,30 +354,37 @@
 &lt;div class=&quot;overflow_test&quot;&gt;
   overflow:hidden IR 기법
 &lt;/div&gt;
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p>원리는 text-indent랑 유사함</p>
 </blockquote>
-<h3 id="3-z-index를-활용한-설정"><a href="#3-z-index를-활용한-설정" class="headerlink" title="3. z-index를 활용한 설정"></a><strong>3. z-index를 활용한 설정</strong></h3><ul>
-<li>이미지의 대체 텍스트에 z-index 속성 값을 음의 정수로 부여하는 방식   </li>
+<h3 id="3-z-index를-활용한-설정"><a class="markdownIt-Anchor" href="#3-z-index를-활용한-설정"></a> <strong>3. z-index를 활용한 설정</strong></h3>
+<ul>
+<li>
+<p>이미지의 대체 텍스트에 z-index 속성 값을 음의 정수로 부여하는 방식</p>
+  <style>
+ 	  .z-index_test{
+    	position:relative;
+      z-index:-1;
+    }
+  </style>
+  <div class="z-index_test">
+    z-index_test IR 기법
+  </div>
+</li>
 </ul>
-<pre><code>&lt;style&gt;
-     .z-index_test{
-      position:relative;
-    z-index:-1;
-  }
-&lt;/style&gt;
-&lt;div class=&quot;z-index_test&quot;&gt;
-  z-index_test IR 기법
-&lt;/div&gt;
-</code></pre><blockquote>
+<blockquote>
 <p>CSS가 정상적으로 로드되지 않을 때 숨겨진 텍스트가 화면에 출력</p>
 </blockquote>
-<h3 id="4-높이와-넓이를-0으로-설정"><a href="#4-높이와-넓이를-0으로-설정" class="headerlink" title="4. 높이와 넓이를 0으로 설정"></a><strong>4. 높이와 넓이를 0으로 설정</strong></h3><blockquote>
+<h3 id="4-높이와-넓이를-0으로-설정"><a class="markdownIt-Anchor" href="#4-높이와-넓이를-0으로-설정"></a> <strong>4. 높이와 넓이를 0으로 설정</strong></h3>
+<blockquote>
 <p>대체 텍스트 글자가 들어가는 요소의 높이와 너비를 0으로 지정하는 방법</p>
 </blockquote>
-<h2 id="잘못-된-IR-기법"><a href="#잘못-된-IR-기법" class="headerlink" title="잘못 된 IR 기법"></a><strong>잘못 된 IR 기법</strong></h2><p>스크린 리더가 적용된 요소를 무시하고 모두 출력하여 사용자가 현재 화면에서 어떤 컨텐츠가 표시되는 것인지 구별 불가</p>
-<h3 id="1-visible-hidden"><a href="#1-visible-hidden" class="headerlink" title="1. visible:hidden"></a><strong>1. visible:hidden</strong></h3><pre><code>&lt;style&gt;
-     .visible_test{
+<h2 id="잘못-된-ir-기법"><a class="markdownIt-Anchor" href="#잘못-된-ir-기법"></a> <strong>잘못 된 IR 기법</strong></h2>
+<p>스크린 리더가 적용된 요소를 무시하고 모두 출력하여 사용자가 현재 화면에서 어떤 컨텐츠가 표시되는 것인지 구별 불가</p>
+<h3 id="1-visiblehidden"><a class="markdownIt-Anchor" href="#1-visiblehidden"></a> <strong>1. visible:hidden</strong></h3>
+<pre><code>&lt;style&gt;
+  .visible_test{
     position:absolute;
     left:9999px;
     width:1px;
@@ -383,46 +395,66 @@
 &lt;div class=&quot;visible_test&quot;&gt;
   visible:hidden IR 기법
 &lt;/div&gt;
-</code></pre><h3 id="2-display-none"><a href="#2-display-none" class="headerlink" title="2. display:none"></a><strong>2. display:none</strong></h3><pre><code>&lt;style&gt;
-     .display_test{
+</code></pre>
+<h3 id="2-displaynone"><a class="markdownIt-Anchor" href="#2-displaynone"></a> <strong>2. display:none</strong></h3>
+<pre><code>&lt;style&gt;
+  .display_test{
     display:none;
   }
 &lt;/style&gt;
 &lt;div class=&quot;display_test&quot;&gt;
   display:none IR 기법
 &lt;/div&gt;
-</code></pre><hr>
-<h1 id="Sprite-기법"><a href="#Sprite-기법" class="headerlink" title="Sprite 기법"></a><strong>Sprite 기법</strong></h1><p><strong>다량수의 이미지를 하나의 이미지로 묶고 CSS를 이용해 이미지들 마다 position 위치를 이동시켜서 특정 이미지가 보이도록 하는 기법</strong></p>
-<h2 id="장점"><a href="#장점" class="headerlink" title="장점"></a><strong>장점</strong></h2><ul>
+</code></pre>
+<hr>
+<h1 id="sprite-기법"><a class="markdownIt-Anchor" href="#sprite-기법"></a> <strong>Sprite 기법</strong></h1>
+<p><strong>다량수의 이미지를 하나의 이미지로 묶고 CSS를 이용해 이미지들 마다 position 위치를 이동시켜서 특정 이미지가 보이도록 하는 기법</strong></p>
+<h2 id="장점"><a class="markdownIt-Anchor" href="#장점"></a> <strong>장점</strong></h2>
+<ul>
 <li>가볍다 : 일정 간격으로 여러가지 이미지들을 하나로 만들기 때문에 이미지 파일을 여러개를 불러올 필요없이 하나의 이미지만 불러오면 됨</li>
 <li>편리함 : 여러개의 이미지가 여러 곳에 분산되어 있으면 이미지를 관리하기가 불편한데 비슷한 분류의 이미지를 동일한 간격으로 배치하기 때문에 쉽게 적용 가능</li>
 </ul>
-<h2 id="단점"><a href="#단점" class="headerlink" title="단점"></a><strong>단점</strong></h2><ul>
+<h2 id="단점"><a class="markdownIt-Anchor" href="#단점"></a> <strong>단점</strong></h2>
+<ul>
 <li>웹페이지에 이미지를 추가/제거할때 Sprite 이미지도 같이 추가/제거를 해야함</li>
 </ul>
-<p><strong>이미지를 올리면 자동으로 position 값을 보여주는 사이트</strong><br><a href="https://spritegen.website-performance.org/" target="_blank" rel="noopener">https://spritegen.website-performance.org/</a></p>
+<p><strong>이미지를 올리면 자동으로 position 값을 보여주는 사이트</strong><br>
+<a href="https://spritegen.website-performance.org/" target="_blank" rel="noopener">https://spritegen.website-performance.org/</a></p>
 <hr>
-<h1 id="HTML-strong-em과-b-i-구분"><a href="#HTML-strong-em과-b-i-구분" class="headerlink" title="HTML strong, em과 b,i 구분"></a><strong>HTML strong, em과 b,i 구분</strong></h1><h2 id="strong-em과-b-i-공통점"><a href="#strong-em과-b-i-공통점" class="headerlink" title="strong, em과 b,i 공통점"></a><strong>strong, em과 b,i 공통점</strong></h2><p>브라우저에서 태그 사용시 굵은 글씨와 이탤릭체로 표시함</p>
-<h2 id="strong-em과-b-i-차이점"><a href="#strong-em과-b-i-차이점" class="headerlink" title="strong, em과 b,i 차이점"></a><strong>strong, em과 b,i 차이점</strong></h2><p>strong, em 같은 경우에는 각각 굵은 글씨, 이텔릭체로 표시하는데 음성으로 읽을 경우 볼륨이나 톤을 변경하여 읽어주지만 b,i 같은 경우에는 웹 브라우저에서만 굵은 글씨, 이텔릭체로 표시</p>
+<h1 id="html-strong-em과-bi-구분"><a class="markdownIt-Anchor" href="#html-strong-em과-bi-구분"></a> <strong>HTML strong, em과 b,i 구분</strong></h1>
+<h2 id="strong-em과-bi-공통점"><a class="markdownIt-Anchor" href="#strong-em과-bi-공통점"></a> <strong>strong, em과 b,i 공통점</strong></h2>
+<p>브라우저에서 태그 사용시 굵은 글씨와 이탤릭체로 표시함</p>
+<h2 id="strong-em과-bi-차이점"><a class="markdownIt-Anchor" href="#strong-em과-bi-차이점"></a> <strong>strong, em과 b,i 차이점</strong></h2>
+<p>strong, em 같은 경우에는 각각 굵은 글씨, 이텔릭체로 표시하는데 음성으로 읽을 경우 볼륨이나 톤을 변경하여 읽어주지만 b,i 같은 경우에는 웹 브라우저에서만 굵은 글씨, 이텔릭체로 표시</p>
 <blockquote>
 <p>결국 b,i 태그는 강조되는 것처럼 보일 수 있지만 실제로 웹에서 음성으로 인식할때 일반 구조로 태그로 인식함</p>
 </blockquote>
 <hr>
-<h1 id="CSS-box-sizing"><a href="#CSS-box-sizing" class="headerlink" title="CSS box-sizing"></a><strong>CSS box-sizing</strong></h1><p>요소의 너비와 높이를 계산하는 데 사용되는 기본적인 CSS model 대체하기 위해 사용</p>
+<h1 id="css-box-sizing"><a class="markdownIt-Anchor" href="#css-box-sizing"></a> <strong>CSS box-sizing</strong></h1>
+<p>요소의 너비와 높이를 계산하는 데 사용되는 기본적인 CSS model 대체하기 위해 사용</p>
 <pre><code>.box-test{
      box-sizing: content-box / padding-box / border-box;
 }
-</code></pre><h2 id="content-box-속성"><a href="#content-box-속성" class="headerlink" title="content-box 속성"></a><strong>content-box 속성</strong></h2><p>css에 기본 정의된 defualt 값이며 width나 height를 측정할 때 padding, border, margin을 포함하지 않음</p>
-<h2 id="padding-box-속성"><a href="#padding-box-속성" class="headerlink" title="padding-box 속성"></a><strong>padding-box 속성</strong></h2><p>width나 height를 측정할 때 border, margin을 포함하지 않음</p>
-<h2 id="border-box-속성"><a href="#border-box-속성" class="headerlink" title="border-box 속성"></a><strong>border-box 속성</strong></h2><p>width나 height를 측정할 때 margin을 포함하지 않음</p>
+</code></pre>
+<h2 id="content-box-속성"><a class="markdownIt-Anchor" href="#content-box-속성"></a> <strong>content-box 속성</strong></h2>
+<p>css에 기본 정의된 defualt 값이며 width나 height를 측정할 때 padding, border, margin을 포함하지 않음</p>
+<h2 id="padding-box-속성"><a class="markdownIt-Anchor" href="#padding-box-속성"></a> <strong>padding-box 속성</strong></h2>
+<p>width나 height를 측정할 때 border, margin을 포함하지 않음</p>
+<h2 id="border-box-속성"><a class="markdownIt-Anchor" href="#border-box-속성"></a> <strong>border-box 속성</strong></h2>
+<p>width나 height를 측정할 때 margin을 포함하지 않음</p>
 <hr>
-<h1 id="CSS-vertical-align"><a href="#CSS-vertical-align" class="headerlink" title="CSS vertical-align"></a><strong>CSS vertical-align</strong></h1><p>inline 또는 table-cell box에서 수직 정렬을 지정</p>
+<h1 id="css-vertical-align"><a class="markdownIt-Anchor" href="#css-vertical-align"></a> <strong>CSS vertical-align</strong></h1>
+<p>inline 또는 table-cell box에서 수직 정렬을 지정</p>
 <pre><code>.vertical-test{
     vertical-align: top / middle / bottom;
 }
-</code></pre><h2 id="top-속성"><a href="#top-속성" class="headerlink" title="top 속성"></a><strong>top 속성</strong></h2><p>셀을 top으로 정렬</p>
-<h2 id="middle-속성"><a href="#middle-속성" class="headerlink" title="middle 속성"></a><strong>middle 속성</strong></h2><p>셀을 중앙으로 정렬</p>
-<h2 id="bottom-속성"><a href="#bottom-속성" class="headerlink" title="bottom 속성"></a><strong>bottom 속성</strong></h2><p>셀을 bottom으로 정렬</p>
+</code></pre>
+<h2 id="top-속성"><a class="markdownIt-Anchor" href="#top-속성"></a> <strong>top 속성</strong></h2>
+<p>셀을 top으로 정렬</p>
+<h2 id="middle-속성"><a class="markdownIt-Anchor" href="#middle-속성"></a> <strong>middle 속성</strong></h2>
+<p>셀을 중앙으로 정렬</p>
+<h2 id="bottom-속성"><a class="markdownIt-Anchor" href="#bottom-속성"></a> <strong>bottom 속성</strong></h2>
+<p>셀을 bottom으로 정렬</p>
 
       
     </div>

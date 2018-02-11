@@ -17,18 +17,18 @@
   
   
   <title>180130-Daily-Summary - Javascript - 변수, 자료형, 객체형, 표기법, var의 문제점, 삼항 연산자 | Jinwoo`s Blog</title>
-  <meta name="description" content="변수 (Variable)값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자  저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type)문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이">
+  <meta name="description" content="변수 (Variable) 값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자   저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type) 문자열, 숫자, 불리언(boolean), 객체 등 여러 종류">
 <meta name="keywords" content="Daily-Summary-Fds">
 <meta property="og:type" content="article">
 <meta property="og:title" content="180130-Daily-Summary - Javascript - 변수, 자료형, 객체형, 표기법, var의 문제점, 삼항 연산자">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/30/180130-Daily-Summary/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="변수 (Variable)값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자  저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type)문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이">
+<meta property="og:description" content="변수 (Variable) 값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자   저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type) 문자열, 숫자, 불리언(boolean), 객체 등 여러 종류">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-01-30T13:35:07.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="180130-Daily-Summary - Javascript - 변수, 자료형, 객체형, 표기법, var의 문제점, 삼항 연산자">
-<meta name="twitter:description" content="변수 (Variable)값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자  저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type)문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이">
+<meta name="twitter:description" content="변수 (Variable) 값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소  메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자   저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)    자료형(Data Type) 문자열, 숫자, 불리언(boolean), 객체 등 여러 종류">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/30/180130-Daily-Summary/index.html">
   
@@ -325,126 +325,157 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="변수-Variable"><a href="#변수-Variable" class="headerlink" title="변수 (Variable)"></a><strong>변수 (Variable)</strong></h1><p>값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소</p>
+        <h1 id="변수-variable"><a class="markdownIt-Anchor" href="#변수-variable"></a> <strong>변수 (Variable)</strong></h1>
+<p>값을 저장 참조하기 위해 사용하며 메모리 상의 주소를 기억하는 저장소</p>
 <blockquote>
 <p>메모리 주소에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자</p>
+</blockquote>
 <ul>
 <li>저장단위 : byte (8bit : 영문 대소문자, 숫자 특수문자를 포함할 수 있는 단위)</li>
 </ul>
-</blockquote>
 <hr>
-<h1 id="자료형-Data-Type"><a href="#자료형-Data-Type" class="headerlink" title="자료형(Data Type)"></a><strong>자료형(Data Type)</strong></h1><p>문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이터를 식별하는 분류</p>
+<h1 id="자료형data-type"><a class="markdownIt-Anchor" href="#자료형data-type"></a> <strong>자료형(Data Type)</strong></h1>
+<p>문자열, 숫자, 불리언(boolean), 객체 등 여러 종류의 데이터를 식별하는 분류</p>
 <blockquote>
-<p>자료형이 있는 이유 : 메모리에 할당하는 크기를 정하기 위해   </p>
+<p>자료형이 있는 이유 : 메모리에 할당하는 크기를 정하기 위해</p>
 </blockquote>
-<h2 id="기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value"><a href="#기본-자료형-변경-불가능한-값-immutable-value-이며-값으로-접근-pass-by-value" class="headerlink" title="기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)"></a><strong>기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)</strong></h2><ul>
+<h2 id="기본-자료형-변경-불가능한-값immutable-value이며-값으로-접근pass-by-value"><a class="markdownIt-Anchor" href="#기본-자료형-변경-불가능한-값immutable-value이며-값으로-접근pass-by-value"></a> <strong>기본 자료형 : 변경 불가능한 값(immutable value)이며 값으로 접근(pass-by-value)</strong></h2>
+<ul>
 <li>Boolean</li>
 <li>null</li>
 <li>undifined</li>
 <li>Number</li>
 <li>String</li>
-<li>Symbol </li>
+<li>Symbol</li>
 </ul>
-<p><strong>Boolean : true or false</strong><br><strong>null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,”NULL”과 다름)</strong><br><strong>undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳</strong><br><strong>Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)</strong><br><strong>String : 문자열 (유사배열)</strong><br><strong>Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)</strong></p>
+<p><strong>Boolean : true or false</strong><br>
+<strong>null : 변수가 가르키고 있는 참조를 무효화함(null은 “Null”,&quot;NULL&quot;과 다름)</strong><br>
+<strong>undifined : 아직 값이 할당되지 않아서  초기화 해놓은 곳</strong><br>
+<strong>Number : 정수와 실수, infinite(+,-), NaN(Not-a-Number)</strong><br>
+<strong>String : 문자열 (유사배열)</strong><br>
+<strong>Symbol : 객체(key,value)명이 중복되지않은 값을 만드는 것 (ECMAScript 6에서 추가)</strong></p>
 <p>예)</p>
 <pre><code>var num;  // 1
 num = 4;  // 2
-</code></pre><ol>
+</code></pre>
+<ol>
 <li>변수명 num이라는 변수를 생성하는데 값을 정의하지 않았으므로 undifined에 해당하는 메모리에 공간을 확보하고 위치를 기억</li>
-<li>4라는 값에 대한 메모리를 새로 확보하고 num이 가르키던 undifined에서 4로 가르킴<blockquote>
+<li>4라는 값에 대한 메모리를 새로 확보하고 num이 가르키던 undifined에서 4로 가르킴</li>
+</ol>
+<blockquote>
 <p>여기서 undifined는 가르키는 포인터가 없으므로 Garbage Collector가 자동적으로 메모리에 확보되있던 공간을 삭제해줌</p>
 </blockquote>
-</li>
-</ol>
-<h2 id="객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference"><a href="#객체형-변경-가능한-값-mutable-value-참조로-접근-Pass-by-reference" class="headerlink" title="객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)"></a><strong>객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)</strong></h2><ul>
+<h2 id="객체형-변경-가능한-값mutable-value-참조로-접근pass-by-reference"><a class="markdownIt-Anchor" href="#객체형-변경-가능한-값mutable-value-참조로-접근pass-by-reference"></a> <strong>객체형 : 변경 가능한 값(mutable value), 참조로 접근(Pass-by-reference)</strong></h2>
+<ul>
 <li>Object</li>
 </ul>
 <p><strong>Object : 배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함</strong></p>
-<p>예) </p>
+<p>예)</p>
 <pre><code>var user1 = {
-  name: &apos;Park&apos;,
-  number: &apos;13&apos;
+  name: 'Park',
+  number: '13'
   }
 }; // 1
 
 
 var user2 = user1; // 2
 
-user2.name = &apos;John&apos;; // 3
+user2.name = 'John'; // 3
 
 console.log(user1.name); // 4
 console.log(user2.name); // 4
-</code></pre><ol>
+</code></pre>
+<ol>
 <li>객체 user1을 생성하고 user1안에 있는 값들을 메모리안에 넣음</li>
 <li>user1의 값을 user2에 넣는게 아니라 user2는 user1을 포인터로 가르킴</li>
-<li>user2.name에 ‘John’이라는 값을 넣으면 기존의 기본자료형 방식과는 다르게 따로 공간을 생성하지 않고 user1에 있던 공간에서 덮어쓰기 형식으로 수정함</li>
-<li>결국 user1.name과 user2.name의 값은 같은 포인터를 가르키기때문에 John 이라는 값을 출력함 </li>
+<li>user2.name에 'John’이라는 값을 넣으면 기존의 기본자료형 방식과는 다르게 따로 공간을 생성하지 않고 user1에 있던 공간에서 덮어쓰기 형식으로 수정함</li>
+<li>결국 user1.name과 user2.name의 값은 같은 포인터를 가르키기때문에 John 이라는 값을 출력함</li>
 </ol>
-<h2 id="기본-자료형과-객체형의-차이점"><a href="#기본-자료형과-객체형의-차이점" class="headerlink" title="기본 자료형과 객체형의 차이점"></a><strong>기본 자료형과 객체형의 차이점</strong></h2><ul>
-<li>데이터를 변경할 수 없음 </li>
+<h2 id="기본-자료형과-객체형의-차이점"><a class="markdownIt-Anchor" href="#기본-자료형과-객체형의-차이점"></a> <strong>기본 자료형과 객체형의 차이점</strong></h2>
+<ul>
+<li>데이터를 변경할 수 없음</li>
 <li>값으로 전달</li>
 </ul>
-<h2 id="표기법"><a href="#표기법" class="headerlink" title="표기법"></a><strong>표기법</strong></h2><p>낙타등표기법(camelcase)   </p>
+<h2 id="표기법"><a class="markdownIt-Anchor" href="#표기법"></a> <strong>표기법</strong></h2>
+<p>낙타등표기법(camelcase)</p>
 <ul>
 <li>Ex) nameName</li>
 </ul>
-<p>스네이크표기법(snakecase)   </p>
+<p>스네이크표기법(snakecase)</p>
 <ul>
 <li>Ex) name_name</li>
 </ul>
-<p>케밥표기법(kebabcase)   </p>
+<p>케밥표기법(kebabcase)</p>
 <ul>
 <li>Ex) name-name</li>
 </ul>
-<h2 id="메모리"><a href="#메모리" class="headerlink" title="메모리"></a><strong>메모리</strong></h2><ol>
+<h2 id="메모리"><a class="markdownIt-Anchor" href="#메모리"></a> <strong>메모리</strong></h2>
+<ol>
 <li>CODE</li>
 <li>DATA : 전역변수를 저장</li>
 <li>STACK : inmutable</li>
 <li>HEAP(참조형 변수) 영역 : mutable</li>
 </ol>
 <hr>
-<h1 id="var-키워드로-선언된-변수의-문제점"><a href="#var-키워드로-선언된-변수의-문제점" class="headerlink" title="var 키워드로 선언된 변수의 문제점"></a><strong>var 키워드로 선언된 변수의 문제점</strong></h1><h2 id="중복-선언"><a href="#중복-선언" class="headerlink" title="중복 선언"></a><strong>중복 선언</strong></h2><ul>
-<li>변수는 중복 선언이 가능   </li>
-</ul>
-<pre><code>var score = 1;
-console.log(score); // 1
+<h1 id="var-키워드로-선언된-변수의-문제점"><a class="markdownIt-Anchor" href="#var-키워드로-선언된-변수의-문제점"></a> <strong>var 키워드로 선언된 변수의 문제점</strong></h1>
+<h2 id="중복-선언"><a class="markdownIt-Anchor" href="#중복-선언"></a> <strong>중복 선언</strong></h2>
+<ul>
+<li>
+<p>변수는 중복 선언이 가능</p>
+<pre><code>  var score = 1;
+  console.log(score); // 1
 
-var score = 100;
-console.log(score); // 100
-</code></pre><h2 id="var-키워드-생략-가능"><a href="#var-키워드-생략-가능" class="headerlink" title="var 키워드 생략 가능"></a><strong>var 키워드 생략 가능</strong></h2><ul>
-<li>변수 선언시 var 키워드 생략 가능<blockquote>
+  var score = 100;
+  console.log(score); // 100
+</code></pre>
+</li>
+</ul>
+<h2 id="var-키워드-생략-가능"><a class="markdownIt-Anchor" href="#var-키워드-생략-가능"></a> <strong>var 키워드 생략 가능</strong></h2>
+<ul>
+<li>변수 선언시 var 키워드 생략 가능
+<blockquote>
 <p>변수는 전역 변수가 됨</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="동적-타이핑"><a href="#동적-타이핑" class="headerlink" title="동적 타이핑"></a><strong>동적 타이핑</strong></h2><ul>
+<h2 id="동적-타이핑"><a class="markdownIt-Anchor" href="#동적-타이핑"></a> <strong>동적 타이핑</strong></h2>
+<ul>
 <li>같은 변수에 여러 data type의 값을 대입할 수 있음</li>
 </ul>
-<h2 id="변수-호이스팅-Variable-Hoisting"><a href="#변수-호이스팅-Variable-Hoisting" class="headerlink" title="변수 호이스팅(Variable Hoisting)"></a><strong>변수 호이스팅(Variable Hoisting)</strong></h2><ul>
+<h2 id="변수-호이스팅variable-hoisting"><a class="markdownIt-Anchor" href="#변수-호이스팅variable-hoisting"></a> <strong>변수 호이스팅(Variable Hoisting)</strong></h2>
+<ul>
 <li>변수를 선언 이전에 참조 가능</li>
 </ul>
-<h2 id="Function-level-scope"><a href="#Function-level-scope" class="headerlink" title="Function-level scope"></a><strong>Function-level scope</strong></h2><ul>
+<h2 id="function-level-scope"><a class="markdownIt-Anchor" href="#function-level-scope"></a> <strong>Function-level scope</strong></h2>
+<ul>
 <li>전역 변수의 남발</li>
 </ul>
 <hr>
-<h2 id="블록-구문"><a href="#블록-구문" class="headerlink" title="블록 구문"></a><strong>블록 구문</strong></h2><p>함수안에서의 블록 구문에만 지역변수를 인정</p>
-<h2 id="비교-연산자"><a href="#비교-연산자" class="headerlink" title="비교 연산자"></a><strong>비교 연산자</strong></h2><p>(==, ===)(!=, !==)의 차이 : “==, !=”는 값만 확인하고 “===, !==”는 값과 타입을 확인함</p>
-<h2 id="삼항-연산자"><a href="#삼항-연산자" class="headerlink" title="삼항 연산자"></a><strong>삼항 연산자</strong></h2><p>조건 ? 조건이 ture일때 반환할 값 : 조건이 false일때 반환할 값 </p>
+<h2 id="블록-구문"><a class="markdownIt-Anchor" href="#블록-구문"></a> <strong>블록 구문</strong></h2>
+<p>함수안에서의 블록 구문에만 지역변수를 인정</p>
+<h2 id="비교-연산자"><a class="markdownIt-Anchor" href="#비교-연산자"></a> <strong>비교 연산자</strong></h2>
+<p>(<mark>, =<mark>)(!=, !</mark>)의 차이 : &quot;</mark>, !=&quot;는 값만 확인하고 &quot;=<mark>, !</mark>&quot;는 값과 타입을 확인함</p>
+<h2 id="삼항-연산자"><a class="markdownIt-Anchor" href="#삼항-연산자"></a> <strong>삼항 연산자</strong></h2>
+<p>조건 ? 조건이 ture일때 반환할 값 : 조건이 false일때 반환할 값</p>
 <blockquote>
 <p>2개 이상의 조건이 들어갈시 가독성 때문에 if문을 쓰는것이 좋음</p>
 </blockquote>
 <pre><code>var condition = true;
-var result = condition ? &apos;true&apos; : &apos;false&apos;;
-console.log(result); // &apos;true&apos;
-</code></pre><h2 id="단축-평가"><a href="#단축-평가" class="headerlink" title="단축 평가"></a><strong>단축 평가</strong></h2><pre><code>function foo (str) {
-  str = str || &apos;&apos;;
+var result = condition ? 'true' : 'false';
+console.log(result); // 'true'
+</code></pre>
+<h2 id="단축-평가"><a class="markdownIt-Anchor" href="#단축-평가"></a> <strong>단축 평가</strong></h2>
+<pre><code>function foo (str) {
+  str = str || '';
   // do somethig with str
   console.log(str.length);
-  }
-</code></pre><blockquote>
+}
+</code></pre>
+<blockquote>
 <p>매개변수 초기화</p>
 </blockquote>
-<h2 id=""><a href="#" class="headerlink" title="!!"></a><strong>!!</strong></h2><p>피연산자를 boolean값으로 변환하는 것</p>
+<h2 id=""><a class="markdownIt-Anchor" href="#"></a> <strong>!!</strong></h2>
+<p>피연산자를 boolean값으로 변환하는 것</p>
 
       
     </div>

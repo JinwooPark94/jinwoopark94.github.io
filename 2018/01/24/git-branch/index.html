@@ -17,19 +17,19 @@
   
   
   <title>git - branch | Jinwoo`s Blog</title>
-  <meta name="description" content="branch란?여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현) branch의 구조 git branch 이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템  git branch 명령어branch 목">
+  <meta name="description" content="branch란? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현)  branch의 구조   git branch  이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템   git branch 명령어">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git - branch">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/24/git-branch/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="branch란?여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현) branch의 구조 git branch 이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템  git branch 명령어branch 목">
+<meta property="og:description" content="branch란? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현)  branch의 구조   git branch  이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템   git branch 명령어">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://jinwoopark94.github.io/img/git/git-branching-model.png">
 <meta property="og:updated_time" content="2018-01-24T12:47:00.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git - branch">
-<meta name="twitter:description" content="branch란?여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현) branch의 구조 git branch 이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템  git branch 명령어branch 목">
+<meta name="twitter:description" content="branch란? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현)  branch의 구조   git branch  이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템   git branch 명령어">
 <meta name="twitter:image" content="http://jinwoopark94.github.io/img/git/git-branching-model.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/24/git-branch/index.html">
@@ -327,21 +327,38 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="branch란"><a href="#branch란" class="headerlink" title="branch란?"></a><strong>branch란?</strong></h1><p><strong>여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현)</strong></p>
-<h2 id="branch의-구조"><a href="#branch의-구조" class="headerlink" title="branch의 구조"></a><strong>branch의 구조</strong></h2><p><img src="/img/git/git-branching-model.png" alt="branch의 구조"></p>
-<h1 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a><strong>git branch</strong></h1><ul>
+        <h1 id="branch란"><a class="markdownIt-Anchor" href="#branch란"></a> <strong>branch란?</strong></h1>
+<p><strong>여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능(나무 가지를 표현)</strong></p>
+<h2 id="branch의-구조"><a class="markdownIt-Anchor" href="#branch의-구조"></a> <strong>branch의 구조</strong></h2>
+<p><img src="/img/git/git-branching-model.png" alt="branch의 구조"></p>
+<h1 id="git-branch"><a class="markdownIt-Anchor" href="#git-branch"></a> <strong>git branch</strong></h1>
+<ul>
 <li>이전의 버전관리 시스템 같은 경우 위험하고 어렵고 용량을 많이 차지했다면 Git branch는 가볍고 편리하며 사용자가 사용할만한 상태까지 끌어 올린 혁신적인 버전관리 시스템</li>
 </ul>
-<h1 id="git-branch-명령어"><a href="#git-branch-명령어" class="headerlink" title="git branch 명령어"></a><strong>git branch 명령어</strong></h1><h2 id="branch-목록보기"><a href="#branch-목록보기" class="headerlink" title="branch 목록보기"></a><strong>branch 목록보기</strong></h2><pre><code>git branch
-</code></pre><h2 id="branch-생성하기"><a href="#branch-생성하기" class="headerlink" title="branch 생성하기"></a><strong>branch 생성하기</strong></h2><pre><code>git branch &quot;새로운 브랜치 이름&quot;
-</code></pre><h2 id="branch-삭제하기"><a href="#branch-삭제하기" class="headerlink" title="branch 삭제하기"></a><strong>branch 삭제하기</strong></h2><pre><code>git branch -d &quot;삭제할 브랜치 이름&quot;
-</code></pre><h2 id="branch-강제-삭제하기"><a href="#branch-강제-삭제하기" class="headerlink" title="branch 강제 삭제하기"></a><strong>branch 강제 삭제하기</strong></h2><pre><code>git branch -D &quot;삭제할 브랜치 이름&quot;
-</code></pre><h2 id="다른-branch로-전환하기"><a href="#다른-branch로-전환하기" class="headerlink" title="다른 branch로 전환하기"></a><strong>다른 branch로 전환하기</strong></h2><pre><code>git checkout &quot;전환하려는 브랜치 이름&quot;
-</code></pre><h2 id="branch-생성하고-전환하기"><a href="#branch-생성하고-전환하기" class="headerlink" title="branch 생성하고 전환하기"></a><strong>branch 생성하고 전환하기</strong></h2><pre><code>git checkout -b &quot;생성하고 전환할 브랜치 이름&quot;
-</code></pre><blockquote>
+<h1 id="git-branch-명령어"><a class="markdownIt-Anchor" href="#git-branch-명령어"></a> <strong>git branch 명령어</strong></h1>
+<h2 id="branch-목록보기"><a class="markdownIt-Anchor" href="#branch-목록보기"></a> <strong>branch 목록보기</strong></h2>
+<pre><code>git branch
+</code></pre>
+<h2 id="branch-생성하기"><a class="markdownIt-Anchor" href="#branch-생성하기"></a> <strong>branch 생성하기</strong></h2>
+<pre><code>git branch &quot;새로운 브랜치 이름&quot;
+</code></pre>
+<h2 id="branch-삭제하기"><a class="markdownIt-Anchor" href="#branch-삭제하기"></a> <strong>branch 삭제하기</strong></h2>
+<pre><code>git branch -d &quot;삭제할 브랜치 이름&quot;
+</code></pre>
+<h2 id="branch-강제-삭제하기"><a class="markdownIt-Anchor" href="#branch-강제-삭제하기"></a> <strong>branch 강제 삭제하기</strong></h2>
+<pre><code>git branch -D &quot;삭제할 브랜치 이름&quot;
+</code></pre>
+<h2 id="다른-branch로-전환하기"><a class="markdownIt-Anchor" href="#다른-branch로-전환하기"></a> <strong>다른 branch로 전환하기</strong></h2>
+<pre><code>git checkout &quot;전환하려는 브랜치 이름&quot;
+</code></pre>
+<h2 id="branch-생성하고-전환하기"><a class="markdownIt-Anchor" href="#branch-생성하고-전환하기"></a> <strong>branch 생성하고 전환하기</strong></h2>
+<pre><code>git checkout -b &quot;생성하고 전환할 브랜치 이름&quot;
+</code></pre>
+<blockquote>
 <p>branch를 검색해서 생성할려는 branch가 없다면 branch를 새로 만들고 만든 branch로 전환</p>
 </blockquote>
-<h3 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다" class="headerlink" title="이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다."></a><strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h3>
+<h3 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a class="markdownIt-Anchor" href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"></a> <strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h3>
+
       
     </div>
     <div class="article-footer">

@@ -17,13 +17,13 @@
   
   
   <title>git - init, add, commit | Jinwoo`s Blog</title>
-  <meta name="description" content="저장소 만들기 (git init) 저장소를 만들기 위해서는 “git init”이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )mkdir gitblog 방금 만든 프로젝트 폴더로 이동합니다.( Linux 명령어 -&amp;gt; cd: 폴더 이동 )cd gitblog git 저장소를 만듭니">
+  <meta name="description" content="저장소 만들기 (git init)  저장소를 만들기 위해서는 &amp;quot;git init&amp;quot;이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )  mkdir gitblog  방금 만든 프로젝트 폴더로 이동합니다. ( Linux 명령어 -&amp;gt; cd: 폴더 이동 )  cd gi">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git - init, add, commit">
 <meta property="og:url" content="http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="저장소 만들기 (git init) 저장소를 만들기 위해서는 “git init”이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )mkdir gitblog 방금 만든 프로젝트 폴더로 이동합니다.( Linux 명령어 -&amp;gt; cd: 폴더 이동 )cd gitblog git 저장소를 만듭니">
+<meta property="og:description" content="저장소 만들기 (git init)  저장소를 만들기 위해서는 &amp;quot;git init&amp;quot;이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )  mkdir gitblog  방금 만든 프로젝트 폴더로 이동합니다. ( Linux 명령어 -&amp;gt; cd: 폴더 이동 )  cd gi">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://jinwoopark94.github.io/img/git/git_img1.png">
 <meta property="og:image" content="http://jinwoopark94.github.io/img/git/git_img2.png">
@@ -31,7 +31,7 @@
 <meta property="og:updated_time" content="2018-01-16T09:29:07.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git - init, add, commit">
-<meta name="twitter:description" content="저장소 만들기 (git init) 저장소를 만들기 위해서는 “git init”이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )mkdir gitblog 방금 만든 프로젝트 폴더로 이동합니다.( Linux 명령어 -&amp;gt; cd: 폴더 이동 )cd gitblog git 저장소를 만듭니">
+<meta name="twitter:description" content="저장소 만들기 (git init)  저장소를 만들기 위해서는 &amp;quot;git init&amp;quot;이라는 명령어를 입력해야 한다.   먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&amp;gt; mkdir: 폴더 생성 )  mkdir gitblog  방금 만든 프로젝트 폴더로 이동합니다. ( Linux 명령어 -&amp;gt; cd: 폴더 이동 )  cd gi">
 <meta name="twitter:image" content="http://jinwoopark94.github.io/img/git/git_img1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://jinwoopark94.github.io/2018/01/15/git-intro0/index.html">
@@ -329,44 +329,68 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h2 id="저장소-만들기-git-init"><a href="#저장소-만들기-git-init" class="headerlink" title="저장소 만들기 (git init)"></a><strong>저장소 만들기 (git init)</strong></h2><ul>
-<li>저장소를 만들기 위해서는 “git init”이라는 명령어를 입력해야 한다.</li>
+        <h2 id="저장소-만들기-git-init"><a class="markdownIt-Anchor" href="#저장소-만들기-git-init"></a> <strong>저장소 만들기 (git init)</strong></h2>
+<ul>
+<li>저장소를 만들기 위해서는 &quot;git init&quot;이라는 명령어를 입력해야 한다.</li>
 </ul>
 <ol>
-<li>먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&gt; mkdir: 폴더 생성 )<pre><code>mkdir gitblog</code></pre></li>
-<li>방금 만든 프로젝트 폴더로 이동합니다.<br>( Linux 명령어 -&gt; cd: 폴더 이동 )<pre><code>cd gitblog</code></pre></li>
-<li>git 저장소를 만듭니다.<pre><code>git init</code></pre></li>
-<li>아래의 명령어를 입력하여 .git 폴더가 생성 되었는지 확인합니다. ( Linux 명령어 -&gt; ls -la: 경로 안의 모든 내용을 출력 )<br><img src="/img/git/git_img1.png" alt="git_img.png"></li>
+<li>먼저 프로젝트 폴더를 만듭니다. ( Linux 명령어 -&gt; mkdir: 폴더 생성 )</li>
 </ol>
-<h2 id="git-추가-상태-확인-git-add-status"><a href="#git-추가-상태-확인-git-add-status" class="headerlink" title="git 추가, 상태 확인 (git add, status)"></a><strong>git 추가, 상태 확인 (git add, status)</strong></h2><ul>
-<li>git은 기본적으로 새로운 파일을 관리하지 않으며 파일을 관리하기 위해서는 등록이 필요합니다. git 파일 등록은 “git add”라는 명령어를 입력해야 합니다. 이 후 현재 git 폴더 상태를 확인하고 싶으면 “git status”라는 명령어를 사용합니다.</li>
+<pre><code>mkdir gitblog</code></pre>
+<ol start="2">
+<li>방금 만든 프로젝트 폴더로 이동합니다.<br>
+( Linux 명령어 -&gt; cd: 폴더 이동 )</li>
+</ol>
+<pre><code>cd gitblog</code></pre>
+<ol start="3">
+<li>git 저장소를 만듭니다.</li>
+</ol>
+<pre><code>git init</code></pre>
+<ol start="4">
+<li>아래의 명령어를 입력하여 .git 폴더가 생성 되었는지 확인합니다. ( Linux 명령어 -&gt; ls -la: 경로 안의 모든 내용을 출력 )<br>
+<img src="/img/git/git_img1.png" alt="git_img.png"></li>
+</ol>
+<h2 id="git-추가-상태-확인-git-add-status"><a class="markdownIt-Anchor" href="#git-추가-상태-확인-git-add-status"></a> <strong>git 추가, 상태 확인 (git add, status)</strong></h2>
+<ul>
+<li>git은 기본적으로 새로운 파일을 관리하지 않으며 파일을 관리하기 위해서는 등록이 필요합니다. git 파일 등록은 &quot;git add&quot;라는 명령어를 입력해야 합니다. 이 후 현재 git 폴더 상태를 확인하고 싶으면 &quot;git status&quot;라는 명령어를 사용합니다.</li>
 </ul>
 <ol>
-<li>파일을 생성합니다. (Linux 명령어 -&gt; touch: 파일 생성)<pre><code>touch blog-contents.txt</code></pre></li>
-<li>현재 프로젝트 폴더의 상태를 확인해봅니다.<pre><code>git status</code></pre>
-
-</li>
+<li>파일을 생성합니다. (Linux 명령어 -&gt; touch: 파일 생성)</li>
 </ol>
-<p><img src="/img/git/git_img2.png" alt="git_img2.png"><br>(git 파일 등록이 안된 상태라 그림과 같이 Untracked files에 빨간색으로 표시됩니다.)</p>
-<ol>
-<li>git 파일을 등록합니다.<pre><code>git add blog-contents.txt</code></pre></li>
-<li>등록 후 다시 현재 프로젝트 폴더의 상태를 확인해봅니다.<pre><code>git status</code></pre>
-
-</li>
+<pre><code>touch blog-contents.txt</code></pre>
+<ol start="2">
+<li>현재 프로젝트 폴더의 상태를 확인해봅니다.</li>
 </ol>
-<p><img src="/img/git/git_img3.png" alt="git_img3.png"><br>(git 파일 등록이 되면 위의 그림과 같이 초록색으로 표시됩니다.)</p>
-<h2 id="git-버전-만들기-git-commit-config"><a href="#git-버전-만들기-git-commit-config" class="headerlink" title="git 버전 만들기 (git commit, config)"></a><strong>git 버전 만들기 (git commit, config)</strong></h2><ul>
-<li>일단 먼저 버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 1번만 하면 됩니다.<pre><code>git config --global user.name "자신의 닉네임"
-git config --global user.email "자신의 이메일"</code></pre></li>
+<pre><code>git status</code></pre>
+<p><img src="/img/git/git_img2.png" alt="git_img2.png"><br>
+(git 파일 등록이 안된 상태라 그림과 같이 Untracked files에 빨간색으로 표시됩니다.)</p>
+<ol start="3">
+<li>git 파일을 등록합니다.</li>
+</ol>
+<pre><code>git add blog-contents.txt</code></pre>
+<ol start="4">
+<li>등록 후 다시 현재 프로젝트 폴더의 상태를 확인해봅니다.</li>
+</ol>
+<pre><code>git status</code></pre>
+<p><img src="/img/git/git_img3.png" alt="git_img3.png"><br>
+(git 파일 등록이 되면 위의 그림과 같이 초록색으로 표시됩니다.)</p>
+<h2 id="git-버전-만들기-git-commit-config"><a class="markdownIt-Anchor" href="#git-버전-만들기-git-commit-config"></a> <strong>git 버전 만들기 (git commit, config)</strong></h2>
+<ul>
+<li>일단 먼저 버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 1번만 하면 됩니다.</li>
 </ul>
+<pre><code>git config --global user.name "자신의 닉네임"
+git config --global user.email "자신의 이메일"</code></pre>
 <ol>
-<li>git 버전에 “git commit”라는 명령어를 이용하여 commit 메세지와 함께 commit합니다.<pre><code>git add blog-contents.txt # git commit을 하기 전 add를 먼저 해줘야 한다.
-git commit -m "commit msg" # commit 메세지를 작성 후 commit</code></pre></li>
-<li>버전에 대한 정보를 확인합니다.<pre><code>git log</code></pre>
-
-</li>
+<li>git 버전에 &quot;git commit&quot;라는 명령어를 이용하여 commit 메세지와 함께 commit합니다.</li>
 </ol>
-<h3 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다" class="headerlink" title="이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다."></a><strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h3>
+<pre><code>git add blog-contents.txt # git commit을 하기 전 add를 먼저 해줘야 한다.
+git commit -m "commit msg" # commit 메세지를 작성 후 commit</code></pre>
+<ol start="2">
+<li>버전에 대한 정보를 확인합니다.</li>
+</ol>
+<pre><code>git log</code></pre>
+<h3 id="이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"><a class="markdownIt-Anchor" href="#이-과정은-생활코딩-지옥에서-온-git-수업을-듣고-정리한-내용입니다"></a> <strong>이 과정은 생활코딩-지옥에서 온 git 수업을 듣고 정리한 내용입니다.</strong></h3>
+
       
     </div>
     <div class="article-footer">
