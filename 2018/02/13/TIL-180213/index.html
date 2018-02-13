@@ -16,21 +16,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Javascript - Cosure | Jinwoo`s Blog</title>
-  <meta name="description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
-<meta name="keywords" content="Javascript,Closure">
+  <title>TIL-180213 | Jinwoo`s Blog</title>
+  <meta name="description" content="오늘 한 일  HTML list, forms markup 정리하기 Algorism 과제 4문제 풀기 Javascript 복습(Javascript Syntax Basics, Data type)   내일 할 일  HTML table, img markup 정리하기 Algorism 풀기 Javascript 복습">
+<meta name="keywords" content="TIL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript - Cosure">
-<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/08/javascript-closure/index.html">
+<meta property="og:title" content="TIL-180213">
+<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/13/TIL-180213/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
+<meta property="og:description" content="오늘 한 일  HTML list, forms markup 정리하기 Algorism 과제 4문제 풀기 Javascript 복습(Javascript Syntax Basics, Data type)   내일 할 일  HTML table, img markup 정리하기 Algorism 풀기 Javascript 복습">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-12T13:58:15.079Z">
+<meta property="og:updated_time" content="2018-02-13T09:52:09.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript - Cosure">
-<meta name="twitter:description" content="클로저(Closure)란? 내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함  실행 컨텍스트 관점 클로저 내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 Activation obje">
+<meta name="twitter:title" content="TIL-180213">
+<meta name="twitter:description" content="오늘 한 일  HTML list, forms markup 정리하기 Algorism 과제 4문제 풀기 Javascript 복습(Javascript Syntax Basics, Data type)   내일 할 일  HTML table, img markup 정리하기 Algorism 풀기 Javascript 복습">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/08/javascript-closure/index.html">
+  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/13/TIL-180213/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -339,14 +339,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-javascript-closure" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-TIL-180213" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Javascript - Cosure
+      TIL-180213
     </h1>
   
 
@@ -354,20 +354,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/02/08/javascript-closure/" class="article-date">
-	  <time datetime="2018-02-08T13:50:17.000Z" itemprop="datePublished">2018-02-08</time>
+	<a href="/2018/02/13/TIL-180213/" class="article-date">
+	  <time datetime="2018-02-13T09:38:45.000Z" itemprop="datePublished">2018-02-13</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+    <a class="article-category-link" href="/categories/TIL/">TIL</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Closure/">Closure</a>, <a class="article-tag-link" href="/tags/Javascript/">Javascript</a>
+	<a class="article-tag-link" href="/tags/TIL/">TIL</a>
   </span>
 
 
@@ -380,29 +380,24 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/08/javascript-closure/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/13/TIL-180213/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="클로저closure란"><a class="markdownIt-Anchor" href="#클로저closure란"></a> 클로저(Closure)란?</h1>
-<p>내부함수와 외부함수가 있는 관계에서 내부함수가 참조하는 외부함수를 참조할때 내부함수가 외부함수보다 life-cycle이 더 오래 살아있는 현상을 클로저라고 함</p>
-<h2 id="실행-컨텍스트-관점-클로저"><a class="markdownIt-Anchor" href="#실행-컨텍스트-관점-클로저"></a> 실행 컨텍스트 관점 클로저</h2>
-<p>내부함수가 유효한 상태에서 외부함수가 종료하여 외부함수의 실행 컨텍스트가 반환되어도, 외부함수 실행 컨텍스트 내의 <strong>Activation object</strong>(변수, 함수 선언 등의 정보를 가지고 있다)는 유효하여 내부함수가 <strong>스코프 체인</strong>을 통해 참조</p>
-<h2 id="자유변수란"><a class="markdownIt-Anchor" href="#자유변수란"></a> 자유변수란 ?</h2>
-<p>내부함수가 참조하고 있는 변수</p>
-<h2 id="클로저의-활용"><a class="markdownIt-Anchor" href="#클로저의-활용"></a> 클로저의 활용</h2>
-<p>Javascript안에서의 클로저는 강력한 기능이지만 성능이나 자원적인 면에서 손해를 볼 수 있음</p>
-<blockquote>
-<p>경험을 통한 사용방법을 터특해야함</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  &lt;p&gt;Counting&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;button type="button" onclick="myFunction()"&gt;Count!&lt;/</span>button&gt;</span><br><span class="line"></span><br><span class="line">  &lt;p id=<span class="string">"change_value"</span>&gt;<span class="number">0</span>&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var add = (function () &#123;</span></span><br><span class="line"><span class="regexp">      var counter = 0;</span></span><br><span class="line"><span class="regexp">      return function () &#123;</span></span><br><span class="line"><span class="regexp">        return ++counter;</span></span><br><span class="line"><span class="regexp">      &#125;;</span></span><br><span class="line"><span class="regexp">    &#125;());</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    function myFunction() &#123;</span></span><br><span class="line"><span class="regexp">      document.getElementById('change_value').innerHTML = add();</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>script&gt;</span><br><span class="line">  &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>변수 add에는 즉시실행함수(immediately-invoked function expression)가 호출되어 그 결과 무명함수 <code>function () {return ++counter;}</code>를 반환</li>
-<li>즉시실행함수는 한번만 실행되므로 add에 담겨있는 함수가 호출될 때마다 변수 counter가 재차 초기화될 일은 없음. 이때 중요한 것은 add에 담겨있는 함수 <code>function () {return ++counter;}</code>는 외부 함수의 변수 counter에 접근할 수 있고 변수 counter는 자신을 참조하는 함수가 소멸될 때가지 유지된다는 것인데 이러한 현상을 Closure라고 함</li>
-<li>변수 counter는 외부에서 직접 접근할 수 없는 <code>private</code> 변수이므로 전역 변수를 사용했을 때와 같이 의도되지 않은 변경을 걱정할 필요도 없음</li>
-</ol>
+        <h2 id="오늘-한-일"><a class="markdownIt-Anchor" href="#오늘-한-일"></a> 오늘 한 일</h2>
+<ul>
+<li>HTML list, forms markup 정리하기</li>
+<li>Algorism 과제 4문제 풀기</li>
+<li>Javascript 복습(Javascript Syntax Basics, Data type)</li>
+</ul>
+<h2 id="내일-할-일"><a class="markdownIt-Anchor" href="#내일-할-일"></a> 내일 할 일</h2>
+<ul>
+<li>HTML table, img markup 정리하기</li>
+<li>Algorism 풀기</li>
+<li>Javascript 복습</li>
+</ul>
 
       
     </div>
@@ -412,7 +407,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://jinwoopark94.github.io/2018/02/08/javascript-closure/" title="Javascript - Cosure" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/08/javascript-closure/</a>
+      <a href="http://jinwoopark94.github.io/2018/02/13/TIL-180213/" title="TIL-180213" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/13/TIL-180213/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -456,13 +451,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/02/08/javascript-execution-context/" title="Javascript - Execution-context"><i class="icon icon-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Newer</a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/02/07/TIL-180207/" title="TIL-180207">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/02/13/javascript-data-type/" title="Javascript - Data Type">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
   </ul>
