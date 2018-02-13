@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Javascript - Data Type | Jinwoo`s Blog</title>
+  <meta name="description" content="자료형 (Data Type) 자료형에는 기본 자료형과 객체형이 있으며 기본자료형에는 Boolean, null, undefined, Number, String, Symbol이 있으며 객체형에는 Object가 있음  1. 기본 자료형 기본 자료형은 변경 불가능한 값(immutable value)이며 값으로 접근(Pass-by-value)함  정적으로 메모리가">
+<meta name="keywords" content="Javascript,Closure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript - Data Type">
+<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/13/javascript-data-type/index.html">
+<meta property="og:site_name" content="Jinwoo`s Blog">
+<meta property="og:description" content="자료형 (Data Type) 자료형에는 기본 자료형과 객체형이 있으며 기본자료형에는 Boolean, null, undefined, Number, String, Symbol이 있으며 객체형에는 Object가 있음  1. 기본 자료형 기본 자료형은 변경 불가능한 값(immutable value)이며 값으로 접근(Pass-by-value)함  정적으로 메모리가">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/immutable.png">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/immutable1.png">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/immutable2.png">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/mutable.png">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/mutable1.png">
+<meta property="og:image" content="http://jinwoopark94.github.io/img/til/mutable2.png">
+<meta property="og:updated_time" content="2018-02-13T09:33:11.216Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript - Data Type">
+<meta name="twitter:description" content="자료형 (Data Type) 자료형에는 기본 자료형과 객체형이 있으며 기본자료형에는 Boolean, null, undefined, Number, String, Symbol이 있으며 객체형에는 Object가 있음  1. 기본 자료형 기본 자료형은 변경 불가능한 값(immutable value)이며 값으로 접근(Pass-by-value)함  정적으로 메모리가">
+<meta name="twitter:image" content="http://jinwoopark94.github.io/img/til/immutable.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/13/javascript-data-type/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+    
+    
+
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/JinwooPark94" target="_blank">
+          <img class="img-circle img-rotate" src="/img/avatar.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">JinwooPark</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Front-end Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Seoul, Korea</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/JinwooPark94" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorism/">Algorism</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Accessibility/">Web Accessibility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Contents/">Web Contents</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sass/">sass</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorism/">Algorism</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Built-in/">Built-in</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Closure/">Closure</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markup/">Markup</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oh-My-ZSH/">Oh My ZSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regexp/">Regexp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Standard-Built-in/">Standard Built-in</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax-Basics/">Syntax Basics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Accessibility/">Web Accessibility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Contents/">Web Contents</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Window/">Window</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ZSH/">ZSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/execution-context/">execution-context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/number/">number</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Algorism/" style="font-size: 13px;">Algorism</a> <a href="/tags/Built-in/" style="font-size: 13px;">Built-in</a> <a href="/tags/CSS/" style="font-size: 13px;">CSS</a> <a href="/tags/Closure/" style="font-size: 13.17px;">Closure</a> <a href="/tags/Daily-Summary-Fds/" style="font-size: 13.83px;">Daily-Summary-Fds</a> <a href="/tags/HTML/" style="font-size: 13.5px;">HTML</a> <a href="/tags/Javascript/" style="font-size: 13.67px;">Javascript</a> <a href="/tags/Markup/" style="font-size: 13.33px;">Markup</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 13px;">Oh My ZSH</a> <a href="/tags/Regexp/" style="font-size: 13px;">Regexp</a> <a href="/tags/Standard-Built-in/" style="font-size: 13px;">Standard Built-in</a> <a href="/tags/Syntax-Basics/" style="font-size: 13px;">Syntax Basics</a> <a href="/tags/TIL/" style="font-size: 14px;">TIL</a> <a href="/tags/Ubuntu/" style="font-size: 13px;">Ubuntu</a> <a href="/tags/Web-Accessibility/" style="font-size: 13px;">Web Accessibility</a> <a href="/tags/Web-Contents/" style="font-size: 13px;">Web Contents</a> <a href="/tags/Window/" style="font-size: 13px;">Window</a> <a href="/tags/ZSH/" style="font-size: 13px;">ZSH</a> <a href="/tags/array/" style="font-size: 13px;">array</a> <a href="/tags/execution-context/" style="font-size: 13px;">execution-context</a> <a href="/tags/git/" style="font-size: 13.5px;">git</a> <a href="/tags/math/" style="font-size: 13px;">math</a> <a href="/tags/number/" style="font-size: 13px;">number</a> <a href="/tags/sass/" style="font-size: 13px;">sass</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">26</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">38</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2018/02/13/javascript-data-type/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Javascript/">Javascript</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/02/13/javascript-data-type/" class="title">Javascript - Data Type</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-02-13T09:26:23.000Z" itemprop="datePublished">2018-02-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2018/02/13/javascript-syntax-basics/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Javascript/">Javascript</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/02/13/javascript-syntax-basics/" class="title">Javascript - Syntax Basics</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-02-13T07:48:09.000Z" itemprop="datePublished">2018-02-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2018/02/13/html-markup2/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/HTML/">HTML</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/02/13/html-markup2/" class="title">HTML Tag - List, Forms markup</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-02-13T05:34:48.000Z" itemprop="datePublished">2018-02-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2018/02/12/TIL-180212/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/TIL/">TIL</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/02/12/TIL-180212/" class="title">TIL-180212</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-02-12T14:08:07.000Z" itemprop="datePublished">2018-02-12</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2018/02/12/javascript-about/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Javascript/">Javascript</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/02/12/javascript-about/" class="title">Javascript - About, History, Javascript in HTML</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-02-12T13:56:32.000Z" itemprop="datePublished">2018-02-12</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-javascript-data-type" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript - Data Type
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/02/13/javascript-data-type/" class="article-date">
+	  <time datetime="2018-02-13T09:26:23.000Z" itemprop="datePublished">2018-02-13</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Closure/">Closure</a>, <a class="article-tag-link" href="/tags/Javascript/">Javascript</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/13/javascript-data-type/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h1 id="자료형-data-type"><a class="markdownIt-Anchor" href="#자료형-data-type"></a> 자료형 (Data Type)</h1>
+<p>자료형에는 기본 자료형과 객체형이 있으며 기본자료형에는 <code>Boolean</code>, <code>null</code>, <code>undefined</code>, <code>Number</code>, <code>String</code>, <code>Symbol</code>이 있으며 객체형에는 <code>Object</code>가 있음</p>
+<h2 id="1-기본-자료형"><a class="markdownIt-Anchor" href="#1-기본-자료형"></a> 1. 기본 자료형</h2>
+<p>기본 자료형은 변경 불가능한 값(immutable value)이며 값으로 접근(Pass-by-value)함</p>
+<blockquote>
+<p>정적으로 메모리가 정해져있는 STACK 영역에 메모리 할당<br>
+예) 아래의 예시를 그림으로 설명</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="comment">// 1번</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">3</span>;     <span class="comment">// 2번</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">// 3번</span></span><br></pre></td></tr></table></figure>
+<h4 id="1번"><a class="markdownIt-Anchor" href="#1번"></a> 1번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="immutable-value"><a class="markdownIt-Anchor" href="#immutable-value"></a> <img src="/img/til/immutable.png" alt="immutable value"></h4>
+<h4 id="2번"><a class="markdownIt-Anchor" href="#2번"></a> 2번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/til/immutable1.png" alt="immutable value"></p>
+<h4 id="3번"><a class="markdownIt-Anchor" href="#3번"></a> 3번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = a;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/til/immutable2.png" alt="immutable value"></p>
+<h3 id="1-1-boolean"><a class="markdownIt-Anchor" href="#1-1-boolean"></a> 1-1. Boolean</h3>
+<p>Javascript 내에서 가장 많이 쓰이는 데이터 타입이며 <code>true</code>와 <code>false</code> 두 가지 값만 가짐</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> boo = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-undefined"><a class="markdownIt-Anchor" href="#1-2-undefined"></a> 1-2. Undefined</h3>
+<p>Javascript 내에서는 변수를 선언하면 자동적으로 모든 초기값을 <code>undefined</code>가 할당</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo; <span class="comment">// 값은 undefined</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo === <span class="literal">undefined</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-3-null"><a class="markdownIt-Anchor" href="#1-3-null"></a> 1-3. Null</h3>
+<p>Null 타입은 값이 하나이고 null은 빈 객체를 가르키므로 변수 정의시 해당 변수가 객체로 사용되어 진다고 하면 null로 초기화 하는 것이 좋음</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(foo)); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
+<h3 id="여기서-잠깐-undefined와-null의-차이점"><a class="markdownIt-Anchor" href="#여기서-잠깐-undefined와-null의-차이점"></a> 여기서 잠깐!! Undefined와 Null의 차이점</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">null과 undefined는 결국 둘다 값이 없음을 나타내는데 둘의 큰 차이점은 등록, 저장 여부이다.</span><br><span class="line"></span><br><span class="line">null은 값은 값이지만 값으로서 의미가 없는 특별한 값이 등록되어 있는 것이고, undefined는 등록이 되어있지 않기 때문에 초기화도 정의되지 않는 것이다.</span><br><span class="line"></span><br><span class="line">결국 null은 선언, 등록을 하는 키워드이고, undefined는 미리 선언된 전역변수이다.</span><br><span class="line"></span><br><span class="line">참고 : http://webclub.tistory.com/1</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-number"><a class="markdownIt-Anchor" href="#1-4-number"></a> 1-4. Number</h3>
+<p>숫자를 표현하는 정수와 실수, 음의 무한대와 양의 무한대를 표현하는 <code>-Infinity</code>와 <code>Infinity</code>, 숫자가 아닌 값을 나타내는 <code>NaN</code>(Not a Number)가 있음</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> boo = <span class="number">1.3</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(foo));        <span class="comment">// number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(-<span class="literal">Infinity</span>));  <span class="comment">// number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(<span class="literal">Infinity</span>));   <span class="comment">// number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(<span class="literal">NaN</span>));        <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-5-string"><a class="markdownIt-Anchor" href="#1-5-string"></a> 1-5. String</h3>
+<p>문자열 타입은 Text 데이터를 나타내는데 사용하며 <code>' '</code>나 <code>&quot; &quot;</code>로 감싸서 표현함</p>
+<blockquote>
+<p>String의 모든 데이터 타입은 16비트 유니코드 문자의 연속임</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="string">"HARIBO"</span>;</span><br><span class="line"><span class="keyword">var</span> boo = <span class="string">'Chocochip'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> errorFoo = <span class="string">'Snack"  // error : 따옴표의 짝이 맞지 않음</span></span><br></pre></td></tr></table></figure>
+<h3 id="여기서-잠깐-number-type-string-type으로-변경하는-방법과-string-type-number-type으로-변경하는-방법을-알아보자"><a class="markdownIt-Anchor" href="#여기서-잠깐-number-type-string-type으로-변경하는-방법과-string-type-number-type으로-변경하는-방법을-알아보자"></a> 여기서 잠깐!! Number Type -&gt; String Type으로 변경하는 방법과 String Type -&gt; Number Type으로 변경하는 방법을 알아보자</h3>
+<h4 id="1-number-type을-string-type으로-변경하는-방법"><a class="markdownIt-Anchor" href="#1-number-type을-string-type으로-변경하는-방법"></a> 1. Number Type을 String Type으로 변경하는 방법</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val = <span class="number">1004</span>;</span><br><span class="line">val = val + <span class="string">''</span>;</span><br><span class="line"><span class="comment">// val = val.toString();</span></span><br><span class="line"><span class="comment">// val = String(val);</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> val); <span class="comment">// string</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>첫 번째와 두 번째 방법을 추천</p>
+</blockquote>
+<h4 id="2-string-type을-number-type으로-변경하는-방법"><a class="markdownIt-Anchor" href="#2-string-type을-number-type으로-변경하는-방법"></a> 2. String Type을 Number Type으로 변경하는 방법</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val = <span class="string">'1004'</span>;</span><br><span class="line">val = +val; <span class="comment">// "+": 단항 연산자(unary operator)</span></span><br><span class="line"><span class="comment">// val = parseInt(val);</span></span><br><span class="line"><span class="comment">// val = val * 1;</span></span><br><span class="line"><span class="comment">// val = Number(val);</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> val); <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>첫 번째와 두 번째 방법을 추천</p>
+</blockquote>
+<h3 id="1-6-symbol"><a class="markdownIt-Anchor" href="#1-6-symbol"></a> 1-6. Symbol</h3>
+<p>ES6에서 새롭게 추가된 Type이며 주로 객체의 프로퍼티 키로 사용</p>
+<blockquote>
+<p>어플리케이션 전체에서 유일하기 때문에 Symbol 값을 키로 갖는 프로퍼티는 충돌 위험이 없음</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> key = <span class="built_in">Symbol</span>(<span class="string">'key'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> key); <span class="comment">// symbol</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-객체형"><a class="markdownIt-Anchor" href="#2-객체형"></a> 2. 객체형</h2>
+<p>객체형은 변경 가능한 값(mutable value)이며 참조로 접근(Pass-by-reference)함</p>
+<blockquote>
+<p>동적으로 변하는 HEAP 영역에 메모리 할당<br>
+예) 아래의 예시를 그림으로 설명</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="comment">// 1번</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">3</span>;     <span class="comment">// 2번</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">// 3번</span></span><br></pre></td></tr></table></figure>
+<h4 id="1번-2"><a class="markdownIt-Anchor" href="#1번-2"></a> 1번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/til/mutable.png" alt="mutable value"></p>
+<h4 id="2번-2"><a class="markdownIt-Anchor" href="#2번-2"></a> 2번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/til/mutable1.png" alt="mutable value"></p>
+<h4 id="3번-2"><a class="markdownIt-Anchor" href="#3번-2"></a> 3번</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = a;</span><br></pre></td></tr></table></figure>
+<p><img src="/img/til/mutable2.png" alt="mutable value"></p>
+<h3 id="2-1-object"><a class="markdownIt-Anchor" href="#2-1-object"></a> 2-1. object</h3>
+<p>배열, 함수, 정규표현식 등 기본자료형을 제외한 나머지들을 포함</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> userInfo = &#123;</span><br><span class="line">  name : <span class="string">'Park'</span>,</span><br><span class="line">  number : <span class="string">'13'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> user = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="정리"><a class="markdownIt-Anchor" href="#정리"></a> 정리</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">기본 자료형</th>
+<th style="text-align:center">객체형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">데이터를 변경 불가능</td>
+<td style="text-align:center">데이터 변경 가능</td>
+</tr>
+<tr>
+<td style="text-align:center">값으로 전달 (Pass by Value)</td>
+<td style="text-align:center">참조로 전달 (Pass by reference)</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <div class="article-footer">
+      <!--<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://jinwoopark94.github.io/2018/02/13/javascript-data-type/" title="Javascript - Data Type" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/13/javascript-data-type/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>-->
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/JinwooPark94" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/img/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/JinwooPark94" target="_blank"><span class="text-dark">JinwooPark</span><small class="ml-1x">Front-end Developer</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2018/02/13/javascript-syntax-basics/" title="Javascript - Syntax Basics">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/JinwooPark94" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+    
+    
+        
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+        
+    
+    
+        <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113861948-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+
+</body>
+</html>
