@@ -16,19 +16,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Tag: Javascript | Jinwoo`s Blog</title>
-  <meta name="description" content="웹 관련 지식 공유">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jinwoo`s Blog">
-<meta property="og:url" content="http://jinwoopark94.github.io/tags/Javascript/page/2/index.html">
+  <title>Javascript - Hoisting | Jinwoo`s Blog</title>
+  <meta name="description" content="Javascript Hoisting  시작하기 전  Hoisting 이란? hoisting은 hoist라는 단어에서 시작되었으며 hoist의 단어의 의미는 “끌어 올리다”, &amp;quot;끌어 올리는 장치&amp;quot;라는 뜻으로 여기서 &amp;quot;끌어 올린다&amp;quot;라는 것이 포인트  본문 Javascript 실행시 실행 컨텍스트(Execution Conte">
+<meta name="keywords" content="Javascript,Hoisting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript - Hoisting">
+<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/14/javascript-hoisting/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="웹 관련 지식 공유">
+<meta property="og:description" content="Javascript Hoisting  시작하기 전  Hoisting 이란? hoisting은 hoist라는 단어에서 시작되었으며 hoist의 단어의 의미는 “끌어 올리다”, &amp;quot;끌어 올리는 장치&amp;quot;라는 뜻으로 여기서 &amp;quot;끌어 올린다&amp;quot;라는 것이 포인트  본문 Javascript 실행시 실행 컨텍스트(Execution Conte">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-02-14T09:40:18.892Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jinwoo`s Blog">
-<meta name="twitter:description" content="웹 관련 지식 공유">
+<meta name="twitter:title" content="Javascript - Hoisting">
+<meta name="twitter:description" content="Javascript Hoisting  시작하기 전  Hoisting 이란? hoisting은 hoist라는 단어에서 시작되었으며 hoist의 단어의 의미는 “끌어 올리다”, &amp;quot;끌어 올리는 장치&amp;quot;라는 뜻으로 여기서 &amp;quot;끌어 올린다&amp;quot;라는 것이 포인트  본문 Javascript 실행시 실행 컨텍스트(Execution Conte">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://jinwoopark94.github.io/tags/Javascript/page/2/index.html">
+  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/14/javascript-hoisting/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -187,179 +189,159 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">Tag: Javascript</h1>
-      <p class="text-muted hidden-xs">Total 3 articles</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a></li>
-          
-          <li><a href="/tags/TIL/">TIL</a></li>
-          
-          <li><a href="/tags/Window/">Window</a></li>
-          
-          <li><a href="/tags/Ubuntu/">Ubuntu</a></li>
-          
-          <li><a href="/tags/ZSH/">ZSH</a></li>
-          
-          <li><a href="/tags/Oh-My-ZSH/">Oh My ZSH</a></li>
-          
-          <li><a href="/tags/Algorism/">Algorism</a></li>
-          
-          <li><a href="/tags/CSS/">CSS</a></li>
-          
-          <li><a href="/tags/git/">git</a></li>
-          
-          <li><a href="/tags/HTML/">HTML</a></li>
-          
-          <li><a href="/tags/Markup/">Markup</a></li>
-          
-          <li><a href="/tags/Javascript/">Javascript</a></li>
-          
-          <li><a href="/tags/Built-in/">Built-in</a></li>
-          
-          <li><a href="/tags/Standard-Built-in/">Standard Built-in</a></li>
-          
-          <li><a href="/tags/array/">array</a></li>
-          
-          <li><a href="/tags/Closure/">Closure</a></li>
-          
-          <li><a href="/tags/execution-context/">execution-context</a></li>
-          
-          <li><a href="/tags/Hoisting/">Hoisting</a></li>
-          
-          <li><a href="/tags/math/">math</a></li>
-          
-          <li><a href="/tags/number/">number</a></li>
-          
-          <li><a href="/tags/Regexp/">Regexp</a></li>
-          
-          <li><a href="/tags/Syntax-Basics/">Syntax Basics</a></li>
-          
-          <li><a href="/tags/Var-keyword-problem/">Var keyword problem</a></li>
-          
-          <li><a href="/tags/sass/">sass</a></li>
-          
-          <li><a href="/tags/Web-Accessibility/">Web Accessibility</a></li>
-          
-          <li><a href="/tags/Web-Contents/">Web Contents</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-javascript-hoisting" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
         
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-02-06T13:15:01.000Z" itemprop="datePublished">2018-02-06</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/02/06/javascript-number/">Javascript - Number</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Javascript/" class="label label-default mb">Javascript</a>
-     
-      <a href="/tags/number/" class="label label-default mb">number</a>
-     
-   </div>
-   
-</article>
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript - Hoisting
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/02/14/javascript-hoisting/" class="article-date">
+	  <time datetime="2018-02-14T09:39:04.000Z" itemprop="datePublished">2018-02-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Hoisting/">Hoisting</a>, <a class="article-tag-link" href="/tags/Javascript/">Javascript</a>
+  </span>
 
 
-</div>
-
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-02-06T13:14:48.000Z" itemprop="datePublished">2018-02-06</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/02/06/javascript-math/">Javascript - Math</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Javascript/" class="label label-default mb">Javascript</a>
-     
-      <a href="/tags/math/" class="label label-default mb">math</a>
-     
-   </div>
-   
-</article>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
-</div>
-
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-02-06T13:14:35.000Z" itemprop="datePublished">2018-02-06</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/02/06/javascript-array/">Javascript - Array</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Javascript/" class="label label-default mb">Javascript</a>
-     
-      <a href="/tags/array/" class="label label-default mb">array</a>
-     
-   </div>
-   
-</article>
-
-
-</div>
-
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/14/javascript-hoisting/#comments" class="article-comment-link">Comments</a></span>
+        
       </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h1 id="javascript-hoisting"><a class="markdownIt-Anchor" href="#javascript-hoisting"></a> Javascript Hoisting</h1>
+<h2 id="시작하기-전"><a class="markdownIt-Anchor" href="#시작하기-전"></a> 시작하기 전</h2>
+<h3 id="hoisting-이란"><a class="markdownIt-Anchor" href="#hoisting-이란"></a> Hoisting 이란?</h3>
+<p><code>hoisting</code>은 <code>hoist</code>라는 단어에서 시작되었으며 <code>hoist</code>의 단어의 의미는 “끌어 올리다”, &quot;끌어 올리는 장치&quot;라는 뜻으로 여기서 &quot;끌어 올린다&quot;라는 것이 포인트</p>
+<h2 id="본문"><a class="markdownIt-Anchor" href="#본문"></a> 본문</h2>
+<p>Javascript 실행시 실행 컨텍스트(Execution Context)가 생성되며 Runtime 시점 전 모든(변수, 함수)선언문을 다른 구문보다 먼저 읽어 최상위 Scope에 위치시키는 현상을 <code>Hoisting</code> 이라고 함</p>
+<blockquote>
+<p>중요!!</p>
+<p>변수 및 함수 선언이 물리적으로 작성한 코드의 상단으로 옮겨지는 것은 아님</p>
+</blockquote>
+<h4 id="hoisting은-총-세-가지-단계를-거쳐서-실행됨"><a class="markdownIt-Anchor" href="#hoisting은-총-세-가지-단계를-거쳐서-실행됨"></a> <strong><code>Hoisting</code>은 총 세 가지 단계를 거쳐서 실행됨</strong></h4>
+<ol>
+<li>선언 단계</li>
+<li>초기화 단계</li>
+<li>할당 단계</li>
+</ol>
+<h3 id="1-선언-단계"><a class="markdownIt-Anchor" href="#1-선언-단계"></a> 1. 선언 단계</h3>
+<p>모든(변수, 함수)선언문을 찾으면 변수 객체(Variable Object)에 변수를 등록하며 스코프가 참조하는 대상이됨</p>
+<h3 id="2-초기화-단계"><a class="markdownIt-Anchor" href="#2-초기화-단계"></a> 2. 초기화 단계</h3>
+<p>모든 변수 객체(Variable Objecct)에 메모리를 할당함과 동시에 모든 변수에 <code>undefined</code>로 초기화</p>
+<h3 id="3-할당-단계"><a class="markdownIt-Anchor" href="#3-할당-단계"></a> 3. 할당 단계</h3>
+<p><code>undefined</code>로 초기화된 변수에 실제값을 할당</p>
+<h2 id="변수-호이스팅valiable-hoisting"><a class="markdownIt-Anchor" href="#변수-호이스팅valiable-hoisting"></a> 변수 호이스팅(Valiable Hoisting)</h2>
+<p>var 키워드로 선언된 변수는 위의 단계에서 선언 단계와 초기화 단계가 한번에 이루어짐</p>
+<p>아래 예시로 살펴보자.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(score); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> score = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(score); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>위의 코드를 보면 score는 선언되지도 않았는데 <code>undefined</code>라는 값이 들어가 있는데 이 현상은 변수 호이스팅으로 인한 현상</p>
+<h2 id="함수-호이스팅function-hoisting"><a class="markdownIt-Anchor" href="#함수-호이스팅function-hoisting"></a> 함수 호이스팅(Function Hoisting)</h2>
+<p>모든 함수는 위의 단계에서 선언 단계, 초기화 단계, 할당 단계가 한번에 이루어짐</p>
+<p>아래 예시로 살펴보자.</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(printHello()); <span class="comment">// Hello</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printHello</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위의 코드를 보면 <code>console.log(printHello());</code>는 선언 이전에 Hello 라는 결과 값을 출력하는데 이러한 현상은 함수 호이스팅으로 인한 현상</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <!--<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://jinwoopark94.github.io/2018/02/14/javascript-hoisting/" title="Javascript - Hoisting" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/14/javascript-hoisting/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>-->
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/JinwooPark94" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/img/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/JinwooPark94" target="_blank"><span class="text-dark">JinwooPark</span><small class="ml-1x">Front-end Developer</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
     </div>
   </article>
   
     
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev">
-                <a href="/tags/Javascript/">
-                    <i class="icon icon-angle-left"></i>
-                    Prev
-                </a>
-            </li>
-            
-            
-            <li class="next disabled">
-                <a href="javascript:;">
-                    Next
-                    <i class="icon icon-angle-right"></i>                    
-                </a>
-            </li>
-            
-        </ul>
-        <div class="total-article bar-right">Page 2 of 2</div>
-        </div>
-    </nav>
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
- 
+    
+    <li class="next">
+      <a href="/2018/02/14/javascript-var-keyword-problem/" title="Javascript - Var keyword problem">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -414,6 +396,8 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
     
+    
+        
     
     
         <script defer type="text/javascript">
