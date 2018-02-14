@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Jinwoo`s Blog">
 <meta property="og:description" content="Javascript Hoisting  시작하기 전  Hoisting 이란? hoisting은 hoist라는 단어에서 시작되었으며 hoist의 단어의 의미는 “끌어 올리다”, &amp;quot;끌어 올리는 장치&amp;quot;라는 뜻으로 여기서 &amp;quot;끌어 올린다&amp;quot;라는 것이 포인트  본문 Javascript 실행시 실행 컨텍스트(Execution Conte">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-14T09:40:18.892Z">
+<meta property="og:updated_time" content="2018-02-14T14:53:03.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript - Hoisting">
 <meta name="twitter:description" content="Javascript Hoisting  시작하기 전  Hoisting 이란? hoisting은 hoist라는 단어에서 시작되었으며 hoist의 단어의 의미는 “끌어 올리다”, &amp;quot;끌어 올리는 장치&amp;quot;라는 뜻으로 여기서 &amp;quot;끌어 올린다&amp;quot;라는 것이 포인트  본문 Javascript 실행시 실행 컨텍스트(Execution Conte">
@@ -250,11 +250,6 @@
 <p>변수 및 함수 선언이 물리적으로 작성한 코드의 상단으로 옮겨지는 것은 아님</p>
 </blockquote>
 <h4 id="hoisting은-총-세-가지-단계를-거쳐서-실행됨"><a class="markdownIt-Anchor" href="#hoisting은-총-세-가지-단계를-거쳐서-실행됨"></a> <strong><code>Hoisting</code>은 총 세 가지 단계를 거쳐서 실행됨</strong></h4>
-<ol>
-<li>선언 단계</li>
-<li>초기화 단계</li>
-<li>할당 단계</li>
-</ol>
 <h3 id="1-선언-단계"><a class="markdownIt-Anchor" href="#1-선언-단계"></a> 1. 선언 단계</h3>
 <p>모든(변수, 함수)선언문을 찾으면 변수 객체(Variable Object)에 변수를 등록하며 스코프가 참조하는 대상이됨</p>
 <h3 id="2-초기화-단계"><a class="markdownIt-Anchor" href="#2-초기화-단계"></a> 2. 초기화 단계</h3>
@@ -265,12 +260,12 @@
 <p>var 키워드로 선언된 변수는 위의 단계에서 선언 단계와 초기화 단계가 한번에 이루어짐</p>
 <p>아래 예시로 살펴보자.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(score); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> score = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(score); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-<p>위의 코드를 보면 score는 선언되지도 않았는데 <code>undefined</code>라는 값이 들어가 있는데 이 현상은 변수 호이스팅으로 인한 현상</p>
+<p>위의 코드를 보면 score는 선언되지도 않았는데 <code>undefined</code>라는 값이 들어가 있는데 이러한 현상은 변수 호이스팅 때문</p>
 <h2 id="함수-호이스팅function-hoisting"><a class="markdownIt-Anchor" href="#함수-호이스팅function-hoisting"></a> 함수 호이스팅(Function Hoisting)</h2>
 <p>모든 함수는 위의 단계에서 선언 단계, 초기화 단계, 할당 단계가 한번에 이루어짐</p>
 <p>아래 예시로 살펴보자.</p>
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(printHello()); <span class="comment">// Hello</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printHello</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>위의 코드를 보면 <code>console.log(printHello());</code>는 선언 이전에 Hello 라는 결과 값을 출력하는데 이러한 현상은 함수 호이스팅으로 인한 현상</p>
+<p>위의 코드를 보면 <code>console.log(printHello());</code>는 선언 이전에 Hello 라는 결과 값을 출력하는데 이러한 현상은 함수 호이스팅 때문</p>
 
       
     </div>
