@@ -16,27 +16,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this | Jinwoo`s Blog</title>
-  <meta name="description" content="함수 객체의 속성(property)  arguments 속성(property) 함수 호출시 함수 값에 arguments를 자동 생성하고 인수들의 정보를 담고 있는 순회가능한 유사배열 객체  유사배열 객체(array-like object) : 배열처럼 움직이는 객체  123456789101112function multiply(x, y) &amp;#123;  //">
-<meta name="keywords" content="Daily-Summary-Fds">
+  <title>Javascript - Function - 2 | Jinwoo`s Blog</title>
+  <meta name="description" content="함수(Function) - 2  5. 함수의 다양한 형태  5-1. 즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression) 함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함  실행이 필요한 초기화 처리등에 사용 가능  123456789// 기명 즉시호출함수(function nameFunction() &amp;#1">
+<meta name="keywords" content="Javascript,Function">
 <meta property="og:type" content="article">
-<meta property="og:title" content="180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this">
-<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html">
+<meta property="og:title" content="Javascript - Function - 2">
+<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/17/javascript-function2/index.html">
 <meta property="og:site_name" content="Jinwoo`s Blog">
-<meta property="og:description" content="함수 객체의 속성(property)  arguments 속성(property) 함수 호출시 함수 값에 arguments를 자동 생성하고 인수들의 정보를 담고 있는 순회가능한 유사배열 객체  유사배열 객체(array-like object) : 배열처럼 움직이는 객체  123456789101112function multiply(x, y) &amp;#123;  //">
+<meta property="og:description" content="함수(Function) - 2  5. 함수의 다양한 형태  5-1. 즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression) 함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함  실행이 필요한 초기화 처리등에 사용 가능  123456789// 기명 즉시호출함수(function nameFunction() &amp;#1">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://poiemaweb.com/img/callback.png">
-<meta property="og:image" content="http://poiemaweb.com/img/object_literal_prototype_chaining.png">
-<meta property="og:image" content="http://poiemaweb.com/img/constructor_function_prototype_chaining.png">
-<meta property="og:image" content="http://poiemaweb.com/img/changing_prototype.png">
-<meta property="og:image" content="http://poiemaweb.com/img/constructor.png">
-<meta property="og:updated_time" content="2018-02-02T14:58:19.820Z">
+<meta property="og:updated_time" content="2018-02-17T06:00:07.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this">
-<meta name="twitter:description" content="함수 객체의 속성(property)  arguments 속성(property) 함수 호출시 함수 값에 arguments를 자동 생성하고 인수들의 정보를 담고 있는 순회가능한 유사배열 객체  유사배열 객체(array-like object) : 배열처럼 움직이는 객체  123456789101112function multiply(x, y) &amp;#123;  //">
+<meta name="twitter:title" content="Javascript - Function - 2">
+<meta name="twitter:description" content="함수(Function) - 2  5. 함수의 다양한 형태  5-1. 즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression) 함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함  실행이 필요한 초기화 처리등에 사용 가능  123456789// 기명 즉시호출함수(function nameFunction() &amp;#1">
 <meta name="twitter:image" content="http://poiemaweb.com/img/callback.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/index.html">
+  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/17/javascript-function2/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -198,14 +194,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-180202-Daily-Summary" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-javascript-function2" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this
+      Javascript - Function - 2
     </h1>
   
 
@@ -213,20 +209,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/02/02/180202-Daily-Summary/" class="article-date">
-	  <time datetime="2018-02-02T14:48:33.000Z" itemprop="datePublished">2018-02-02</time>
+	<a href="/2018/02/17/javascript-function2/" class="article-date">
+	  <time datetime="2018-02-17T05:59:00.000Z" itemprop="datePublished">2018-02-17</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a>
+	<a class="article-tag-link" href="/tags/Function/">Function</a>, <a class="article-tag-link" href="/tags/Javascript/">Javascript</a>
   </span>
 
 
@@ -239,36 +235,61 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/02/180202-Daily-Summary/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/17/javascript-function2/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h1 id="함수-객체의-속성property"><a class="markdownIt-Anchor" href="#함수-객체의-속성property"></a> 함수 객체의 속성(property)</h1>
-<h2 id="arguments-속성property"><a class="markdownIt-Anchor" href="#arguments-속성property"></a> arguments 속성(property)</h2>
+        <h1 id="함수function-2"><a class="markdownIt-Anchor" href="#함수function-2"></a> 함수(Function) - 2</h1>
+<h2 id="5-함수의-다양한-형태"><a class="markdownIt-Anchor" href="#5-함수의-다양한-형태"></a> 5. 함수의 다양한 형태</h2>
+<h3 id="5-1-즉시호출함수표현식-iife-immediately-invoke-function-expression"><a class="markdownIt-Anchor" href="#5-1-즉시호출함수표현식-iife-immediately-invoke-function-expression"></a> 5-1. 즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression)</h3>
+<p>함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함</p>
+<blockquote>
+<p>실행이 필요한 초기화 처리등에 사용 가능</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 기명 즉시호출함수</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">nameFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 익명방법</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-내부-함수-inner-function"><a class="markdownIt-Anchor" href="#5-2-내부-함수-inner-function"></a> 5-2. 내부 함수 (Inner function)</h3>
+<p>함수 내부에 있는 함수를 내부함수</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//부모함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 내부함수</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>자식은 부모의 변수에 접근이 가능하지만 부모는 자식의 변수에 접근 불가능함</li>
+<li>안의 내부함수는 부모함수의 외부에서 접근할 수 없음</li>
+</ul>
+<h3 id="5-3-콜백-함수-callback-function"><a class="markdownIt-Anchor" href="#5-3-콜백-함수-callback-function"></a> 5-3. 콜백 함수 (Callback function)</h3>
+<p><img src="http://poiemaweb.com/img/callback.png" alt="참고 : http://poiemaweb.com/js-function - callback function"></p>
+<p>특정한 이벤트가 발생할때 호출되는 함수</p>
+<blockquote>
+<p>나중에 호출하는 함수</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">laterCall</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">'Park'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 0.03초 후에 함수 실행</span></span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span> + name);</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">doSomething(); <span class="comment">// My name is Park 이라고 출력됨</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-4-재귀함수-recursion-function"><a class="markdownIt-Anchor" href="#5-4-재귀함수-recursion-function"></a> 5-4. 재귀함수 (Recursion Function)</h3>
+<p>자기 자신을 재호출 하는 함수</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 가장 이해하기 factorial의 예</span></span><br><span class="line"><span class="comment">// factorial이란 계승의 계산이며, 만약 3의 값이 들어오면 1 * 2 * 3을 곱한 계산인 6이 나옴</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 0 보다 작은 경우 -1 반환</span></span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 0과 같은 경우 1을 반환</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> tmp = num;</span><br><span class="line">    <span class="keyword">while</span> (num-- &gt; <span class="number">2</span>) &#123;</span><br><span class="line">        tmp *= num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(factorial(<span class="number">8</span>)); <span class="comment">// 40320</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-함수-객체의-속성"><a class="markdownIt-Anchor" href="#6-함수-객체의-속성"></a> 6. 함수 객체의 속성</h2>
+<h3 id="6-1-arguments-속성"><a class="markdownIt-Anchor" href="#6-1-arguments-속성"></a> 6-1. arguments 속성</h3>
 <p>함수 호출시 함수 값에 arguments를 자동 생성하고 인수들의 정보를 담고 있는 순회가능한 유사배열 객체</p>
 <blockquote>
 <p>유사배열 객체(array-like object) : 배열처럼 움직이는 객체</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 방어코드 넣기</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">multiply();        <span class="comment">// &#123;&#125;</span></span><br><span class="line">multiply(<span class="number">1</span>);       <span class="comment">// &#123; '0': 1 &#125;</span></span><br><span class="line">multiply(<span class="number">1</span>, <span class="number">2</span>);    <span class="comment">// &#123; '0': 1, '1': 2 &#125;</span></span><br><span class="line">multiply(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// &#123; '0': 1, '1': 2, '2': 3 &#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="caller-속성property"><a class="markdownIt-Anchor" href="#caller-속성property"></a> caller 속성(property)</h2>
+<h3 id="6-2-caller-속성"><a class="markdownIt-Anchor" href="#6-2-caller-속성"></a> 6-2. caller 속성</h3>
 <p>자신이 호출한 함수를 의미</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">restaurant</span>(<span class="params">personFunc</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> table = personFunc();</span><br><span class="line">  <span class="keyword">return</span> desk;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> person.caller;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(restaurant(person)); <span class="comment">// function restaurant의 속성을 가지고 있음</span></span><br></pre></td></tr></table></figure>
-<h2 id="length-속성property"><a class="markdownIt-Anchor" href="#length-속성property"></a> length 속성(property)</h2>
+<h3 id="6-3-length-속성"><a class="markdownIt-Anchor" href="#6-3-length-속성"></a> 6-3. length 속성</h3>
 <p>함수에서 매개변수의 개수를 의미</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"> name, gender, country </span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person.length); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-<h2 id="name-속성property"><a class="markdownIt-Anchor" href="#name-속성property"></a> name 속성(property)</h2>
+<h3 id="6-4-name-속성"><a class="markdownIt-Anchor" href="#6-4-name-속성"></a> 6-4. name 속성</h3>
 <p>기명 함수 또는 익명 함수에 사용되며</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"> name, gender, country </span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// 여기서의 person name은 함수 function의 이름인 person이 출력됨</span></span><br></pre></td></tr></table></figure>
-<h2 id="____proto-속성property"><a class="markdownIt-Anchor" href="#____proto-속성property"></a> ____<strong>proto</strong> 속성(property)</h2>
+<h3 id="6-5-____proto-속성"><a class="markdownIt-Anchor" href="#6-5-____proto-속성"></a> 6-5. ____<strong>proto</strong> 속성</h3>
 <ul>
 <li>함수 객체를 포함한 모든 객체가 가지고 있는 프로퍼티</li>
 <li>자신의 부모역할을 할 프로포타입 객체를 가르킴</li>
 <li>함수의 프로포타입 객체는 <code>Function.prototype</code> 이며 이것도 함수</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">phone</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === <span class="built_in">Function</span>.prototype);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getPrototypeOf(phone) === <span class="built_in">Function</span>.prototype);</span><br></pre></td></tr></table></figure>
-<h2 id="prototype-속성property"><a class="markdownIt-Anchor" href="#prototype-속성property"></a> prototype 속성(property)</h2>
+<h3 id="6-6-prototype-속성"><a class="markdownIt-Anchor" href="#6-6-prototype-속성"></a> 6-6. prototype 속성</h3>
 <ul>
 <li>함수 객체만 가지고 있는 프로퍼티</li>
 <li>함수 객체가 생성자로 사용될 때 생성된 객체의 부모 역할을 하는 객체를 가르킴</li>
@@ -278,137 +299,34 @@
 <p>함수는 생성자 함수로 사용될 가능성이 있기 때문에</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">phone</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === <span class="built_in">Function</span>.prototype); <span class="comment">// true ①</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__ === phone.prototype);   <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.prototype.constructor === phone); <span class="comment">// true ②</span></span><br><span class="line"><span class="built_in">console</span>.log(phone.__proto__.constructor === phone.prototype.constructor); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="함수의-다양한-형태"><a class="markdownIt-Anchor" href="#함수의-다양한-형태"></a> 함수의 다양한 형태</h1>
-<h2 id="즉시호출함수표현식-iife-immediately-invoke-function-expression"><a class="markdownIt-Anchor" href="#즉시호출함수표현식-iife-immediately-invoke-function-expression"></a> 즉시호출함수표현식 (IIFE,  Immediately Invoke Function Expression)</h2>
-<p>함수 정의와 동시에 즉시 호출하는데 딱 한번 호출함</p>
-<blockquote>
-<p>실행이 필요한 초기화 처리등에 사용 가능</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 기명 즉시호출함수</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">nameFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 익명방법</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
-<h2 id="내부-함수-inner-function"><a class="markdownIt-Anchor" href="#내부-함수-inner-function"></a> 내부 함수 (Inner function)</h2>
-<p>함수 내부에 있는 함수를 내부함수</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//부모함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 내부함수</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>자식은 부모의 변수에 접근이 가능하지만 부모는 자식의 변수에 접근 불가능함</li>
-<li>안의 내부함수는 부모함수의 외부에서 접근할 수 없음</li>
-</ul>
-<h2 id="콜백-함수-callback-function"><a class="markdownIt-Anchor" href="#콜백-함수-callback-function"></a> 콜백 함수 (Callback function)</h2>
-<p><img src="http://poiemaweb.com/img/callback.png" alt="참고 : http://poiemaweb.com/js-function - callback function"></p>
-<p>특정한 이벤트가 발생할때 호출되는 함수</p>
-<blockquote>
-<p>나중에 호출하는 함수</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">laterCall</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">'Park'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 0.03초 후에 함수 실행</span></span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span> + name);</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">doSomething(); <span class="comment">// My name is Park 이라고 출력됨</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="프로토타입-객체"><a class="markdownIt-Anchor" href="#프로토타입-객체"></a> 프로토타입 객체</h1>
-<ul>
-<li>
-<p><code>Javascript</code>는 프로토타입 기반 객체지향 프로그래밍 언어</p>
-</li>
-<li>
-<p>모든 객체는 자신의 부모 역할 담당하는 객체와 연결되어 있음</p>
-<blockquote>
-<p>부모 객체를 Prototype 객체라고 부르며 줄여서 Prototype이라고 함</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>결국 Prototype 객체는 생성자 함수에 의해 생성된 각 객체들에 제공되는 공통부분의 프로퍼티를 제공하기 위해 사용</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> restaurant = &#123;</span><br><span class="line">  foodName: <span class="string">'pasta'</span>,</span><br><span class="line">  value: <span class="number">16000</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(restaurant.hasOwnProperty(<span class="string">'name'</span>)); <span class="comment">// 값은 : true</span></span><br></pre></td></tr></table></figure>
-<p>restaurant라는 객체에는 hasOwnProperty라는 정보가 없지만 값은 true가 출력이 된다. 그 이유는 만약 선택한 객체에 값이 없으면 그 다음 부모 객체로 찾아가고 또 없으면 이 과정을 반복하여 결국 Object 객체까지 가서 없으면 error값을 반환 한다.</p>
-<h2 id="constructor-프로퍼티"><a class="markdownIt-Anchor" href="#constructor-프로퍼티"></a> constructor 프로퍼티</h2>
-<p>모든 Prototype 객체는 constructor 이라는 Property를 가지는데 이것은 생성자 함수를 가르킴</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Restaurant</span>(<span class="params">food</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.food = food;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Restaurant(<span class="string">'pasta'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Restaurant.prototype.constructor === Restaurant);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.constructor === Restaurant);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Restaurant.constructor === <span class="built_in">Function</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="prototype-chain프로토타입-체인"><a class="markdownIt-Anchor" href="#prototype-chain프로토타입-체인"></a> Prototype chain(프로토타입 체인)</h2>
-<p>Property나 메소드로 접근하려고 할 때 해당 객체에 Property 값 또는 메소드가 없다면 각각의 객체에 가지고 있는 ____<strong>proto</strong>( 부모역할을 할 프로포타입 객체를 가르킴)의 위치를 찾아 계속 반복 수행을 하는 것</p>
-<blockquote>
-<p>Prototype chain의 동작 조건</p>
-</blockquote>
-<p><strong>자바스트립트의 프로토타입 체이닝은 결국 상속</strong></p>
-<h3 id="리터널-방식-객체의-prototype-체인"><a class="markdownIt-Anchor" href="#리터널-방식-객체의-prototype-체인"></a> 리터널 방식 객체의 Prototype 체인</h3>
-<p>객체를 생성하는 과정에서 Object() 생성자 함수로 객체를 생성하는데 Object() 생성자 함수도 다른 함수와 같은 함수이기 때문에 prototype 속성이 있음</p>
-<p><img src="http://poiemaweb.com/img/object_literal_prototype_chaining.png" alt="참고 : http://poiemaweb.com/js-function - Object literal Prototype chaining"></p>
-<blockquote>
-<p>결국 객체(Object)를 생성하면 그 객체에 <code>Object.prototype</code>을 프로포타입 객체로 가짐</p>
-</blockquote>
-<h3 id="생성자-방식-객체의-prototype-체인"><a class="markdownIt-Anchor" href="#생성자-방식-객체의-prototype-체인"></a> 생성자 방식 객체의 Prototype 체인</h3>
-<p>함수를 생성하는 과정에서 Function() 생성자 함수를 통해 함수가 생성되는데 모든 함수의 Prototype 객체는 <code>Function.prototype</code>이고 또한 생성자 함수도 함수 객체이므로 <code>Function.prototype</code> 객체이다.</p>
-<p><img src="http://poiemaweb.com/img/constructor_function_prototype_chaining.png" alt="참고 : http://poiemaweb.com/js-function - constructor function prototype chaining"></p>
-<blockquote>
-<p>모든 방식은 결국 모든 객체의 부모인 Object.prototpye 객체에서 끝나는데 이것을 <code>프로토타입 체인의 종점</code>이라고 함</p>
-</blockquote>
-<h2 id="prototype-객체의-확장-및-변경"><a class="markdownIt-Anchor" href="#prototype-객체의-확장-및-변경"></a> Prototype 객체의 확장 및 변경</h2>
-<p>Prototype 객체도 객체이므로 객체를 추가, 수정 또는 삭제 할 수 있음</p>
-<blockquote>
-<p>이 말은 즉 Object.prototype 객체를 추가, 수정 또는 삭제 가능</p>
-</blockquote>
-<p><img src="http://poiemaweb.com/img/changing_prototype.png" alt="참고 : http://poiemaweb.com/js-function - changing prototype"></p>
-<h2 id="기본자료형primitive-data-type의-확장"><a class="markdownIt-Anchor" href="#기본자료형primitive-data-type의-확장"></a> 기본자료형(Primitive data type)의 확장</h2>
-<p>기본자료형인 문자열이 객체와 유사하게 동작하는데 기본자료형으로 프로퍼티나 메소드를 호출할 때 기본자료형과 연관된 객체로 일시적으로 변환되어 프로토타입 객체를 공유하고 이후 다시 기본자료형으로 변환</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'test'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);                 <span class="comment">// 자료형</span></span><br><span class="line"><span class="built_in">console</span>.log(str.constructor === <span class="built_in">String</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.dir(str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> strObj = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'test'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj);                 <span class="comment">// 객체</span></span><br><span class="line"><span class="built_in">console</span>.log(strObj.constructor === <span class="built_in">String</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.dir(strObj);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>기본자료형 중 문자열일 경우 &quot;.&quot;을 찍는 순간 String() 생성자 함수로 객체로 바꿔버림</p>
-</blockquote>
-<hr>
-<h1 id="scope-유효범위"><a class="markdownIt-Anchor" href="#scope-유효범위"></a> Scope (유효범위)</h1>
-<h2 id="scope의-종류"><a class="markdownIt-Anchor" href="#scope의-종류"></a> Scope의 종류</h2>
-<ul>
-<li>전역변수 : 어디서든 참조할 수 있는 변수
-<blockquote>
-<p>전역 객체(Global scope)는 window의 property</p>
-</blockquote>
-</li>
-<li>지역변수 : 지역에서만 참조할 수 있는 변수
-<blockquote>
-<p>함수 지역내에만 지역변수를 선언 가능</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="생존기간life-cycle-조절"><a class="markdownIt-Anchor" href="#생존기간life-cycle-조절"></a> 생존기간(life-cycle) 조절</h2>
-<ul>
-<li>전역변수 : 어플리케이션이 끝날 때 까지 남아 있음</li>
-<li>지역변수 : 함수가 종료될 때 까지 남아 있음</li>
-</ul>
-<hr>
-<h1 id="this"><a class="markdownIt-Anchor" href="#this"></a> this</h1>
-<p>인스턴스 자신을 가르키는 변수이며 객체 자신에 대한 참조 값을 가지고 있음</p>
-<h2 id="특징"><a class="markdownIt-Anchor" href="#특징"></a> 특징</h2>
-<ul>
-<li>함수가 호출될 때 argument 객체와 this를 전달 받음</li>
-<li>함수 또는 메소드 안에 있는 것은 모두 전역객체
-<blockquote>
-<p>단, 2가지를 제외함</p>
-</blockquote>
-<ul>
-<li>메소드 내에 있는 경우</li>
-<li>생성자 함수에 있는 경우</li>
-</ul>
-</li>
-</ul>
-<h2 id="함수-호출-패턴에-따른-this의-참조값"><a class="markdownIt-Anchor" href="#함수-호출-패턴에-따른-this의-참조값"></a> 함수 호출 패턴에 따른 this의 참조값</h2>
-<h3 id="1-함수-호출-패턴"><a class="markdownIt-Anchor" href="#1-함수-호출-패턴"></a> 1. 함수 호출 패턴</h3>
+<h2 id="7-함수-호출-패턴에-따른-this의-참조값"><a class="markdownIt-Anchor" href="#7-함수-호출-패턴에-따른-this의-참조값"></a> 7. 함수 호출 패턴에 따른 this의 참조값</h2>
+<h3 id="7-1-함수-호출-패턴"><a class="markdownIt-Anchor" href="#7-1-함수-호출-패턴"></a> 7-1. 함수 호출 패턴</h3>
 <p>전역객체는 객체중에 가장 상위 객체인데 딱 유일한 하나이며 browser에서는 ‘window’ node에서는 'global’을 포함</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// browser console</span></span><br><span class="line"><span class="keyword">this</span> === <span class="built_in">window</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// in Terminal - Node</span></span><br><span class="line"><span class="keyword">this</span> === global <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-메소드-호출-패턴"><a class="markdownIt-Anchor" href="#2-메소드-호출-패턴"></a> 2. 메소드 호출 패턴</h3>
+<h3 id="7-2-메소드-호출-패턴"><a class="markdownIt-Anchor" href="#7-2-메소드-호출-패턴"></a> 7-2. 메소드 호출 패턴</h3>
 <p>함수 자체가 객체의 Property면 메소드 호출 패턴으로 호출</p>
 <blockquote>
 <p>메소드 내부에 this는 메소드를 호출한 객체에 바인딩됨</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> me = <span class="keyword">new</span> Person(<span class="string">'Park'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(me.getName());</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">'Woo'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.getName());</span><br></pre></td></tr></table></figure>
-<h3 id="3-생성자-호출-패턴"><a class="markdownIt-Anchor" href="#3-생성자-호출-패턴"></a> 3. 생성자 호출 패턴</h3>
+<h3 id="7-3-생성자-호출-패턴"><a class="markdownIt-Anchor" href="#7-3-생성자-호출-패턴"></a> 7-3. 생성자 호출 패턴</h3>
 <p>기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작</p>
 <h4 id="동작-방식"><a class="markdownIt-Anchor" href="#동작-방식"></a> 동작 방식</h4>
 <ol>
-<li>빈 객체 생성과 동시에 this 바인딩<br>
-<strong>순서</strong>
+<li>
+<p>빈 객체 생성과 동시에 this 바인딩</p>
+<p><strong>순서</strong></p>
 <ul>
 <li>빈 객체를 만듬</li>
 <li>this를 빈 객체를 가리킴</li>
 <li>마지막에 자신의 프로토타입 객체로 설정</li>
 </ul>
 </li>
-<li>this를 통한 property 생성</li>
-<li>생성된 객체를 반환함
+<li>
+<p>this를 통한 property 생성</p>
+</li>
+<li>
+<p>생성된 객체를 반환함</p>
 <ul>
 <li>반환문이 없는 경우, this에 바인딩 되어있는 새로운 객체를 반환</li>
 <li>반환문이 this가 아닌 다른 객체를 반환하는 경우, this가 아닌 해당 객체가 반환</li>
@@ -416,8 +334,6 @@
 </li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 생성자 함수 코드 실행 전 -------- 1</span></span><br><span class="line">  <span class="keyword">this</span>.name = name;  <span class="comment">// --------- 2</span></span><br><span class="line">  <span class="comment">// 생성된 함수 반환 -------------- 3</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> me = <span class="keyword">new</span> Person(<span class="string">'Lee'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(me.name);</span><br></pre></td></tr></table></figure>
-<p><img src="http://poiemaweb.com/img/constructor.png" alt="참고 : http://poiemaweb.com/js-function - constructor"></p>
-<h3 id="참고-httppoiemawebcom"><a class="markdownIt-Anchor" href="#참고-httppoiemawebcom"></a> 참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
 
       
     </div>
@@ -427,7 +343,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/" title="180202-Daily-Summary - Javascript - 객체, 함수의 종류, 프로토타입 객체, Scope, this" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/02/180202-Daily-Summary/</a>
+      <a href="http://jinwoopark94.github.io/2018/02/17/javascript-function2/" title="Javascript - Function - 2" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/17/javascript-function2/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -471,13 +387,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/02/03/TIL-180202/" title="TIL-180202"><i class="icon icon-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Newer</a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/02/01/TIL-180201/" title="TIL-180201">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/02/17/function2/" title="function2">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
   </ul>
