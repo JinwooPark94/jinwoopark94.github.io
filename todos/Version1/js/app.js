@@ -99,9 +99,18 @@ function loadData(filter){
 
     // 자동 검색
   } else if (filter === 'search') {
-    arrayName = todos.filter( function (item){
-      return (item.content.toLowerCase().match(searchTodo.value.toLowerCase())) ? true : false;
+    // 정규 표현식 사용
+    var regexr = new RegExp(searchTodo.value, "ig");
+
+    arrayName = todos.filter(function (item) {
+      return regexr.test(item.content);
     });
+
+    // 정규표현식을 사용하지 않을 시
+    /*arrayName = todos.filter( function (item){
+      return (item.content.toLowerCase().match(searchTodo.value.toLowerCase())) ? true : false;
+    }); */
+
     if (!searchTodo.value) arrayName = todos;
 
   } else {
