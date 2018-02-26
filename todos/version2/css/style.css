@@ -6,6 +6,10 @@ body {
   font-size:15px;
 }
 
+.container{
+  margin-bottom:8%;
+}
+
 .text-muted {
   color: #98a6ad;
 }
