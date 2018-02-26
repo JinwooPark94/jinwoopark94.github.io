@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Todos V2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="title">Todos</h1>
+        <input type="search" id="search-todo" placeholder="Search">
+        <ul class="nav nav-xs nav-pills">
+          <li id="all" class="active">
+            <a>All</a>
+          </li>
+          <li id="active">
+            <a>Active</a>
+          </li>
+          <li id="completed">
+            <a>Completed</a>
+          </li>
+        </ul>
+        <input id="input-todo" class="form-control input-lg" placeholder="What needs to be done?" autofocus>
+        <ul id="todo-list" class="list-group">
+          <!-- <li class="list-group-item">
+            <div class="hover-anchor">
+              <a class="hover-action text-muted">
+                <span class="glyphicon glyphicon-remove-circle pull-right" data-id="1"></span>
+              </a>
+              <label class="i-checks" for="1">
+                <input type="checkbox" id="1" checked><i></i>
+                <span>Angular</span>
+              </label>
+            </div>
+          </li> -->
+        </ul>
+        <p id="message-todo">해당 목록이 없습니다.</p>
+        <div class="col-xs-6">
+          <label class="i-checks" style="padding-left: 20px">
+            <input id="chk-allComplete" type="checkbox"><i></i><span class="select-all">전체 선택</span>
+          </label>
+        </div>
+        <div class="col-xs-6 text-right">
+          <button id="btn-removeCompletedTodos" class="btn btn-default btn-xs">Clear completed (<span id="completedTodos"></span>)</button>
+          <strong id="activeTodos"></strong> items left
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
