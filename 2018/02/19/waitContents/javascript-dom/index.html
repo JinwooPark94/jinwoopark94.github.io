@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Javascript - DOM | Jinwoo`s Blog</title>
+  <meta name="description" content="문서 객체 모델 (DOM : Document Object Model)   HTML과 XML 문서에 대한 애플리케이션 프로그래밍 인터페이스   Document는 html, css, javascript를 포함하며 객체로 만들어 모델화 하는 것   DOM은 W3C의 공식 표준이지만 HTML과 따로 관리함    이미지 : http://poiemaweb.com/j">
+<meta name="keywords" content="Javascript,DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript - DOM">
+<meta property="og:url" content="http://jinwoopark94.github.io/2018/02/19/waitContents/javascript-dom/index.html">
+<meta property="og:site_name" content="Jinwoo`s Blog">
+<meta property="og:description" content="문서 객체 모델 (DOM : Document Object Model)   HTML과 XML 문서에 대한 애플리케이션 프로그래밍 인터페이스   Document는 html, css, javascript를 포함하며 객체로 만들어 모델화 하는 것   DOM은 W3C의 공식 표준이지만 HTML과 따로 관리함    이미지 : http://poiemaweb.com/j">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://poiemaweb.com/img/client-server.png">
+<meta property="og:image" content="http://poiemaweb.com/img/HTMLElement.png">
+<meta property="og:image" content="http://poiemaweb.com/img/nodeValue.png">
+<meta property="og:image" content="http://poiemaweb.com/img/insertAdjacentHTML-position.png">
+<meta property="og:updated_time" content="2018-05-09T03:34:39.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript - DOM">
+<meta name="twitter:description" content="문서 객체 모델 (DOM : Document Object Model)   HTML과 XML 문서에 대한 애플리케이션 프로그래밍 인터페이스   Document는 html, css, javascript를 포함하며 객체로 만들어 모델화 하는 것   DOM은 W3C의 공식 표준이지만 HTML과 따로 관리함    이미지 : http://poiemaweb.com/j">
+<meta name="twitter:image" content="http://poiemaweb.com/img/client-server.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://jinwoopark94.github.io/2018/02/19/waitContents/javascript-dom/index.html">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+    
+    
+
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/JinwooPark94" target="_blank">
+          <img class="img-circle img-rotate" src="/img/avatar.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">JinwooPark</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Front-end Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Seoul, Korea</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/JinwooPark94" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorism/">Algorism</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Daily-Summary-Fds/">Daily-Summary-Fds</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/Blog/">Blog</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">31</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Accessibility/">Web Accessibility</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Contents/">Web Contents</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sass/">sass</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorism/">Algorism</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asynchronous-proccessing-model/">Asynchronous proccessing model</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Attributes/">Attributes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Built-in/">Built-in</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Closure/">Closure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Comment/">Comment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Common-character-entities/">Common character entities</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/">DOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Daily-Summary-Fds/">Daily-Summary-Fds</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-type/">Data type</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Document-Structure/">Document Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Events/">Events</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Forms/">Forms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Function/">Function</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hoisting/">Hoisting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/">Image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image-map/">Image map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/List/">List</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Loadmap/">Loadmap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markup/">Markup</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oh-My-ZSH/">Oh My ZSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Page-Information/">Page Information</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regexp/">Regexp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Standard-Built-in/">Standard Built-in</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Syntax-Basics/">Syntax Basics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Table/">Table</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Text/">Text</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Var-keyword-problem/">Var keyword problem</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Accessibility/">Web Accessibility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-Contents/">Web Contents</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Window/">Window</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wrapper/">Wrapper</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ZSH/">ZSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/execution-context/">execution-context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/number/">number</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/object/">object</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Ajax/" style="font-size: 13px;">Ajax</a> <a href="/tags/Algorism/" style="font-size: 13px;">Algorism</a> <a href="/tags/Asynchronous-proccessing-model/" style="font-size: 13px;">Asynchronous proccessing model</a> <a href="/tags/Attributes/" style="font-size: 13px;">Attributes</a> <a href="/tags/Blog/" style="font-size: 13px;">Blog</a> <a href="/tags/Built-in/" style="font-size: 13px;">Built-in</a> <a href="/tags/CSS/" style="font-size: 13px;">CSS</a> <a href="/tags/Closure/" style="font-size: 13px;">Closure</a> <a href="/tags/Comment/" style="font-size: 13px;">Comment</a> <a href="/tags/Common-character-entities/" style="font-size: 13px;">Common character entities</a> <a href="/tags/DOM/" style="font-size: 13px;">DOM</a> <a href="/tags/Daily-Summary-Fds/" style="font-size: 13.83px;">Daily-Summary-Fds</a> <a href="/tags/Data-type/" style="font-size: 13px;">Data type</a> <a href="/tags/Document-Structure/" style="font-size: 13px;">Document Structure</a> <a href="/tags/Events/" style="font-size: 13px;">Events</a> <a href="/tags/Forms/" style="font-size: 13px;">Forms</a> <a href="/tags/Function/" style="font-size: 13.17px;">Function</a> <a href="/tags/HTML/" style="font-size: 13.67px;">HTML</a> <a href="/tags/Hoisting/" style="font-size: 13px;">Hoisting</a> <a href="/tags/Image/" style="font-size: 13px;">Image</a> <a href="/tags/Image-map/" style="font-size: 13px;">Image map</a> <a href="/tags/Javascript/" style="font-size: 13.83px;">Javascript</a> <a href="/tags/List/" style="font-size: 13px;">List</a> <a href="/tags/Loadmap/" style="font-size: 13px;">Loadmap</a> <a href="/tags/Markup/" style="font-size: 13.33px;">Markup</a> <a href="/tags/Oh-My-ZSH/" style="font-size: 13px;">Oh My ZSH</a> <a href="/tags/Page-Information/" style="font-size: 13px;">Page Information</a> <a href="/tags/Regexp/" style="font-size: 13px;">Regexp</a> <a href="/tags/Standard-Built-in/" style="font-size: 13px;">Standard Built-in</a> <a href="/tags/Syntax-Basics/" style="font-size: 13px;">Syntax Basics</a> <a href="/tags/TIL/" style="font-size: 14px;">TIL</a> <a href="/tags/Table/" style="font-size: 13px;">Table</a> <a href="/tags/Text/" style="font-size: 13px;">Text</a> <a href="/tags/Ubuntu/" style="font-size: 13px;">Ubuntu</a> <a href="/tags/Var-keyword-problem/" style="font-size: 13px;">Var keyword problem</a> <a href="/tags/Web-Accessibility/" style="font-size: 13px;">Web Accessibility</a> <a href="/tags/Web-Contents/" style="font-size: 13px;">Web Contents</a> <a href="/tags/Window/" style="font-size: 13px;">Window</a> <a href="/tags/Wrapper/" style="font-size: 13px;">Wrapper</a> <a href="/tags/ZSH/" style="font-size: 13px;">ZSH</a> <a href="/tags/array/" style="font-size: 13px;">array</a> <a href="/tags/execution-context/" style="font-size: 13px;">execution-context</a> <a href="/tags/git/" style="font-size: 13.5px;">git</a> <a href="/tags/math/" style="font-size: 13px;">math</a> <a href="/tags/number/" style="font-size: 13px;">number</a> <a href="/tags/object/" style="font-size: 13px;">object</a> <a href="/tags/sass/" style="font-size: 13px;">sass</a>
+    </div>
+  </div>
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-waitContents/javascript-dom" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript - DOM
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/02/19/waitContents/javascript-dom/" class="article-date">
+	  <time datetime="2018-02-19T14:45:19.000Z" itemprop="datePublished">2018-02-19</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/DOM/">DOM</a>, <a class="article-tag-link" href="/tags/Javascript/">Javascript</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/19/waitContents/javascript-dom/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h1 id="문서-객체-모델-dom-document-object-model"><a class="markdownIt-Anchor" href="#문서-객체-모델-dom-document-object-model"></a> 문서 객체 모델 (DOM : Document Object Model)</h1>
+<ul>
+<li>
+<p>HTML과 XML 문서에 대한 애플리케이션 프로그래밍 인터페이스</p>
+</li>
+<li>
+<p>Document는 html, css, javascript를 포함하며 객체로 만들어 모델화 하는 것</p>
+</li>
+<li>
+<p>DOM은 W3C의 공식 표준이지만 HTML과 따로 관리함</p>
+</li>
+</ul>
+<p><img src="http://poiemaweb.com/img/client-server.png" alt="브라우저 동작 원리"></p>
+<p>이미지 : <a href="http://poiemaweb.com/js-dom" target="_blank" rel="noopener">http://poiemaweb.com/js-dom</a></p>
+<h3 id="브라우저-동작-원리"><a class="markdownIt-Anchor" href="#브라우저-동작-원리"></a> 브라우저 동작 원리</h3>
+<ol>
+<li>HTML을 로드함</li>
+<li>HTML 객체화를 위해 파싱하는데 중간에 멈춰서 CSS, Javascript가 나오면 CSS, Javascript를 로드 후 파싱</li>
+<li>HTML은 Dom tree를 만들고 CSS는 CSSOM tree를 만들며 Javascript는 Syntax tree를 만드는데 여기서 Syntax tree는 HTML과 CSS를 제어할 수 있게 함</li>
+<li>각자 만든 tree를 합친 render tree를 만들어 렌더링을 할 수 있게 만들어 줌</li>
+</ol>
+<h2 id="1-dom-tree"><a class="markdownIt-Anchor" href="#1-dom-tree"></a> 1. DOM tree</h2>
+<p>브라우저는 HTML을 로드한 후 생성하는 모델을 의미하고 객체처럼 구조화 되어 있음</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>안녕하세요<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Document -&gt; Element : html -&gt; Element : head -&gt; Element : title -&gt; Text Hello</p>
+<p>​                                                   -&gt; Element : body -&gt; Element : p      -&gt; Text: 안녕하세요</p>
+</blockquote>
+<h3 id="dom-tree는-네-종류의-노드로-구성되어-있음"><a class="markdownIt-Anchor" href="#dom-tree는-네-종류의-노드로-구성되어-있음"></a> <strong>Dom tree는 네 종류의 노드로 구성되어 있음</strong></h3>
+<p><img src="http://poiemaweb.com/img/HTMLElement.png" alt="Element Node"></p>
+<p>이미지 : <a href="http://poiemaweb.com/js-dom" target="_blank" rel="noopener">http://poiemaweb.com/js-dom</a></p>
+<h4 id="1-1-document-노드"><a class="markdownIt-Anchor" href="#1-1-document-노드"></a> 1-1 Document 노드</h4>
+<ul>
+<li>Dom tree의 최상위에 존재</li>
+<li>각각의 노드들(Element, Attribute, Text)을 접근하기 위해 반드시 Document 노드를 통해야함</li>
+<li>Dom tree에서의 시작점</li>
+<li>페이지에 대한 정보를 얻고 구조 및 외관을 조작</li>
+<li>HTML, XML 기반 문서를 표현</li>
+</ul>
+<blockquote>
+<p>NodeType은 9를 나타냄</p>
+</blockquote>
+<h4 id="1-2-element-노드"><a class="markdownIt-Anchor" href="#1-2-element-노드"></a> 1-2 Element 노드</h4>
+<ul>
+<li>XML / HTML 요소를 표현하며 이를 통해 태그 이름이나 자식, 속성 정보에 접근 가능</li>
+<li>HTML 중첩에 의해 부자 관계를 가지며 이 부자 관계를 통해 정보를 구조화</li>
+</ul>
+<blockquote>
+<p>NodeType은 1을 나타냄</p>
+</blockquote>
+<h4 id="1-3-attribute-노드"><a class="markdownIt-Anchor" href="#1-3-attribute-노드"></a> 1-3 Attribute 노드</h4>
+<ul>
+<li>해당 Attribute가 지정된 요소의 자식이 아니라 해당 요소의 일부로 표현</li>
+<li>Attribute를 참조 또는 수정 가능</li>
+<li>HTML에서는 자식 노드를 가질 수 없음</li>
+<li>XML에서는 자식 노드로 Text, EntityReference를 가질 수 있음</li>
+</ul>
+<blockquote>
+<p>NodeType 11을 나타냄</p>
+</blockquote>
+<h4 id="1-4-text-노드"><a class="markdownIt-Anchor" href="#1-4-text-노드"></a> 1-4 Text 노드</h4>
+<ul>
+<li>평범한 텍스트가 포함되고 글자 그대로 사용</li>
+<li>HTML 문자는 포함 가능하지만 HTML 코드는 포함 불가</li>
+<li>요소 노드의 자식이며 자신의 자식 노드를 가질 수 없음</li>
+<li>Dom tree에서의 마지막점</li>
+</ul>
+<blockquote>
+<p>NodeType은 3을 나타냄</p>
+</blockquote>
+<p>결론적으로 Dom tree는 조작하고자 하는 요소를 선택 또는 탐색하며, 선택된 요소의 Contents 또는 Attribute를 조작함</p>
+<h2 id="3-dom-query-traversing-요소에의-접근"><a class="markdownIt-Anchor" href="#3-dom-query-traversing-요소에의-접근"></a> 3. DOM Query / Traversing (요소에의 접근)</h2>
+<h3 id="31-하나의-요소-노드-선택dom-query"><a class="markdownIt-Anchor" href="#31-하나의-요소-노드-선택dom-query"></a> 3.1 하나의 요소 노드 선택(DOM Query)</h3>
+<h4 id="documentgetelementbyidid"><a class="markdownIt-Anchor" href="#documentgetelementbyidid"></a> <code>document.getElementById(id)</code></h4>
+<ul>
+<li>
+<p>id Attribute 값으로 요소 노드를 한개 선택</p>
+<blockquote>
+<p>여러개 선택시 첫 번째 요소 반환</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">'haribo'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="documentqueryselectorcssselector"><a class="markdownIt-Anchor" href="#documentqueryselectorcssselector"></a> <code>document.querySelector(cssSelector)</code></h4>
+<ul>
+<li>
+<p>CSS 셀렉터를 사용하여 요소 노드를 한개 선택</p>
+<blockquote>
+<p>여러개 선택시 첫 번째 요소 반환</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">'div.food'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="32-여러개의-요소-노드-선택dom-query"><a class="markdownIt-Anchor" href="#32-여러개의-요소-노드-선택dom-query"></a> 3.2 여러개의 요소 노드 선택(DOM Query)</h3>
+<h4 id="documentgetelementsbyclassnameclass"><a class="markdownIt-Anchor" href="#documentgetelementsbyclassnameclass"></a> <code>document.getElementsByClassName(class)</code></h4>
+<ul>
+<li>
+<p>class Attribute 값으로 요소 노드를 모두 선택</p>
+<blockquote>
+<p>공백으로 구분하여 여러개의 class 지정 가능</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'food'</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>단점 : 배열과 비슷한 사용법을 갖고 있으나 배열이 아닌 유사배열이므로 실시간으로 Node의 상태 변경을 반영</strong></p>
+<h4 id="documentgetelementsbytagnametagname"><a class="markdownIt-Anchor" href="#documentgetelementsbytagnametagname"></a> <code>document.getElementsByTagName(tagName)</code></h4>
+<ul>
+<li>태그명으로 요소 노드를 모두 선택</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="documentqueryselectorallselector"><a class="markdownIt-Anchor" href="#documentqueryselectorallselector"></a> <code>document.querySelectorAll(selector)</code></h4>
+<ul>
+<li>지정된 CSS 선택자를 사용하여 요소 노드를 모두 선택</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elems = <span class="built_in">document</span>.querySelectorAll(<span class="string">'div.food'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="33-dom-traversing-탐색"><a class="markdownIt-Anchor" href="#33-dom-traversing-탐색"></a> 3.3 Dom traversing (탐색)</h3>
+<h4 id="parentnode"><a class="markdownIt-Anchor" href="#parentnode"></a> <code>parentNode</code></h4>
+<ul>
+<li>부모 노드를 탐색</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">'#haribo'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// id가 haribo인 부모 노드를 탐색함</span></span><br><span class="line"><span class="keyword">var</span> parentNode = elem.parentNode;</span><br></pre></td></tr></table></figure>
+<h4 id="firstchild-lastchild"><a class="markdownIt-Anchor" href="#firstchild-lastchild"></a> <code>firstChild, lastChild</code></h4>
+<ul>
+<li>자식 노드를 탐색</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">'.food'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 첫 번째 자식 탐색</span></span><br><span class="line">elem.firstChild.className = <span class="string">'rainbow'</span>;</span><br><span class="line"><span class="comment">// 마지막 자식 탐색</span></span><br><span class="line">elem.lastChild.className = <span class="string">'rainbow'</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="haschildnodes"><a class="markdownIt-Anchor" href="#haschildnodes"></a> <code>hasChildNodes()</code></h4>
+<ul>
+<li>자식 노드가 있는지 확인하고 Boolean 값을 반환</li>
+</ul>
+<h4 id="childnodes"><a class="markdownIt-Anchor" href="#childnodes"></a> <code>childNodes</code></h4>
+<ul>
+<li>자식 노드의 컬렉션을 반환</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.querySelector(<span class="string">'.food'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (elem.hasChildNodes()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(elem.childNodes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="previoussibling-nextsibling"><a class="markdownIt-Anchor" href="#previoussibling-nextsibling"></a> <code>previousSibling</code>, <code>nextSibling</code></h4>
+<ul>
+<li>형제 노드를 탐색</li>
+</ul>
+<h2 id="4-dom-manipulation-조작"><a class="markdownIt-Anchor" href="#4-dom-manipulation-조작"></a> 4. Dom Manipulation (조작)</h2>
+<h3 id="4-1-텍스트-노드-접근수정"><a class="markdownIt-Anchor" href="#4-1-텍스트-노드-접근수정"></a> 4-1. 텍스트 노드 접근/수정</h3>
+<p><img src="http://poiemaweb.com/img/nodeValue.png" alt="nodeValue"></p>
+<p>이미지 : <a href="http://poiemaweb.com/js-dom" target="_blank" rel="noopener">http://poiemaweb.com/js-dom</a></p>
+<p>여기서 li와 attribute는 같은 관계이며 text는 부모와 자식 관계</p>
+<h4 id="텍스트-노드에-접근하는-방식"><a class="markdownIt-Anchor" href="#텍스트-노드에-접근하는-방식"></a> 텍스트 노드에 접근하는 방식</h4>
+<ol>
+<li>해당 텍스트 노드의 부모 노드를 선택한다. 텍스트 노드는 요소 노드의 자식</li>
+<li>firstChild 프로퍼티를 사용하여 텍스트 노드를 탐색</li>
+<li>텍스트 노드의 유일한 프로퍼티(<code>nodeValue</code>)를 이용하여 텍스트를 취득</li>
+<li><code>nodeValue</code>를 이용하여 텍스트를 수정</li>
+</ol>
+<h4 id="nodevalue"><a class="markdownIt-Anchor" href="#nodevalue"></a> <code>nodeValue</code></h4>
+<ul>
+<li>노드의 값을 반환</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 해당 텍스트 노드의 부모 요소 노드를 선택한다.</span></span><br><span class="line"><span class="keyword">var</span> one = <span class="built_in">document</span>.getElementById(<span class="string">'one'</span>);</span><br><span class="line"><span class="built_in">console</span>.dir(one); <span class="comment">// HTMLLIElement: li#one.red</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeName, nodeType을 통해 노드의 정보를 취득할 수 있다.</span></span><br><span class="line"><span class="built_in">console</span>.log(one.nodeName); <span class="comment">// LI</span></span><br><span class="line"><span class="built_in">console</span>.log(one.nodeType); <span class="comment">// 1: Element node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// firstChild 프로퍼티를 사용하여 텍스트 노드를 탐색한다.</span></span><br><span class="line"><span class="keyword">var</span> textNode = one.firstChild;</span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeName, nodeType을 통해 노드의 정보를 취득할 수 있다.</span></span><br><span class="line"><span class="built_in">console</span>.log(textNode.nodeName); <span class="comment">// #text</span></span><br><span class="line"><span class="built_in">console</span>.log(textNode.nodeType); <span class="comment">// 3: Text node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeValue 프로퍼티를 사용하여 노드의 값을 취득한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(textNode.nodeValue); <span class="comment">// Seoul</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// nodeValue 프로퍼티를 이용하여 텍스트를 수정한다.</span></span><br><span class="line">textNode.nodeValue = <span class="string">'Pusan'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-텍스트-노드-접근수정"><a class="markdownIt-Anchor" href="#4-2-텍스트-노드-접근수정"></a> 4-2. 텍스트 노드 접근/수정</h3>
+<p>어트리뷰트 노드을 조작할 때 다음 프로퍼티 또는 메소드를 사용</p>
+<h4 id="classname"><a class="markdownIt-Anchor" href="#classname"></a> <code>className</code></h4>
+<ul>
+<li>class Attribute 값을 취득 또는 변경</li>
+<li>만약 class Attribute 값이 존재하지 않을시 Attribute를 생성하고 지정된 값을 설정</li>
+<li>class가 많을 경우 <code>split(' ')</code>을 이용해 배열로 사용</li>
+</ul>
+<h4 id="id"><a class="markdownIt-Anchor" href="#id"></a> <code>id</code></h4>
+<ul>
+<li>id Attribute 값을 취득 또는 변경</li>
+<li>만약 id Attribute 값이 존재하지 않을시 id Attribute를 생성하고 지정된 값을 설정</li>
+</ul>
+<h4 id="hasattributeattribute"><a class="markdownIt-Anchor" href="#hasattributeattribute"></a> <code>hasAttribute(attribute)</code></h4>
+<ul>
+<li>지정한 Attribute를 가지고 있는지 확인하며 true or false 반환</li>
+</ul>
+<h4 id="getattributeattribute"><a class="markdownIt-Anchor" href="#getattributeattribute"></a> <code>getAttribute(attribute)</code></h4>
+<ul>
+<li>Attribute의 값을 취득</li>
+</ul>
+<h4 id="setattributeattribute"><a class="markdownIt-Anchor" href="#setattributeattribute"></a> <code>setAttribute(attribute)</code></h4>
+<ul>
+<li>Attribute와 Attribute의 값을 설정</li>
+</ul>
+<h4 id="removetattributeattribute"><a class="markdownIt-Anchor" href="#removetattributeattribute"></a> <code>removetAttribute(attribute)</code></h4>
+<ul>
+<li>지정한 Attribute를 제거</li>
+</ul>
+<h2 id="5-html-콘텐츠-조작"><a class="markdownIt-Anchor" href="#5-html-콘텐츠-조작"></a> 5. HTML 콘텐츠 조작</h2>
+<p>HTML 콘텐츠를 조작하기 위해 사용하며 마크업이 포함된 콘텐츠를 추가하는 행위는 크로스 스크립팅 공격에 취약함</p>
+<h4 id="5-1-textcontent"><a class="markdownIt-Anchor" href="#5-1-textcontent"></a> 5-1. <code>textContent</code></h4>
+<ul>
+<li>요소의 텍스트 콘텐츠를 취득 또는 변경</li>
+<li>마크업 사용 X</li>
+<li>텍스트를 할당시 텍스트 변경 가능</li>
+</ul>
+<h4 id="5-2-innertext"><a class="markdownIt-Anchor" href="#5-2-innertext"></a> 5-2. <code>innerText</code></h4>
+<ul>
+<li>비표준</li>
+<li>CSS에 순종적임 ( CSS에 보여지지 않는 것들은 반환 X)</li>
+<li>CSS를 함께 고려함으로 textContent보다 느림</li>
+</ul>
+<h4 id="5-3-innerhtml"><a class="markdownIt-Anchor" href="#5-3-innerhtml"></a> 5-3. <code>innerHTML</code></h4>
+<ul>
+<li>해당 요소의 모든 자식 요소를 포함하는 모든 콘텐츠를 하나의 문자열로 취득</li>
+</ul>
+<h3 id="6-dom-조작-방식"><a class="markdownIt-Anchor" href="#6-dom-조작-방식"></a> 6. DOM 조작 방식</h3>
+<p><code>innerHTML</code> 프로퍼티를 사용하지 않고 새롭게 콘텐츠를 추가할 수 있는 방법</p>
+<h4 id="6-1-createelementtagname"><a class="markdownIt-Anchor" href="#6-1-createelementtagname"></a> 6-1. <code>createElement(tagName)</code></h4>
+<ul>
+<li>태그 이름을 인자로 전달하여 요소 생성</li>
+</ul>
+<h4 id="6-2-createtextnodetext"><a class="markdownIt-Anchor" href="#6-2-createtextnodetext"></a> 6-2. <code>CreateTextNode(text)</code></h4>
+<ul>
+<li>텍스트를 인자로 전달하여 텍스트 노드 생성</li>
+</ul>
+<h4 id="6-3-appendchildnode"><a class="markdownIt-Anchor" href="#6-3-appendchildnode"></a> 6-3. <code>appendChild(Node)</code></h4>
+<ul>
+<li>인자로 전달한 노드를 자식 요소로 DOM 트리에 추가</li>
+</ul>
+<h4 id="6-4-removechildnode"><a class="markdownIt-Anchor" href="#6-4-removechildnode"></a> 6-4. <code>removeChild(Node)</code></h4>
+<ul>
+<li>인자로 전달한 노드를 DOM 트리에 제거</li>
+</ul>
+<h3 id="7-insertadjacenthtmlposition-string"><a class="markdownIt-Anchor" href="#7-insertadjacenthtmlposition-string"></a> 7. <code>insertAdjacentHTML(position, string)</code></h3>
+<p>인자로 전달한 텍스트를 HTML로 파싱하고 그 결과로 생성된 노드를 DOM 트리의 지정된 위치에 삽입</p>
+<p>첫 번째 인자인 position에는 아래의 값들이 들어올 수 있음</p>
+<ul>
+<li>‘beforebegin’</li>
+<li>‘afterbegin’</li>
+<li>‘beforeend’</li>
+<li>‘afterend’</li>
+</ul>
+<p><img src="http://poiemaweb.com/img/insertAdjacentHTML-position.png" alt="insertAdjacentHTML-position"></p>
+<p>이미지 : <a href="http://poiemaweb.com/js-dom" target="_blank" rel="noopener">http://poiemaweb.com/js-dom</a></p>
+<h2 id="8-innerhtml-vs-dom-조작-방식-vs-insertadjacenthtml"><a class="markdownIt-Anchor" href="#8-innerhtml-vs-dom-조작-방식-vs-insertadjacenthtml"></a> 8. innerHTML vs. DOM 조작 방식 vs. insertAdjacentHTML()</h2>
+<h4 id="innerhtml"><a class="markdownIt-Anchor" href="#innerhtml"></a> <strong>innerHTML</strong></h4>
+<table>
+<thead>
+<tr>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOM 조작 방식에 비해 빠르고 간편</td>
+<td>XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠를 추가할 때 주의하여야 함</td>
+</tr>
+<tr>
+<td>간편하게 문자열로 정의한 여러 요소를 DOM에 추가 가능</td>
+<td>해당 요소의 내용을 덮어 쓴다. 즉, HTML을 로드하고 다시 파싱한다. 이것은 비효율적</td>
+</tr>
+<tr>
+<td>콘텐츠를 취득할 수 있음</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dom-조작-방식"><a class="markdownIt-Anchor" href="#dom-조작-방식"></a> <strong>DOM 조작 방식</strong></h4>
+<table>
+<thead>
+<tr>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>특정 노드 한개(노드, 텍스트, 데이터 등)를 DOM에 추가할 때 적합</td>
+<td>innerHTML보다 느리고 더 많은 코드가 필요함</td>
+</tr>
+</tbody>
+</table>
+<h4 id="insertadjacenthtml"><a class="markdownIt-Anchor" href="#insertadjacenthtml"></a> <strong>insertAdjacentHTML()</strong></h4>
+<table>
+<thead>
+<tr>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>간편하게 문자열로 정의된 여러 요소를 DOM에 추가할 수 있음</td>
+<td>XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠를 추가할 때 주의하여야 함</td>
+</tr>
+<tr>
+<td>삽입되는 위치를 선정할 수 있음</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="결론"><a class="markdownIt-Anchor" href="#결론"></a> 결론</h4>
+<ul>
+<li><code>innerHTML</code>과 insertAdjacentHTML()은 크로스 스크립팅 공격에 취약</li>
+<li>텍스트 추가, 변경시 <code>textContent</code>, 새로운 요소 추가, 삭제시 <code>DOM 조작 방식</code>을 사용</li>
+</ul>
+<h3 id="참고-httppoiemawebcom"><a class="markdownIt-Anchor" href="#참고-httppoiemawebcom"></a> 참고 : <a href="http://poiemaweb.com" target="_blank" rel="noopener">http://poiemaweb.com</a></h3>
+
+      
+    </div>
+    <div class="article-footer">
+      <!--<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://jinwoopark94.github.io/2018/02/19/waitContents/javascript-dom/" title="Javascript - DOM" target="_blank" rel="external">http://jinwoopark94.github.io/2018/02/19/waitContents/javascript-dom/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>-->
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/JinwooPark94" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/img/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/JinwooPark94" target="_blank"><span class="text-dark">JinwooPark</span><small class="ml-1x">Front-end Developer</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/02/19/TIL-180219/" title="TIL-180218"><i class="icon icon-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;Newer</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2018/02/19/javascript-Asynchronous-proccessing-model/" title="Javascript - Asynchronous proccessing model">Older&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/JinwooPark94" target="_blank" title="Github" ><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+    
+    
+        
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+        
+    
+    
+        <script defer type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113861948-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+
+</body>
+</html>
